@@ -1,3 +1,4 @@
-Hola, modifiquen este archivo para confirmar que pueden hacer commits y no reborujarnos :) 
+﻿Hola, modifiquen este archivo para confirmar que pueden hacer commits y no reborujarnos :) 
 Esta es mi modificación-Angel-
 Esta es mi modificación-Daniela-
+1 2 3 - Zayra
