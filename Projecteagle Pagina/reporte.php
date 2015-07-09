@@ -37,7 +37,7 @@ while($f=mysql_fetch_array($re))
      
      
      echo '
-                    <label class="estilo-label">Reporte Minero</label>
+                    
 					<label class="estilo-label">FECHA</label> <label class="estilo-label">'.$f['fecha'].'</label>
 					<label class="estilo-label">TIPO DE ACCIDENTE</label> <label class="estilo-label-res">'.$f['descripcion'].'</label>
 					<label class="estilo-label">TITULAR MINERO</label> <label class="estilo-label-res">'.$f['titular_minero'].'</label>
