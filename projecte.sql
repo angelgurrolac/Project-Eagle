@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-07-2015 a las 06:53:27
+-- Tiempo de generación: 31-07-2015 a las 18:21:28
 -- Versión del servidor: 5.6.17
 -- Versión de PHP: 5.5.12
 
@@ -23,29 +23,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `administrador`
---
-
-CREATE TABLE IF NOT EXISTS `administrador` (
-  `id_admin` int(11) NOT NULL AUTO_INCREMENT,
-  `user` varchar(20) NOT NULL,
-  `pass` varchar(15) NOT NULL,
-  `cpass` varchar(15) NOT NULL,
-  PRIMARY KEY (`id_admin`),
-  UNIQUE KEY `id_admin` (`id_admin`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
-
---
--- Volcado de datos para la tabla `administrador`
---
-
-INSERT INTO `administrador` (`id_admin`, `user`, `pass`, `cpass`) VALUES
-(1, 'admin', 'admin', 'admin'),
-(2, 'admin', 'admin', 'admin');
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `cuadrante`
 --
 
@@ -56,14 +33,15 @@ CREATE TABLE IF NOT EXISTS `cuadrante` (
   `longitud` varchar(50) NOT NULL,
   `no_trabajadores` int(11) NOT NULL,
   PRIMARY KEY (`cuadrante_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Volcado de datos para la tabla `cuadrante`
 --
 
 INSERT INTO `cuadrante` (`cuadrante_id`, `descripcion`, `latitud`, `longitud`, `no_trabajadores`) VALUES
-(1, 'DESCRIPCIÓN DEL CUADRANTE ', ' 35° 43'' 9"', ' 32° 42'' 3"', 4);
+(1, 'DESCRIPCIÓN DEL CUADRANTE ', ' 35° 43'' 9"', ' 32° 42'' 3"', 4),
+(2, 'Descripcion del cuadrante del dron', '78° 43'' 9" ', '46° 42'' 3"', 9);
 
 -- --------------------------------------------------------
 
@@ -128,7 +106,7 @@ CREATE TABLE IF NOT EXISTS `reporte` (
   `tipo_id` int(11) NOT NULL,
   PRIMARY KEY (`id_reporte`),
   UNIQUE KEY `victima_nombre` (`victima_nombre`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Volcado de datos para la tabla `reporte`
@@ -159,6 +137,7 @@ INSERT INTO `reporte` (`id_reporte`, `fecha`, `titular_minero`, `concesion`, `no
 CREATE TABLE IF NOT EXISTS `reporte_dron` (
   `id_dron` int(11) NOT NULL AUTO_INCREMENT,
   `fecha` date NOT NULL,
+  `Modelo` varchar(300) NOT NULL,
   `tipo_id` int(11) NOT NULL,
   `cuadrante_id` int(11) NOT NULL,
   `tiempo_vuelo` int(11) NOT NULL,
@@ -171,8 +150,8 @@ CREATE TABLE IF NOT EXISTS `reporte_dron` (
 -- Volcado de datos para la tabla `reporte_dron`
 --
 
-INSERT INTO `reporte_dron` (`id_dron`, `fecha`, `tipo_id`, `cuadrante_id`, `tiempo_vuelo`, `distancia_recorrida`, `nivel_bateria`) VALUES
-(1, '2015-07-15', 1, 2, 30, 1800, 18);
+INSERT INTO `reporte_dron` (`id_dron`, `fecha`, `Modelo`, `tipo_id`, `cuadrante_id`, `tiempo_vuelo`, `distancia_recorrida`, `nivel_bateria`) VALUES
+(1, '2015-07-15', '', 1, 2, 30, 1800, 18);
 
 -- --------------------------------------------------------
 
@@ -193,6 +172,32 @@ CREATE TABLE IF NOT EXISTS `tipos` (
 INSERT INTO `tipos` (`tipo_id`, `descripcion`) VALUES
 (1, 'TRÁNSITO'),
 (2, 'CAÍDAS DE PERSONAS');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `id_usuarios` int(11) NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(200) NOT NULL,
+  `contrasena` varchar(30) NOT NULL,
+  `tipo_usuario` varchar(14) NOT NULL,
+  PRIMARY KEY (`id_usuarios`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuarios`, `usuario`, `contrasena`, `tipo_usuario`) VALUES
+(1, 'zayra@h.com', '12345678', 'admin'),
+(4, 'd@h.com', '123', ''),
+(5, 'zayra@h.com', '123', 'paramedico'),
+(6, 'edith@hotmail.com', '123456', 'paramedico'),
+(7, 'edith@hotmail.com', '123456', 'paramedico'),
+(8, 'edith@hotmail.com', '123456', 'admin');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

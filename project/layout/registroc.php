@@ -11,5 +11,5 @@
 	mysql_query("INSERT INTO usuarios (usuario, contrasena, tipo_usuario) 
 				VALUES ('$usuario', '$contrasena', '$tipo_usuario')");
 
-	header("Location: ../index3.php");
+	header("Location: index3.php");
 ?>

@@ -5,10 +5,10 @@
 		<meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/tabla-estilo.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" href="../recursos/assets/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="../recursos/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="../recursos/css/tabla-estilo.css" />
+		<link rel="stylesheet" type="text/css" href="../recursos/css/component.css" />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
 		<script src="js/jquery.stickyheader.js"></script>
@@ -24,7 +24,7 @@
 						<li><a href="#one" class="button icon fa-chevron-down scrolly">Visualizar reportes</a></li>
 					</ul>
 				</div>
-				<div ><div class="inner"><img src="images/dron.png" alt="" /></div></div>
+				<div ><div class="inner"><img src="../recursos/images/dron.png" alt="" /></div></div>
 			</header>
 
 		<!-- One -->
@@ -517,12 +517,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
+			    
+			<script src="../recursos/assets/js/jquery.min.js"></script>
+        
+			<script src="../recursos/assets/js/jquery.scrolly.min.js"></script>
+			<script src="../recursos/assets/js/skel.min.js"></script>
+			<script src="../recursos/assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+			<script src="../recursos/assets/js/main.js"></script>
 
 	</body>
 </html>
