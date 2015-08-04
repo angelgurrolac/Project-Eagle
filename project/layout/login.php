@@ -23,11 +23,11 @@ else
     }
     //cuando solo tenemos una instruccion las llaves son opcionales
     if(count($filas)>0){
-        header( 'Location: reporte.php' );
+        header( 'Location: menu.html' );
         //echo "si";
     }
     else {
-        header( 'Location: index3.php' );
+        header( 'Location: index.php' );
         //echo "no";
     }
        //header( 'Location: index.html' );

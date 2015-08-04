@@ -16,11 +16,11 @@
   <option value="paramedico">Paramédico</option>
   <option value="otro">Otro</option>
 </select>
-<input type="text" name="usuario" class="placeholder" placeholder="ejemplo@ejemplo.com">
-<input type="password" name="contrasena" class="placeholder" placeholder="Contraseña">
-<input type="password" name="ccontrasena" class="placeholder" placeholder="Confirmar contraseña">
+<input type="email" name="usuario" class="placeholder" placeholder="ejemplo@ejemplo.com"  pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+<input type="password" name="contrasena" class="placeholder" placeholder="Contraseña"  size="30" required>
+<input type="password" name="ccontrasena" class="placeholder" placeholder="Confirmar contraseña"  size="30" required>
 <input type="submit" value="Registrar" name="commit">
-    <a  class="estilo-a" href="index3.php">Iniciar sesión</a>
+    <a  class="estilo-a" href="index.php">Iniciar sesión</a>
 </form>
 </body> 
 </html>

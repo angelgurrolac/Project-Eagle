@@ -1,37 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>PROJECT EAGLE</title>
-    <link href="css/style.css" rel="stylesheet">  
-    <link href="css/bootstrap.min.css" rel="stylesheet">  
-    
-	
+<meta charset="utf-8">
+<title>Login</title>
+
+<link rel="stylesheet" type="text/css" href="../recursos/css/estilo-login.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://www.modernizr.com/downloads/modernizr-latest.js"></script>
+<script type="text/javascript" src="js/login-placeholder.js"></script>
 </head>
-
-
-
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-2"><p><button class="myButton" href="/">Inicio</button></p></div>
-			<div class="col-md-1"></div>
-			<div class="col-md-2"><p><button class="myButton" href="/despegar">Despegar</button></p></div>
-			<div class="col-md-1"></div>
-			<div class="col-md-2"><p><button class="myButton" href="/aterrizar">Aterrizar</button></p></div>
-			<div class="col-md-2"></div>
-		</div>
-	</div>
-
-
-         				
-       			      
-                      
-      
+    <img src="../recursos/images/logo_efectos.png" alt="Project Eagle" class="estilo-logo-login"  align="middle" float="inherit">
+<form id="slick-login" method="post" action="login.php">
+    
+<input type="text" name="usuario" class="placeholder" placeholder="ejemplo@ejemplo.com"  pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+<input type="password" name="contrasena" class="placeholder" placeholder="Contraseña"   size="30" required >
+<input type="submit" value="Login" name="commit">
+    <a  class="estilo-a" href="registrar.php">Regístrate</a>
   
-</body>
+</form>
+      
+</body> 
 </html>
