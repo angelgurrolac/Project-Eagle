@@ -1,5 +1,27 @@
+<?php
+ 
+function Conectarse() 
+{ 
+   if (!($link=mysql_connect("localhost","root","admin"))) 
+   { 
+      //echo "Error conectando a la base de datos."; 
+      exit(); 
+   } 
+   if (!mysql_select_db("projecte",$link)) 
+   { 
+      //echo "Error seleccionando la base de datos."; 
+      exit(); 
+   } 
 
-<?
-$link=mysql_connect("localhost", "root", "admin");
-mysql_select_db("projecte",$link) OR DIE ("Error: No es posible establecer la conexión");
-?>
+   return $link; 
+
+
+} 
+
+$link=Conectarse();
+mysql_query("SET NAMES 'utf8'");
+
+
+
+
+?> 

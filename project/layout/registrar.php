@@ -6,7 +6,24 @@
 <link rel="stylesheet" type="text/css" href="../recursos/css/estilo-login.css" />
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="http://www.modernizr.com/downloads/modernizr-latest.js"></script>
-<script type="text/javascript" src="js/login-placeholder.js"></script>
+<script type="text/javascript" src="../recursos/js/login-placeholder.js"></script>
+    <script type="text/javascript">
+        var contrasena1 = contrasena.value();
+        var contrasena2 = ccontrasena.value();
+        
+        
+        if(contrasena1 == contrasena2)
+        {
+            alert("Registro Correcto");
+        }
+        else
+        {
+            alert("Las contraseñas no coinciden");
+            
+        }
+        
+        
+    </script>
 </head>
 <body>
     <img src="../recursos/images/logo_efectos.png" alt="Project Eagle" class="estilo-logo-login"  align="middle" float="inherit">

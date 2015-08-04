@@ -4,7 +4,6 @@
 	
 	$usuario = $_POST['usuario'];
 	$contrasena = $_POST['contrasena'];
-
 	$tipo_usuario = $_POST['tipo_usuario'];
 
 
