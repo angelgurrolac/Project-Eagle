@@ -36,8 +36,8 @@
 
 
 					 <?php 
-					 include ("php/conexion.php");
-					   $re=mysql_query("SELECT * FROM reporte r,tipos t WHERE id_reporte=1 AND 
+					 include ("conexion.php");
+					   $re=mysqli_query("SELECT * FROM reporte r,tipos t WHERE id_reporte=1 AND 
 					   	r.tipo_id=t.tipo_id");
 while($f=mysql_fetch_array($re))
 {
@@ -142,9 +142,9 @@ while($f=mysql_fetch_array($re))
 
 					 <?php 
 					
-					   $re=mysql_query("SELECT * FROM reporte_dron r, cuadrante c WHERE id_dron=1
+					   $re=mysqli_query("SELECT * FROM reporte_dron r, cuadrante c WHERE id_dron=1
 					   	AND c.cuadrante_id=r.cuadrante_id");
-while($f=mysql_fetch_array($re))
+while($f=mysqli_fetch_array($re))
 {
   
      

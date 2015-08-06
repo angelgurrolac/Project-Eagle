@@ -1,6 +1,6 @@
 
 <?php 
-	include_once('conexion.php');
+	include_once('php/conexion.php');
 	
 	$usuario = $_POST['usuario'];
 	$contrasena = $_POST['contrasena'];
@@ -9,8 +9,20 @@
 
 	
 
-	mysql_query("INSERT INTO usuarios (usuario, contrasena, tipo_usuario) 
+	$insert = ("INSERT INTO usuarios (usuario, contrasena, tipo_usuario) 
 				VALUES ('$usuario', '$contrasena', '$tipo_usuario')");
+       
 
-	header("Location: index.php");
+$sql=mysql_query($insert);
+
+if($sql)
+{
+	echo "Registro correcto";
+}
+else
+{
+	echo "error" ;
+}
+
+
 ?>
