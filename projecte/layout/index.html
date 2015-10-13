@@ -1,0 +1,129 @@
+    <!DOCTYPE html>
+    <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/login.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+        
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css" />
+
+
+    <script type="text/javascript">
+    $(document).ready(function(){  
+
+     $('#iniciar').on('click',function(evento) {
+                evento.preventDefault();
+                  
+                $.ajax({
+                    url:'php/login.php',
+                    type: 'POST',
+                    data: {
+                         usuario:$('#email').val(),
+                        contrasena:$('#password').val()
+                        
+                    },
+                    
+                    dataType: 'json' 
+                }).done(function(datos)  {
+                 
+                 console.log(datos);
+
+
+
+                    if(typeof(datos.usuario) == 'undefined')
+                    {
+                    
+                         $('#mensaje').text('Usuario o Contraseña invalidos');
+                         
+                    }
+                        
+                    else
+                    {
+                      
+                        //alert('Bienvenido ' + datos.usuario[0].nombre );
+                        window.location.href="inicio.html";
+                    }
+                    
+                }).fail(function(datos)
+                {
+                	//alert(correo);
+                    console.log('error')
+                    
+                    
+                });
+                
+                
+            });
+
+    });
+
+    </script>
+
+
+
+
+    </head>
+    <body>
+    <div class="container">
+        
+        <div class="row">
+        <div class="col-sm-4"></div>
+            
+        <div class="col-sm-4">
+            
+        </div>
+            
+        <div class="col-sm-4">  <input class="btn-registrar"type="button" value="Regístrate" onClick=" window.location.href='usuario/registrar.html' "></div>
+        
+      </div>
+          
+      <div class="row">
+        <div class="col-sm-4"></div>
+            
+        <div class="col-sm-4">
+            <img class="estilo-logo-login" src="../assets/images/logo_efectos.png" alt="Project Eagle"  align="middle" float="inherit">  
+        </div>
+            
+        <div class="col-sm-4"> </div>
+        
+      </div>
+        
+        
+         
+        
+        <div class="row">
+        <div class="col-sm-4"></div>
+            
+        <div class="col-sm-4">
+             
+    <form >
+         
+       
+
+        
+    <input id="email"  name="usuario" class="txt-datos" placeholder="Usuario"  pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+        </br>
+    <input id="password" type="password" name="contrasena" class="txt-datos" placeholder="Contraseña"   size="30" required >
+            </br>
+    <input id="iniciar" class="txt-datos btn-iniciars"  type="submit" value="Iniciar sesión" name="commit">
+    <h4 class="estilo-a" id="mensaje"></h4>
+
+    </form>
+        </div>
+            
+        <div class="col-sm-4"></div>
+        
+      </div>
+        
+        
+     
+
+        </div>
+    <footer id="footer">
+        <a class="estilo-a" href="#">Acerca de Project Eagle</a>
+    </footer>
+          
+    </body> 
+    </html>
