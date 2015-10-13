@@ -2,12 +2,15 @@
  
 function Conectarse() 
 { 
-   if (!($link=mysql_connect("localhost","root","admin"))) 
+   $link=mysqli_connect("localhost","root","");
+   if (!($link)) 
    { 
       echo "Error conectando a la base de datos."; 
       exit(); 
-   } 
-   if (!mysql_select_db("projecte",$link)) 
+   } else{
+
+   }
+   if (!mysqli_select_db($link,"projecte")) 
    { 
       echo "Error seleccionando la base de datos."; 
       exit(); 
@@ -20,7 +23,7 @@ function Conectarse()
 } 
 
 $link=Conectarse();
-mysql_query("SET NAMES 'utf8'");
+mysqli_query($link,"SET NAMES 'utf8'");
 
 
 

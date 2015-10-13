@@ -47,22 +47,22 @@
                     <header>
                         <h4>DRONES</h4>
                     </header>
-                    <form method="POST" action="registrar-drone">
+                    <form method="POST" action="registrar-drone.php">
                         <div class="row">
                         <div class="2u 12u$(mobile)"> <label>Modelo</label></div>
-                        <div class="10u$ 12u$(mobile)"><input type="text" name="modelo"/></div>
+                        <div class="10u$ 12u$(mobile)"><input type="text" name="modelo" id="modelo" required/></div>
                         <div class="2u 12u$(mobile)"> <label>Marca</label></div>
-                        <div class="10u$ 12u$(mobile)"><input type="text" name="marca"/></div>
+                        <div class="10u$ 12u$(mobile)"><input type="text" name="marca" id="marca" /></div>
                         <div class="2u 12u$(mobile)"> <label>Estatus</label></div>
-                        <div class="10u$ 12u$(mobile)"><input type="text" name="estatus"/></div>
-                        <div class="12u$"><input type="submit" value="Registrar" /></div>
+                        <div class="10u$ 12u$(mobile)"><input type="text" name="estatus" id="status"/></div>
+                        <div class="12u$"><input type="submit" value="Registrar" id="registrar-drone"/></div>
                     </div>
                     </form>   
                 </div>
             </section>
         </div>
         
-        <div id="contenedor"></div>
+        
 
         <div id="contenedorE" > </div>
 
@@ -77,12 +77,12 @@
 
         
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollzer.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-            <script src="assets/js/js-drones.js"></script>
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../../assets/js/jquery.scrollzer.min.js"></script>
+			<script src="../../assets/js/skel.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<script src="../../assets/js/main.js"></script>
+            <script src="../../assets/js/js-drones.js"></script>
 	</body>
 </html>
