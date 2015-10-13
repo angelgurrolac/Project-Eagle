@@ -1,67 +1,113 @@
-<!DOCTYPE html>
-<head>
-<meta charset="utf-8">
-<title>Registro</title>
-
-<link rel="stylesheet" type="text/css" href="../recursos/css/estilo-login.css" />
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="http://www.modernizr.com/downloads/modernizr-latest.js"></script>
-<script type="text/javascript" src="../recursos/js/login-placeholder.js"></script>
-<script type="text/javascript" src="../recursos/js/jquery-2.0.3.min.js"></script>
-
-    <script type="text/javascript">
-
-    $(document).ready(function(){  
-
-        var form = $('.fn');
-     form.submit(function(){
-                
-
-                var usuario2 = document.datos.usuario.value;
-                var contrasena2 = document.datos.contrasena.value;
-                var tipo_usuario2 = document.datos.tipo_usuario.value;
-             
-                
-
-                 
-
-                  $.ajax({
-                        url:"registroc.php",
-                        type: "POST",
-                        data: {usuario:usuario2,contrasena:contrasena2,tipo_usuario:tipo_usuario2},
-
-                        success:function (resp) {
-                                alert(resp);
-                                alert("hola");
-                                //location.reload();
-                                window.location.href="index.html";
-                        }
+         <!DOCTYPE html>
+            <head>
+            <meta charset="utf-8">
+            <title>Login</title>
 
 
-                          })
+            <link rel="stylesheet" type="text/css" href="../../assets/css/login.css" />
+            <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.css" />
+            <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css" />
+
+            <script type="text/javascript">
+
+            $(document).ready(function(){  
+
+                var form = $('.fn');
+             form.submit(function(){
+                        
+
+                        var usuario2 = document.datos.usuario.value;
+                        var contrasena2 = document.datos.contrasena.value;
+                        var tipo_usuario2 = document.datos.tipo_usuario.value;
+                     
+                        
+
+                         
+
+                          $.ajax({
+                                url:"registroc.php",
+                                type: "POST",
+                                data: {usuario:usuario2,contrasena:contrasena2,tipo_usuario:tipo_usuario2},
+
+                                success:function (resp) {
+                                        alert(resp);
+                                        alert("hola");
+                                        //location.reload();
+                                        window.location.href="../index.html";
+                                }
+
+
+                                  })
+                    });
+
+
             });
+                
+            </script>
+        </head>
+        <body>
+             <body>
+            <div class="container">
+                
+                <div class="row">
+                <div class="col-sm-4"></div>
+                    
+                <div class="col-sm-4">
+                    
+                </div>
+                    
+                <div class="col-sm-4">  <input class="btn-registrar"type="button" value="Iniciar sesión" onClick=" window.location.href='../index.html' "></div>
+                
+              </div>
+                  
+              <div class="row">
+                <div class="col-sm-4"></div>
+                    
+                <div class="col-sm-4">
+                    <img class="estilo-logo-login" src="../../assets/images/logo_efectos.png" alt="Project Eagle"  align="middle" float="inherit">  
+                </div>
+                    
+                <div class="col-sm-4"> </div>
+                
+              </div>
+                
+                
+                 
+                
+                <div class="row">
+                <div class="col-sm-4"></div>
+                    
+                <div class="col-sm-4">
+                     
+            <form>
+                
+            <input  name="usuario" class="txt-datosr" placeholder="usuario"  required />
+                </br>
+                    
+                <input  name="nombres" type="text" class="txt-datosr" placeholder="Nombres"  required />
+                </br> 
+                   
+                    <input  name="apellidop" type="text"  class="txt-datosr" placeholder="Apellido Paterno"  required />
+                </br>
+                <input  name="apellidom" type="text"  class="txt-datosr" placeholder="Apellido Materno"  required />
+                </br>
+        <input type="password" name="contrasena" class="txt-datosr"  placeholder="Contrasena"  size="30" required />
+            </br>
+        <input id="registrar" class="txt-datosr btn-iniciars"  type="submit" value="Registrar" name="commit">
+            </form>
+                </div>
+                    
+                <div class="col-sm-4"></div>
+                
+              </div>
+                
+                
+             
 
+                </div>
+            <footer id="footer">
+                <a class="estilo-a" href="#">Acerca de Project Eagle</a>
+            </footer>
 
-    });
-        
-    </script>
-</head>
-<body>
-    
-<form method="post" name="datos" class="fn" id="slick-login">
-     <header> <img class="estilo-logo-login" src="../recursos/images/logo_efectos.png" alt="Project Eagle"  align="middle" float="inherit"> </header>  
-
-     <select name="tipo_usuario">
-  <option value="admin">Administrador</option>
-  <option value="paramedico">Paramédico</option>
-  <option value="otro">Otro</option>
-     </select>
-
-<input type="email" name="usuario" class="placeholder" placeholder="ejemplo@ejemplo.com"  pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
-<input type="password" name="contrasena" class="placeholder contrasena" placeholder="Contraseña"  size="30" required>
-<input type="password" name="ccontrasena" class="placeholder ccontrasena" placeholder="Confirmar contraseña"  size="30" required>
-<input id="valida" type="submit" value="Registrar" name="commit">
-    <a  class="estilo-a" href="index.html">Iniciar sesión</a>
-</form>
-</body> 
-</html>
+        </body> 
+        </html>
