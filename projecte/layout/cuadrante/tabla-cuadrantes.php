@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Reportes</title>
+		<title>Cuadrantes</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../../assets/css/estilo-tablas.css" /> 
@@ -45,28 +45,29 @@
             <section id="contact" class="two">
                 <div class="container">
                     <header>
-                        <h4>REPORTES</h4>
+                        <h4>CUADRANTES</h4>
                     </header>
                     <form method="post" action="#">
                         <div class="row">
                             <div class="0.5u 12u$(mobile)"><label class="icon fa-search"/></div>
                             <div class="5u 12u$(mobile) estilo-buscador"><input type="text" name="buscador" placeholder="Buscador"/></div>
-                            <div class="1.5u 12u$(mobile) estilo-buscador"><button class="icon fa-plus-circle estilo-icono">      Nuevo reporte</button></div>
+                            <div class="1.5u 12u$(mobile) estilo-buscador"><button class="icon fa-plus-circle estilo-icono">      Nuevo cuadrante</button></div>
                         </div>
                     
                         <div class="rwd">
                             <table class="rwd_auto">
                                 <thead>
                                     <tr>
-                                        <th>Fecha</th>
-                                        <th>Nombre</th>
-                                        <th>Número de victimas</th>
-                                        <th>Empresa</th>
+                                        <th>Cuadrante</th>
+                                        <th>Latitud</th>
+                                        <th>Longitud</th>
+                                        <th>Descripción</th>
+                                        <th>Número de trabajadores</th>
                                         <th>
                                             <button class="icon fa-folder-open estilo-icono"></button>
                                             <button class="icon fa-edit estilo-icono" data-toggle="modal" data-target="#myModal"></button>
                                             <button class="icon fa-remove estilo-icono"></button>
-                                             <button class="icon fa-remove estilo-icono">descargar</button>
+                                           
                                         </th>
                                     </tr>
                                 </thead>
