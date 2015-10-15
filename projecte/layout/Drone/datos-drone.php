@@ -47,28 +47,32 @@
                     <header>
                         <h4>DRONES</h4>
                     </header>
-                    <form method="POST" action="registrar-drone.php">
+                    <form method="POST" action="registrar-drone">
                         <div class="row">
-                        <div class="2u 12u$(mobile)"> <label>Modelo</label></div>
-                        <div class="10u$ 12u$(mobile)"><input type="text" name="modelo" id="modelo" required/></div>
-                        <div class="2u 12u$(mobile)"> <label>Marca</label></div>
-                        <div class="10u$ 12u$(mobile)"><input type="text" name="marca" id="marca" /></div>
-                        <div class="2u 12u$(mobile)"> <label>Estatus</label></div>
-                        <div class="10u$ 12u$(mobile)"><input type="text" name="estatus" id="status"/></div>
-                        <div class="12u$"><input type="submit" value="Registrar" id="registrar-drone"/></div>
+                        <div class="3u 12u$(mobile)"> <label>Fecha de instalación</label></div>
+                        <div class="9u$ 12u$(mobile)"><input type="date" name="modelo"/></div>
+                        <div class="3u 12u$(mobile)"> <label>Modelo</label></div>
+                        <div class="9u$ 12u$(mobile)"><input type="text" name="marca"/></div>
+                        <div class="3u 12u$(mobile)"> <label>Estatus</label></div>
+                        <div class="9u$ 12u$(mobile)"><input type="text" name="estatus"/></div>
+                        <div class="3u 12u$(mobile)"> <label>Calibración</label></div>
+                        <div class="9u$ 12u$(mobile)"><input type="text" name="calibracion"/></div>
+                        <div class="3u 12u$(mobile)"> <label>Observaciones</label></div>
+                        <div class="9u$ 12u$(mobile)"><input type="text" name="observaciones"/></div>
+                        <div class="12u$"><input type="submit" value="Registrar" /></div>
                     </div>
                     </form>   
                 </div>
             </section>
         </div>
         
-        
+        <div id="contenedor"></div>
 
         <div id="contenedorE" > </div>
 
         
 		<!-- Footer -->
-			<div id="footer" style="margin-top:10.8%">
+			<div id="footer">
 				<!-- Copyright -->
 					<ul class="copyright">
 						<li>Todos los derechos reservados. Project Eagle.</li>
@@ -77,12 +81,12 @@
 
         
 		<!-- Scripts -->
-			<script src="../../assets/js/jquery.min.js"></script>
-			<script src="../../assets/js/jquery.scrolly.min.js"></script>
-			<script src="../../assets/js/jquery.scrollzer.min.js"></script>
-			<script src="../../assets/js/skel.min.js"></script>
-			<script src="../../assets/js/util.js"></script>
-			<script src="../../assets/js/main.js"></script>
-            <script src="../../assets/js/js-drones.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+            <script src="assets/js/js-drones.js"></script>
 	</body>
 </html>

@@ -5,14 +5,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../../assets/css/estilo-tablas.css" /> 
-                <!-- Scripts -->
-            <script src="../../assets/js/jquery.min.js"></script>
-            <script src="../../assets/js/jquery.scrolly.min.js"></script>
-            <script src="../../assets/js/jquery.scrollzer.min.js"></script>
-            <script src="../../assets/js/skel.min.js"></script>
-            <script src="../../assets/js/util.js"></script>
-            <script src="../../assets/js/main.js"></script>
-            <script src="../../assets/js/js-drones.js"></script>
 	</head>
     
 	<body>
@@ -59,16 +51,19 @@
                         <div class="row">
                             <div class="0.5u 12u$(mobile)"><label class="icon fa-search"/></div>
                             <div class="5u 12u$(mobile) estilo-buscador"><input type="text" name="buscador" placeholder="Buscador"/></div>
-                            <div class="1.5u 12u$(mobile) estilo-buscador"><button class="icon fa-plus-circle estilo-icono">      Nuevo reporte</button></div>
+                            <div class="1.5u 12u$(mobile) estilo-buscador"><button class="icon fa-plus-circle estilo-icono">      Nuevo registro</button></div>
+                            <div class="1.5u 12u$(mobile) estilo-buscador"><button class="icon fa-area-chart estilo-icono">      Cuadrantes</button></div>
                        </div>
                         
                         <div class="rwd">
                             <table class="rwd_auto">
                                 <thead>
                                     <tr>
+                                        <th>Fecha de instalación</th>
                                         <th>Modelo</th>
-                                        <th>Marca</th>
                                         <th>Estatus</th>
+                                        <th>Calibración</th>
+                                        <th>Observaciones</th>
                                         <th>
                                             <button class="icon fa-folder-open estilo-icono"></button>
                                             <button class="icon fa-edit estilo-icono" data-toggle="modal" data-target="#myModal"></button>
@@ -95,10 +90,7 @@
                     </form>
                 </div>
             </section>
-
-            <div id="contenedor"></div>
         </div>
-
 
         
 		<!-- Footer -->
@@ -110,6 +102,13 @@
             </div>
 
         
-
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+            <script src="assets/js/js-drones.js"></script>
 	</body>
 </html>
