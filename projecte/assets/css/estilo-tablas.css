@@ -1635,16 +1635,16 @@
 	a {
 		text-decoration: none;
 		color: inherit;
-		border-bottom: dotted 1px rgba(128, 128, 128, 0.5);
-		-moz-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-		-webkit-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-		-ms-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-		transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+		
+		-moz-transition: color 0.35s ease-in-out;
+		-webkit-transition: color 0.35s ease-in-out ;
+		-ms-transition: color 0.35s ease-in-out;
+		transition: color 0.35s ease-in-out;
 		outline: 0;
 	}
 
 		a:hover {
-			color: #ffffff;
+			color: #000000;
 			border-bottom-color: rgba(255, 255, 255, 0);
 		}
 
@@ -2592,6 +2592,11 @@
  margin:0 1em 1em 0;
 }
 
+/*Estilo del ancla de salir de la sesión*/
+.estilo-salir
+{
+ 
+}
 
 
 

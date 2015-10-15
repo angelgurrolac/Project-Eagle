@@ -35,7 +35,7 @@
         <div id="usuario">
             <label>Jane F.</label>
             <label> | </label>
-            <label>Salir</label>
+            <a href="../index.html" class="estilo-salir">Salir</a>
         </div>
         
         
@@ -65,8 +65,8 @@
                                         <th>
                                             <button class="icon fa-folder-open estilo-icono"></button>
                                             <button class="icon fa-edit estilo-icono" data-toggle="modal" data-target="#myModal"></button>
-                                            <button class="icon fa-remove estilo-icono"></button>
-                                             <button class="icon fa-remove estilo-icono">descargar</button>
+                                            <button class="icon fa-download estilo-icono"></button>
+                                             <button class="icon fa-remove estilo-icono"></button>
                                         </th>
                                     </tr>
                                 </thead>
