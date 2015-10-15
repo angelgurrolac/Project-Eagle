@@ -1,28 +1,17 @@
-
 <?php 
-	include_once('php/conexion.php');
-	
+
 	$usuario = $_POST['usuario'];
+	$nombres = $_POST['nombres'];
+	$apellidop = $_POST['apellidop'];
+	$apellidom = $_POST['apellidom'];
 	$contrasena = $_POST['contrasena'];
-	$tipo_usuario = $_POST['tipo_usuario'];
+	$fecha_creacion = date('Y-m-d H:i:s');
 
+	$link=mysqli_connect("localhost","root","","projecte");
 
-	
+	mysqli_query($link,"INSERT INTO usuarios(`nombre_user`, `nombre`, `ap_paterno`, `ap_materno`, `password_encriptado`,`fecha_creacion`,`id_tipo_user`,`alta`) 
+						VALUES ('$usuario','$nombres','$apellidop','$apellidom',sha1('$contrasena'),'$fecha_creacion',0,0)");
 
-	$insert = ("INSERT INTO usuarios (usuario, contrasena, tipo_usuario) 
-				VALUES ('$usuario', '$contrasena', '$tipo_usuario')");
-       
-
-$sql=mysql_query($insert);
-
-if($sql)
-{
-	echo "Registro correcto";
-}
-else
-{
-	echo "error" ;
-}
-
-
+	header("Location: registrar.html");
 ?>
+

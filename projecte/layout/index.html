@@ -11,53 +11,53 @@
 
 
     <script type="text/javascript">
-    $(document).ready(function(){  
+    // $(document).ready(function(){  
 
-     $('#iniciar').on('click',function(evento) {
-                evento.preventDefault();
+    //  $('#iniciar').on('click',function(evento) {
+    //             evento.preventDefault();
                   
-                $.ajax({
-                    url:'php/login.php',
-                    type: 'POST',
-                    data: {
-                         usuario:$('#email').val(),
-                        contrasena:$('#password').val()
+    //             $.ajax({
+    //                 url:'php/login.php',
+    //                 type: 'POST',
+    //                 data: {
+    //                      usuario:$('#email').val(),
+    //                     contrasena:$('#password').val()
                         
-                    },
+    //                 },
                     
-                    dataType: 'json' 
-                }).done(function(datos)  {
+    //                 dataType: 'json' 
+    //             }).done(function(datos)  {
                  
-                 console.log(datos);
+    //              console.log(datos);
 
 
 
-                    if(typeof(datos.usuario) == 'undefined')
-                    {
+    //                 if(typeof(datos.usuario) == 'undefined')
+    //                 {
                     
-                         $('#mensaje').text('Usuario o Contraseña invalidos');
+    //                      $('#mensaje').text('Usuario o Contraseña invalidos');
                          
-                    }
+    //                 }
                         
-                    else
-                    {
+    //                 else
+    //                 {
                       
-                        //alert('Bienvenido ' + datos.usuario[0].nombre );
-                        window.location.href="inicio.html";
-                    }
+    //                     //alert('Bienvenido ' + datos.usuario[0].nombre );
+    //                     window.location.href="inicio.html";
+    //                 }
                     
-                }).fail(function(datos)
-                {
-                	//alert(correo);
-                    console.log('error')
+    //             }).fail(function(datos)
+    //             {
+    //             	//alert(correo);
+    //                 console.log('error')
                     
                     
-                });
+    //             });
                 
                 
-            });
+    //         });
 
-    });
+    // });
 
     </script>
 
@@ -96,7 +96,7 @@
             
         <div class="col-sm-4">
              
-    <form >
+    <form method="post" action="usuario/login.php">
          
        
 
