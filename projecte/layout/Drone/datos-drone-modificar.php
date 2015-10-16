@@ -1,18 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Registrar drone</title>
+		<title>Modificar registrar drone</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="../../assets/css/estilo-datos.css" />
-				<!-- Scripts -->
-			<script src="../../assets/js/jquery.min.js"></script>
-			<script src="../../assets/js/jquery.scrolly.min.js"></script>
-			<script src="../../assets/js/jquery.scrollzer.min.js"></script>
-			<script src="../../assets/js/skel.min.js"></script>
-			<script src="../../assets/js/util.js"></script>
-			<script src="../../assets/js/main.js"></script>
-            <script src="../../assets/js/js-drones.js"></script>
+		<link rel="stylesheet" href="../../assets/css/estilo-datos.css" /> 
 	</head>
     
 	<body>
@@ -53,21 +45,21 @@
             <section id="contact" class="two">
                 <div class="container">
                     <header>
-                        <h4>NUEVO REGISTRO</h4>
+                        <h4>MODIFICAR REGISTRO</h4>
                     </header>
-                    <form method="POST" action="registrar-drone.php">
+                    <form method="POST" action="registrar-drone">
                         <div class="row">
                         <div class="3u 12u$(mobile)"> <label>Fecha de instalación</label></div>
-                        <div class="9u$ 12u$(mobile)"><input type="date" name="fechaInstalacion"/></div>
+                        <div class="9u$ 12u$(mobile)"><input type="date" name="modelo"/></div>
                         <div class="3u 12u$(mobile)"> <label>Modelo</label></div>
-                        <div class="9u$ 12u$(mobile)"><input type="text" name="modelo"/></div>
+                        <div class="9u$ 12u$(mobile)"><input type="text" name="marca"/></div>
                         <div class="3u 12u$(mobile)"> <label>Estatus</label></div>
                         <div class="9u$ 12u$(mobile)"><input type="text" name="estatus"/></div>
                         <div class="3u 12u$(mobile)"> <label>Calibración</label></div>
                         <div class="9u$ 12u$(mobile)"><input type="text" name="calibracion"/></div>
                         <div class="3u 12u$(mobile)"> <label>Observaciones</label></div>
                         <div class="9u$ 12u$(mobile)"><input type="text" name="observaciones"/></div>
-                        <div class="12u$"><input type="submit" value="Guardar" /></div>
+                        <div class="12u$"><input type="submit" value="Modificar" /></div>
                     </div>
                     </form>   
                 </div>
@@ -80,14 +72,22 @@
 
         
 		<!-- Footer -->
-			<div id="footer">
+        <div id="footer">
 				<!-- Copyright -->
 					<ul class="copyright">
 						<li>Todos los derechos reservados. Project Eagle.</li>
 					</ul>
-			</div>
+            </div>
+			
 
         
-
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+            <script src="assets/js/js-drones.js"></script>
 	</body>
 </html>
