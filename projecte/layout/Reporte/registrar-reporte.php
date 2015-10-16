@@ -5,7 +5,15 @@
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="stylesheet" href="../../assets/css/estilo-datos.css" /> 
-        <link rel="stylesheet" href="../../assets/css/estilo-tablas.css"
+        <link rel="stylesheet" href="../../assets/css/estilo-tablas.css"/>
+                  <!-- Scripts -->
+               <script src="../../assets/js/jquery.min.js"></script>
+               <script src="../../assets/js/jquery.scrolly.min.js"></script>
+               <script src="../../assets/js/jquery.scrollzer.min.js"></script>
+               <script src="../../assets/js/skel.min.js"></script>
+               <script src="../../assets/js/util.js"></script>
+               <script src="../../assets/js/main.js"></script>
+            <script src="../../assets/js/js-reportes.js"></script>
      </head>
     
      <body>
@@ -48,7 +56,7 @@
                         <h4>NUEVO REPORTE</h4>
                     </header>
                     
-                    <form method="post" action="registrar-reportec">
+                    <form method="post" action="registrar-reportec.php">
                         <div class="row">
                                    
                         <div class="7u 12u$(mobile)"> <label></label></div>
@@ -59,8 +67,16 @@
                                </div>
                             <div class="row">
                         <div class="3u 12u$(mobile)"> <label>Tipo de accidente</label></div>
-                            <div class="4u 12u$(mobile)">       <select>
+                            <div class="4u 12u$(mobile)">       <select id="tipo-accidente">
   <option value="ejemplo" selected>Seleccione</option>
+   <?php
+      $link=mysqli_connect("localhost","root","","projecte");
+      $result = $link->query("SELECT `id_tipo_accidente`, `descripcion` FROM tipo_accidente");
+      while ($row = $result->fetch_assoc()) {  
+        echo '<option value='.$row["id_tipo_accidente"].'>'.$row["descripcion"].'</option>';
+      }
+      echo "<option value='otro'>Otro</option>";
+  ?>
 </select></div>
                               <div class="1u 12u$(mobile)"> <label>Otro</label></div>
                                   <div class="3u$ 12u$(mobile)"><input type="text" name="otro accidente"/></div>
@@ -165,15 +181,5 @@
                               <li>Todos los derechos reservados. Project Eagle.</li>
                          </ul>
                </div>
-
-        
-          <!-- Scripts -->
-               <script src="assets/js/jquery.min.js"></script>
-               <script src="assets/js/jquery.scrolly.min.js"></script>
-               <script src="assets/js/jquery.scrollzer.min.js"></script>
-               <script src="assets/js/skel.min.js"></script>
-               <script src="assets/js/util.js"></script>
-               <script src="assets/js/main.js"></script>
-            <script src="assets/js/js-drones.js"></script>
      </body>
 </html>
