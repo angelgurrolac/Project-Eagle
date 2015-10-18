@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-09-2015 a las 06:02:05
+-- Tiempo de generación: 18-10-2015 a las 05:36:22
 -- Versión del servidor: 5.6.17
 -- Versión de PHP: 5.5.12
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `projecte`
 --
+CREATE DATABASE IF NOT EXISTS `projecte` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `projecte`;
 
 -- --------------------------------------------------------
 
@@ -63,15 +65,20 @@ CREATE TABLE IF NOT EXISTS `diagnosticos` (
   `ap_paterno_victima` varchar(50) NOT NULL,
   `ap_materno_victima` varchar(50) NOT NULL,
   `id_reporte` int(11) NOT NULL,
+  `tipo_accidente_id` int(11) NOT NULL,
+  `fallecio` tinyint(1) NOT NULL,
   PRIMARY KEY (`id_diagnostico`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `diagnosticos`
 --
 
-INSERT INTO `diagnosticos` (`id_diagnostico`, `sintomas`, `observaciones`, `oxigeno_sangre`, `pulsaciones`, `respiracion`, `imagen`, `video`, `fecha`, `nombre_victima`, `ap_paterno_victima`, `ap_materno_victima`, `id_reporte`) VALUES
-(1, '2', 'insolacion ', 'El paciente sufre de insolacion ', '34', '245', 'Acelerada', '', '0000-00-00 00:00:00', '', '', '', 0);
+INSERT INTO `diagnosticos` (`id_diagnostico`, `sintomas`, `observaciones`, `oxigeno_sangre`, `pulsaciones`, `respiracion`, `imagen`, `video`, `fecha`, `nombre_victima`, `ap_paterno_victima`, `ap_materno_victima`, `id_reporte`, `tipo_accidente_id`, `fallecio`) VALUES
+(1, '2', 'insolacion ', 'El paciente sufre de insolacion ', '34', '245', 'Acelerada', '', '0000-00-00 00:00:00', '', '', '', 0, 0, 0),
+(2, '', '', '', '2', '', '', '', '0000-00-00 00:00:00', '', '', '', 0, 0, 0),
+(3, '', '', '', '2', '', '', '', '0000-00-00 00:00:00', '', '', '', 0, 0, 0),
+(4, '', '', '', '75', '', '', '', '0000-00-00 00:00:00', '', '', '', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -94,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `dron` (
 --
 
 INSERT INTO `dron` (`id_dron`, `modelo`, `estatus`, `calibracion`, `observaciones`, `fecha_instalacion`) VALUES
-(1, 'Beebop Drone', 1, '', '', '0000-00-00 00:00:00');
+(1, 'modelo', 1, 'calibracion', 'observaciones', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -111,7 +118,6 @@ CREATE TABLE IF NOT EXISTS `reporte` (
   `victima_nombre` varchar(200) DEFAULT NULL,
   `empresa` varchar(300) DEFAULT NULL,
   `tipo_empresa` varchar(100) DEFAULT NULL,
-  `id_tipo_accidente` int(11) NOT NULL,
   `no_decesos` int(11) NOT NULL,
   `obervaciones` varchar(1000) NOT NULL,
   PRIMARY KEY (`id_reporte`),
@@ -122,21 +128,21 @@ CREATE TABLE IF NOT EXISTS `reporte` (
 -- Volcado de datos para la tabla `reporte`
 --
 
-INSERT INTO `reporte` (`id_reporte`, `fecha`, `titular_minero`, `concesion`, `no_victimas`, `victima_nombre`, `empresa`, `tipo_empresa`, `id_tipo_accidente`, `no_decesos`, `obervaciones`) VALUES
-(1, '2015-01-01', 'COMPA', 'AMERICANA', 1, 'ATAMARI MAMANI, FROILAN', 'MINERA RIO CAUDALOSO Y SERVICIOS COMPLEMENTARIOS', 'Contratista Minero', 2, 0, ''),
-(2, '2015-01-15', 'EMPRESA ADMINISTRADORA CHUNGAR S.A.C.', 'ANIMON', 1, 'GILIAN SILVA, NELZON', 'EMPRESA MINERA CONSTRUCTORA ASUNTOS AMBIENTALES Y TRANSPORTE HUAYLLAY SOCIEDAD AN', 'Empresas Conexas', 1, 0, ''),
-(3, '2015-01-21', 'COMPA', 'BREAPAMPA', 1, 'PALOMINO  CAJAHUAMAN, LUIS', 'D.C.R. MINERIA Y CONSTRUCCION S.A.C.', 'Contratista Minero', 3, 0, ''),
-(4, '2015-01-27', 'MINERA CHINALCO PER', 'TOROMOCHO', 1, 'LOPEZ SEGUIL, JOHNNY', 'TRANSPORTES CRUZ DEL SUR S.A.C.', 'Empresas Conexas', 4, 0, ''),
-(5, '2015-01-31', 'SOCIEDAD MINERA CERRO VERDE S.A.A.', 'CERRO VERDE 1,2,3', 1, 'TOERRES RUIZ, ROLAN ALVARO', 'GYM S.A.', 'Empresas Conexas', 3, 0, ''),
-(6, '2015-02-04', 'CONSORCIO MINERO HORIZONTE S.A.', 'ACUMULACION PARCOY N', 1, 'CASO LOPEZ, HECTOR', 'SERVICIOS MINEROS GLORIA S.A.C.', 'Contratista Minero', 2, 0, ''),
-(7, '2015-02-06', 'CATALINA HUANCA SOCIEDAD MINERA S.A.C.', 'CATALINA HUANCA', 1, 'SANCHEZ  JULCANI, ROGELIO', 'CORPORACION VILLAR INGENIEROS S.A.C.', 'Contratista Minero', 1, 0, ''),
-(8, '2015-03-12', 'SOCIEDAD MINERA CORONA S.A.', 'ACUMULACION YAURICOCHA', 1, 'INDERIQUE HUAYNALAYA, ASCENCION', 'OPERACIONES MINERAS Y CIVILES JUNIOR EIRL', 'Contratista Minero', 1, 0, ''),
-(9, '2015-03-13', 'COMPA', 'SAN VICENTE', 1, 'TELLO HURTADO, RAUL CARLOS', 'COMPA', 'Titular Minero', 1, 0, ''),
-(10, '2015-03-15', 'COMPA', 'LA PODEROSA DE TRUJILLO', 1, 'RODR', 'COMPA', 'Titular Minero', 2, 0, ''),
-(11, '2015-03-17', 'SOCIEDAD MINERA BAYA S.A.C.', 'EL RINCON PROHIBIDO', 1, 'BARRIOS MERCEDES, OSCAR', 'SOCIEDAD MINERA BAYA S.A.C.', 'Titular Minero', 3, 0, ''),
-(12, '2015-03-24', 'DOE RUN PERU S.R.L. EN LIQUIDACION EN MARCHA', 'COBRIZA 1126', 1, 'CANO RIVERO, ABRAHAM NEHEMIAS', 'DOE RUN PERU S.R.L. EN LIQUIDACION EN MARCHA', 'Titular Minero', 4, 0, ''),
-(13, '2015-04-26', 'SOCIEDAD MINERA CORONA S.A.', 'ACUMULACION YAURICOCHA', 1, 'HUARINGA PONCE, JHOEL CARLOS', 'ALFA INGENIERIA SUBTERRANEA S.R.L.', 'Contratista Minero', 4, 0, ''),
-(14, '2015-04-27', 'OBRAS CIVILES Y MINERAS S.A.C.', 'DIVISION OYON 1', 1, 'QUINCHO QUISPE, JULIO CESAR', 'OBRAS CIVILES Y MINERAS S.A.C.', 'Titular Minero', 3, 0, '');
+INSERT INTO `reporte` (`id_reporte`, `fecha`, `titular_minero`, `concesion`, `no_victimas`, `victima_nombre`, `empresa`, `tipo_empresa`, `no_decesos`, `obervaciones`) VALUES
+(1, '2015-01-01', 'COMPA', 'AMERICANA', 1, 'ATAMARI MAMANI, FROILAN', 'MINERA RIO CAUDALOSO Y SERVICIOS COMPLEMENTARIOS', 'Contratista Minero', 0, ''),
+(2, '2015-01-15', 'EMPRESA ADMINISTRADORA CHUNGAR S.A.C.', 'ANIMON', 1, 'GILIAN SILVA, NELZON', 'EMPRESA MINERA CONSTRUCTORA ASUNTOS AMBIENTALES Y TRANSPORTE HUAYLLAY SOCIEDAD AN', 'Empresas Conexas', 0, ''),
+(3, '2015-01-21', 'COMPA', 'BREAPAMPA', 1, 'PALOMINO  CAJAHUAMAN, LUIS', 'D.C.R. MINERIA Y CONSTRUCCION S.A.C.', 'Contratista Minero', 0, ''),
+(4, '2015-01-27', 'MINERA CHINALCO PER', 'TOROMOCHO', 1, 'LOPEZ SEGUIL, JOHNNY', 'TRANSPORTES CRUZ DEL SUR S.A.C.', 'Empresas Conexas', 0, ''),
+(5, '2015-01-31', 'SOCIEDAD MINERA CERRO VERDE S.A.A.', 'CERRO VERDE 1,2,3', 1, 'TOERRES RUIZ, ROLAN ALVARO', 'GYM S.A.', 'Empresas Conexas', 0, ''),
+(6, '2015-02-04', 'CONSORCIO MINERO HORIZONTE S.A.', 'ACUMULACION PARCOY N', 1, 'CASO LOPEZ, HECTOR', 'SERVICIOS MINEROS GLORIA S.A.C.', 'Contratista Minero', 0, ''),
+(7, '2015-02-06', 'CATALINA HUANCA SOCIEDAD MINERA S.A.C.', 'CATALINA HUANCA', 1, 'SANCHEZ  JULCANI, ROGELIO', 'CORPORACION VILLAR INGENIEROS S.A.C.', 'Contratista Minero', 0, ''),
+(8, '2015-03-12', 'SOCIEDAD MINERA CORONA S.A.', 'ACUMULACION YAURICOCHA', 1, 'INDERIQUE HUAYNALAYA, ASCENCION', 'OPERACIONES MINERAS Y CIVILES JUNIOR EIRL', 'Contratista Minero', 0, ''),
+(9, '2015-03-13', 'COMPA', 'SAN VICENTE', 1, 'TELLO HURTADO, RAUL CARLOS', 'COMPA', 'Titular Minero', 0, ''),
+(10, '2015-03-15', 'COMPA', 'LA PODEROSA DE TRUJILLO', 1, 'RODR', 'COMPA', 'Titular Minero', 0, ''),
+(11, '2015-03-17', 'SOCIEDAD MINERA BAYA S.A.C.', 'EL RINCON PROHIBIDO', 1, 'BARRIOS MERCEDES, OSCAR', 'SOCIEDAD MINERA BAYA S.A.C.', 'Titular Minero', 0, ''),
+(12, '2015-03-24', 'DOE RUN PERU S.R.L. EN LIQUIDACION EN MARCHA', 'COBRIZA 1126', 1, 'CANO RIVERO, ABRAHAM NEHEMIAS', 'DOE RUN PERU S.R.L. EN LIQUIDACION EN MARCHA', 'Titular Minero', 0, ''),
+(13, '2015-04-26', 'SOCIEDAD MINERA CORONA S.A.', 'ACUMULACION YAURICOCHA', 1, 'HUARINGA PONCE, JHOEL CARLOS', 'ALFA INGENIERIA SUBTERRANEA S.R.L.', 'Contratista Minero', 0, ''),
+(14, '2015-04-27', 'OBRAS CIVILES Y MINERAS S.A.C.', 'DIVISION OYON 1', 1, 'QUINCHO QUISPE, JULIO CESAR', 'OBRAS CIVILES Y MINERAS S.A.C.', 'Titular Minero', 0, '');
 
 -- --------------------------------------------------------
 
@@ -166,18 +172,6 @@ INSERT INTO `reporte_dron` (`id_dron`, `fecha`, `Modelo`, `tipo_id`, `cuadrante_
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tipos_usuarios`
---
-
-CREATE TABLE IF NOT EXISTS `tipos_usuarios` (
-  `id_tipo_user` int(11) NOT NULL,
-  `descripcion` varchar(20) NOT NULL,
-  PRIMARY KEY (`id_tipo_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `tipo_accidente`
 --
 
@@ -194,6 +188,18 @@ CREATE TABLE IF NOT EXISTS `tipo_accidente` (
 INSERT INTO `tipo_accidente` (`id_tipo_accidente`, `descripcion`) VALUES
 (1, 'TRÁNSITO'),
 (2, 'CAÍDAS DE PERSONAS');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tipos_usuarios`
+--
+
+CREATE TABLE IF NOT EXISTS `tipos_usuarios` (
+  `id_tipo_user` int(11) NOT NULL,
+  `descripcion` varchar(20) NOT NULL,
+  PRIMARY KEY (`id_tipo_user`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -223,14 +229,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_user`, `nombre_user`, `nombre`, `ap_paterno`, `ap_materno`, `password_encriptado`, `fecha_creacion`, `contador_visitas`, `sesion_actual`, `ultima_sesion`, `fecha_actualizacion`, `id_tipo_user`, `alta`) VALUES
-(1, 'zayra@h.com', '12345678', 'admin', '', '', '0000-00-00 00:00:00', 0, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0),
-(2, 'zayra@h.com', '12', 'admin', '', '', '0000-00-00 00:00:00', 0, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0),
-(3, 'zayra@h.com', 'f', 'admin', '', '', '0000-00-00 00:00:00', 0, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0),
-(4, 'zayra@h.com', '123', 'admin', '', '', '0000-00-00 00:00:00', 0, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0),
-(5, 'zayra@h.com', '12', 'paramedico', '', '', '0000-00-00 00:00:00', 0, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0),
-(6, 'zayra@h.com', '1', 'admin', '', '', '0000-00-00 00:00:00', 0, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0),
-(7, 'zayra@h.com', 'e', 'paramedico', '', '', '0000-00-00 00:00:00', 0, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0),
-(8, 'zayra@h.com', '12345', 'admin', '', '', '0000-00-00 00:00:00', 0, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0);
+(1, 'zayra@h.com', '12345678', 'admin', '', '', '0000-00-00 00:00:00', 0, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

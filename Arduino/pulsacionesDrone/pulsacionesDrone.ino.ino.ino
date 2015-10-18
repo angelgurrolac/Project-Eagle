@@ -8,20 +8,23 @@ byte server[] = { 127,0,0,0 }; // Direccion IP del servidor
 EthernetClient client; 
 float pulsaciones;
 int analog_pin = 0;
+long NumRan;
  
 void setup(void) {
   Ethernet.begin(mac, ip); // Inicializamos el Ethernet Shield
-  delay(1000); // Esperamos 1 segundo de cortesia
+  delay(1000); // Esperamos 1 segundo 
 }
  
 void loop(void) {
-  
-  pulsaciones = analogRead(analog_pin);
+
+  NumRan = random(10,180);
+  pulsaciones = analogRead(NumRan);
+  delay(20);
   //Display in Serial Monitor
   Serial.print(pulsaciones);
   Serial.println(" Pulsaciones del herido");
   // Proceso de envio de muestras al servidor
-  Serial.println("Connecting...");
+  Serial.println("Conectando...");
   if (client.connect(server, 80)>0) {  // Conexion con el servidor
     client.print("GET /Arduino/iot.php?valor="); // Enviamos los datos por GET
     client.print(pulsaciones);
