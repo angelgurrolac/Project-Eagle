@@ -25,7 +25,7 @@ echo "
                             <div class='9u$ 12u$(mobile)'><input type='text' name='calibracion_editar' value='".$edit_drone['calibracion']."'/></div>
                             <div class='3u 12u$(mobile)'> <label>Observaciones</label></div>
                             <div class='9u$ 12u$(mobile)'><input type='text' name='observaciones_editar' value='".$edit_drone['observaciones']."'/></div>
-                            <div class='12u$'><input type='submit' value='Registrar' /></div>
+                            <div class='12u$'><input type='submit' value='Modificar' /></div>
                         </div>
                     </form>   
                 </div>

@@ -46,11 +46,12 @@ function llenarDrones(){
 		success: function(data){
            $("#miTabla").html(data);
            $("#miTabla").hide();
-           $("#miTabla").fadeToggle(2000,'swing');
+           $("#miTabla").fadeToggle(1000,'swing');
            $("#miTabla").addClass("linea");
 
             
            $('body').on('click', '.dato_drone', function() {
+           	// document.location.href = "tabla-drones.php#contenedor";
            	var id = $(this).attr('data-listadook');
 				$.ajax({
 					type: 'POST',
@@ -58,6 +59,7 @@ function llenarDrones(){
 					data: {ide:id},//parametros
 
 					success: function(data){
+						// document.location.href = "tabla-drones.php#contenedor";
 			           $("#contenedor").html(data);
 			           console.log(data); 
 					}
@@ -74,11 +76,32 @@ function llenarDrones(){
 					data: {idEliminar:id},//parametros
 
 					success: function(data){
+						window.location.href="tabla-drones.php"
 			           $("#contenedorE").html(data);
 			           console.log(data); 
 					}
 				});
 			});
         }
+	});
+}
+
+function buscarDrones(busqueda){
+	// alert(busqueda);
+	var letra = busqueda;
+	// if (letra=="") {
+	// 	// alert();
+	// 	// llenarDrones();
+	// };
+	$.ajax({
+		type: 'POST',
+		url: 'busqueda-drone.php', 
+		data: {busqueda:letra},//parametros
+		success: function(data){
+			$("#miTabla").html(data);
+           $("#miTabla").hide();
+           $("#miTabla").fadeToggle(1000,'swing');
+           $("#miTabla").addClass("linea");
+		}
 	});
 }

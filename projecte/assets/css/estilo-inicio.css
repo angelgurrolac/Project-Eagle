@@ -147,8 +147,11 @@ ul.icons {
     color: #ffffff;
     background: transparent;
     border: transparent;
-    
+    text-align: center;
+    float: inherit;  
 }
+
+
 /* Pading entre los iconos */
 .cont-i
 {

@@ -5,7 +5,21 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="../assets/css/estilo-inicio.css">
-        
+        		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.scrollzer.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+        <script type="text/javascript">
+        	function reportes(){
+        		alert();
+        		window.location.href="Reporte/tabla-reportes.php";
+        	}
+
+        	$("#tuboton").click(function(){ window.location.href = "pagina.html"; }); 
+        </script>
 	</head>
 	<body>
          <!-- Header2 de login-->
@@ -23,28 +37,20 @@
 								<div class="row cont-i">
                                     <div class="2u"></div>
                                     <div class="3u 12u$(mobile)">
-                                        <button class="icon fa-file estilo-icono"></br>Reportes</button>
+                                        <a class="icon fa-file estilo-icono" href="Reporte/tabla-reportes.php"></br>Reportes</a>
 									</div>
                                     
                                     <div class="3u 12u$(mobile)">
-                                        <button class="icon fa-stethoscope estilo-icono"></br>Diagnosticos</button>
+                                        <a class="icon fa-stethoscope estilo-icono" id="btn-diagnosticos" href="Diagnostico/tabla-diagnosticos.php"></br>Diagnosticos</a>
 									</div>
                                     
                                     <div class="3u 12u$(mobile)">
-                                        <button class="icon fa-crosshairs estilo-icono"></br>Drones</button>
+                                        <a class="icon fa-crosshairs estilo-icono" id="btn-drones" href="Drone/tabla-drones.php"></br>Drones</a>
 									</div>
 								</div>
 							</form>
 						</div>
 					</section>
 			
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollzer.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 	</body>
 </html>
