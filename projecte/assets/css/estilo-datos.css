@@ -1790,6 +1790,7 @@
 	}
 
 	form input[type="text"],
+    form input[type="number"],
 	form input[type="email"],
 	form input[type="password"],
     form input[type="date"],
@@ -1814,6 +1815,7 @@
 	}
 
 		form input[type="text"]:focus,
+        form input[type="number"]:focus,
 		form input[type="email"]:focus,
 		form input[type="password"]:focus,
         form input[type="date"]:focus,
@@ -1824,6 +1826,7 @@
 		}
 
 	form input[type="text"],
+    form input[type="number"],
 	form input[type="email"],
 	form input[type="password"],
     form input[type="date"],
@@ -1832,7 +1835,7 @@
 	}
 
 	form textarea {
-		min-height: 14em;
+		min-height: 5em;
 	}
 
 	form .formerize-placeholder {
@@ -2549,4 +2552,13 @@
 				}
 
 	}
+.descargar
 
+{
+    padding: 1em;
+    margin: 1em;
+}
+#mostrarp
+{
+    display: none;
+}

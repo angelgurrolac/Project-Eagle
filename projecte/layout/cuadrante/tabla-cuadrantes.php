@@ -20,10 +20,10 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicio</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-file">Reportes</span></a></li>
-								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-stethoscope">Diagnósticos</span></a></li>
-								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-crosshairs">Drones</span></a></li>
+								<li><a href="../inicio.html" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicio</span></a></li>
+								<li><a href="../Reporte/tabla-reportes.php" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-file">Reportes</span></a></li>
+								<li><a href="../Diagnostico/diagnosticos.php" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-stethoscope">Diagnósticos</span></a></li>
+								<li><a href="../Drone/tabla-drones.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-crosshairs">Drones</span></a></li>
                                 <li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-wrench">Configuración</span></a></li>
 							</ul>
 						</nav>
@@ -33,9 +33,10 @@
         
          <!-- Header2 de login-->
         <div id="usuario">
+            <img src="#" width="5%" height="8%" />
             <label>Jane F.</label>
             <label> | </label>
-            <label>Salir</label>
+            <a href="../index.html" class="estilo-salir">Salir</a>
         </div>
         
         
@@ -51,7 +52,7 @@
                         <div class="row">
                             <div class="0.5u 12u$(mobile)"><label class="icon fa-search"/></div>
                             <div class="5u 12u$(mobile) estilo-buscador"><input type="text" name="buscador" placeholder="Buscador"/></div>
-                            <div class="1.5u 12u$(mobile) estilo-buscador"><button class="icon fa-plus-circle estilo-icono">      Nuevo cuadrante</button></div>
+                            <div class="1.5u 12u$(mobile) estilo-buscador"><a href="registrar-cuadrante.php"class="icon fa-plus-circle estilo-icono">      Nuevo cuadrante</a></div>
                         </div>
                     
                         <div class="rwd">
@@ -64,9 +65,7 @@
                                         <th>Descripción</th>
                                         <th>Número de trabajadores</th>
                                         <th>
-                                            <button class="icon fa-folder-open estilo-icono"></button>
-                                            <button class="icon fa-edit estilo-icono" data-toggle="modal" data-target="#myModal"></button>
-                                            <button class="icon fa-remove estilo-icono"></button>
+                                           
                                            
                                         </th>
                                     </tr>
@@ -83,7 +82,7 @@
 
                                     
                                     <script type="text/javascript">
-                                        llenarReportes();
+                                        llenarCuadrantes();
                                     </script>
                                 </tbody>
                             </table>
@@ -92,6 +91,10 @@
                 </div>
             </section>
         </div>
+        
+          <div id="contenedor-registroC"></div>
+
+         <div id="contenedo-modicuadrante"></div>
 
         
 		<!-- Footer -->
