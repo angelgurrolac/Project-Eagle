@@ -1,7 +1,3 @@
-<?php 
-    session_start();
-    echo $_SESSION['nombre_user']; 
-?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -16,22 +12,17 @@
 			<script src="../assets/js/skel.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
-        <script type="text/javascript">
-        	function reportes(){
-        		alert();
-        		window.location.href="Reporte/tabla-reportes.php";
-        	}
-
-        	$("#tuboton").click(function(){ window.location.href = "pagina.html"; }); 
-        </script>
+			<script src="../assets/js/js-usuario.js"></script>
 	</head>
 	<body>
          <!-- Header2 de login-->
         <div id="usuario">
-
-            <label>Jane F.</label>
-            <label> | </label>
-            <label>Salir</label>
+        <?php 
+        	session_start();
+        	echo "<label>".$_SESSION['nombre']." ".$_SESSION['apellido']."</label>
+	    			<label> | </label>
+	    			<label id='cerrarSesion'>Salir</label>";
+		?>
         </div>
 
 				<!-- Iconos -->

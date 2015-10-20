@@ -2,7 +2,7 @@
 $link=mysqli_connect("localhost","root","","projecte");
 $id = $_POST['ide'];
 
-$sql_edit= mysqli_query($link, "SELECT `id_dron`,`fecha_instalacion`,`modelo`,`estatus`,`calibracion`,`observaciones` FROM `dron`  where id_dron=$id;");
+$sql_edit= mysqli_query($link, "SELECT `id_dron`,`fecha_instalacion`,`modelo`,`estatus`,`calibracion`,`observaciones` FROM `dron` where id_dron=$id;");
 
 $edit_drone = mysqli_fetch_array($sql_edit);
 echo "

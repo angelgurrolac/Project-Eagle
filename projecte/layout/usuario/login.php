@@ -32,7 +32,9 @@ if($row = mysqli_fetch_row($result))
  if($row[5] == $pas)
  {
   //Creamos sesión
-  session_start();  
+  session_start();
+  $_SESSION['nombre'] = $row[2]; 
+  $_SESSION['apellido'] = $row[3]; 
   //Almacenamos el nombre de usuario en una variable de sesión usuario
   $_SESSION['nombre_user'] = $usuario; 
   // var_dump($_SESSION['nombre_user']); 

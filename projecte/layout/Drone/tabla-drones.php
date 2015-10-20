@@ -29,10 +29,10 @@
 						<nav id="nav">
 							<ul>
 								<li><a href="../inicio.html" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicio</span></a></li>
-								<li><a href="Reporte/tabla-reportes.php" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-file">Reportes</span></a></li>
-								<li><a href="#" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-stethoscope">Diagnósticos</span></a></li>
-								<li><a href="tabla-drones.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-crosshairs">Drones</span></a></li>
-                                <li><a href="#" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-wrench">Configuración</span></a></li>
+                                <li><a href="../Reporte/tabla-reportes.php" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-file">Reportes</span></a></li>
+                                <li><a href="../Diagnostico/diagnosticos.php" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-stethoscope">Diagnósticos</span></a></li>
+                                <li><a href="tabla-drones.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-crosshairs">Drones</span></a></li>
+                                <li><a href="../usuario/configuracion.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-wrench">Configuración</span></a></li>
 							</ul>
 						</nav>
 				</div>
@@ -60,7 +60,7 @@
                             <div class="0.5u 12u$(mobile)"><label class="icon fa-search"/></div>
                             <div class="5u 12u$(mobile) estilo-buscador"><input type="text" name="buscador" placeholder="Buscador" onkeyup="buscarDrones(this.value)" /></div>
                             <div class="1.5u 12u$(mobile) estilo-buscador"><a class="icon fa-plus-circle estilo-icono" href="datos-drone.php">      Nuevo registro</a></div>
-                            <div class="1.5u 12u$(mobile) estilo-buscador"><a class="icon fa-area-chart estilo-icono" href="#">      Cuadrantes</a></div>
+                            <div class="1.5u 12u$(mobile) estilo-buscador"><a class="icon fa-area-chart estilo-icono" href="../cuadrante/datos-cuadrante.php">      Cuadrantes</a></div>
                        </div>
                         
                         <div class="rwd">

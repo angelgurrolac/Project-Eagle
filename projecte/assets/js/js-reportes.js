@@ -1,3 +1,4 @@
+var otroTipo = false;
 function llenarReportes(){
 	$.ajax({			
 		url: 'llenar-reporte.php',
@@ -29,16 +30,18 @@ function llenarReportes(){
             
 
             
-            $('body').on('click', '.dato_elim', function() {
+            $('body').on('click', '.dato_elimR', function() {
            	var id = $(this).attr('data-listadoE');
+           	// alert(id);
 				$.ajax({
 					type: 'POST',
-					url: 'mensajeEliminar.php', 
+					url: 'mensajeEliminarR.php', 
 					data: {idEliminar:id},//parametros
 
 					success: function(data){
 			           $("#contenedorE").html(data);
 			           console.log(data); 
+			           window.location.href="tabla-reportes.php";
 					}
 				});
 			});
@@ -93,4 +96,31 @@ function llenarDiagnosticos(){
 			});
         }
 	});	
+}
+
+function cambiarFecha(fecha){
+	// alert(fecha);
+	$.ajax({
+		type: 'POST',
+		url: 'mostrar-datos-fecha.php', 
+		data: {fecha:fecha},//parametros
+		success: function(data){
+			// $("#mostrarRD").empty();
+			$("#miTabla").html(data);
+			console.log(data); 
+		}
+	});
+}
+
+function otraOpt(opt){
+	if (opt =="otro") {
+		// $("#otroOpt").display.none;
+		document.getElementById("lbl-otro").style.display = "block";
+		document.getElementById("input-otro").style.display = "block";
+		otroTipo=true;
+	}else{
+		document.getElementById("lbl-otro").style.display = "none";
+		document.getElementById("input-otro").style.display = "none";
+		otroTipo=false;
+	}
 }

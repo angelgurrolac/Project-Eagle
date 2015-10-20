@@ -5,7 +5,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../../assets/css/estilo-tablas.css" />
-  <link rel="stylesheet" href="../../assets/css/estilo-datos.css" /> 
+  <link rel="stylesheet" href="../../assets/css/estilo-datos.css" />
+    <!-- Scripts -->
+  <script src="../../assets/js/jquery.min.js"></script>
+  <script src="../../assets/js/jquery.scrolly.min.js"></script>
+  <script src="../../assets/js/jquery.scrollzer.min.js"></script>
+  <script src="../../assets/js/skel.min.js"></script>
+  <script src="../../assets/js/util.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/js-reportes.js"></script> 
   
 </head>
 
@@ -50,33 +58,44 @@
         <h4>NUEVO REPORTE</h4>
       </header>
       
-      <form method="post" action="registrar-reportec">
+      <form method="post" action="registrar-reportec.php" id="mostrarRD">
         <div class="row">
          
           <div class="7u 12u$(mobile)"> <label></label></div>
           
           <div class="1u 12u$(mobile)"> <label>Fecha</label></div>
           
-          <div class="4u$ 12u$(mobile)"><input type="date" name="fecha accidente"/></div>
+          <div class="4u$ 12u$(mobile)"><input type="date" name="fechaaccidente" onchange="cambiarFecha(this.value)" required/></div>
           
           
           <div class="3u 12u$(mobile)"> <label>Tipo de accidente</label></div>
-          <div class="4u 12u$(mobile)">       <select>
-            <option value="ejemplo" selected>Seleccione</option>
+          <div class="4u 12u$(mobile)">       
+          <select id="tipo_accidente" onchange="otraOpt(this.value)">
+            <option value="" selected>Seleccione</option>
+          <?php 
+            $link=mysqli_connect("localhost","root","","projecte");
+            $result = $link->query('SELECT `id_tipo_accidente`,`descripcion` FROM `tipo_accidente`');
+            while ($row = $result->fetch_assoc()) {  
+              echo"<option value='".$row['id_tipo_accidente']."'>".$row['descripcion']."</option>";
+            }
+           ?>
+           <option value="otro">Otro</option>
           </select></div>
-          <div class="1u 12u$(mobile)"> <label>Otro</label></div>
-          <div class="4u$ 12u$(mobile)"><input type="text" name="otro accidente"/></div>
+   
+          <div class="1u 12u$(mobile)"> <label  id="lbl-otro">Otro</label></div>
+          <div class="4u$ 12u$(mobile)"><input type="text" name="otroaccidente" id="input-otro" /></div>
+   
           
           
           
           
           <div class="3u 12u$(mobile)"> <label>Número  de víctimas</label></div>
-          <div class="4u$ 12u$(mobile)"><input type="number" name="num victimas"/></div>
+          <div class="4u$ 12u$(mobile)"><input type="number" name="numvictimas"/></div>
           
           
           
           <div class="3u 12u$(mobile)"> <label>Número  de decesos</label></div>
-          <div class="4u$ 12u$(mobile)"><input type="number" name="num decesos"/></div>
+          <div class="4u$ 12u$(mobile)"><input type="number" name="numdecesos"/></div>
           
           
           <div class="4u 12u$(mobile)"> <label>Nombre(s) de la(s) víctima(s) </label></div>
@@ -101,10 +120,6 @@
                 </tr>
               </thead>
               <tbody id="miTabla">
-                
-                <script type="text/javascript">
-                llenarDiagnosticos();
-                </script>
               </tbody>
             </table>
           </div>
@@ -161,15 +176,5 @@
       <li>Todos los derechos reservados. Project Eagle.</li>
     </ul>
   </div>
-
-  
-  <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.scrolly.min.js"></script>
-  <script src="assets/js/jquery.scrollzer.min.js"></script>
-  <script src="assets/js/skel.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/js-drones.js"></script>
 </body>
 </html>

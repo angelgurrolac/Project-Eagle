@@ -5,6 +5,14 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../../assets/css/estilo-tablas.css" /> 
+                <!-- Scripts -->
+            <script src="../../assets/js/jquery.min.js"></script>
+            <script src="../../assets/js/jquery.scrolly.min.js"></script>
+            <script src="../../assets/js/jquery.scrollzer.min.js"></script>
+            <script src="../../assets/js/skel.min.js"></script>
+            <script src="../../assets/js/util.js"></script>
+            <script src="../../assets/js/main.js"></script>
+            <script src="../../assets/js/js-cuadrantes.js"></script>
 	</head>
     
 	<body>
@@ -21,10 +29,10 @@
 						<nav id="nav">
 							<ul>
 								<li><a href="../inicio.html" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicio</span></a></li>
-								<li><a href="../Reporte/tabla-reportes.php" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-file">Reportes</span></a></li>
-								<li><a href="../Diagnostico/diagnosticos.php" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-stethoscope">Diagnósticos</span></a></li>
-								<li><a href="../Drone/tabla-drones.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-crosshairs">Drones</span></a></li>
-                                <li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-wrench">Configuración</span></a></li>
+                                <li><a href="../Reporte/tabla-reportes.php" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-file">Reportes</span></a></li>
+                                <li><a href="../Diagnostico/diagnosticos.php" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-stethoscope">Diagnósticos</span></a></li>
+                                <li><a href="../Drone/tabla-drones.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-crosshairs">Drones</span></a></li>
+                                <li><a href="../usuario/configuracion.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-wrench">Configuración</span></a></li>
 							</ul>
 						</nav>
 				</div>
@@ -51,8 +59,8 @@
                     <form method="post" action="#">
                         <div class="row">
                             <div class="0.5u 12u$(mobile)"><label class="icon fa-search"/></div>
-                            <div class="5u 12u$(mobile) estilo-buscador"><input type="text" name="buscador" placeholder="Buscador"/></div>
-                            <div class="1.5u 12u$(mobile) estilo-buscador"><a href="registrar-cuadrante.php"class="icon fa-plus-circle estilo-icono">      Nuevo cuadrante</a></div>
+                            <div class="5u 12u$(mobile) estilo-buscador"><input type="text" name="buscador" placeholder="Buscador" onkeyup="buscarCuadrantes(this.value)"/></div>
+                            <div class="1.5u 12u$(mobile) estilo-buscador"><a href="datos-cuadrante.php"class="icon fa-plus-circle estilo-icono">      Nuevo cuadrante</a></div>
                         </div>
                     
                         <div class="rwd">
@@ -92,7 +100,7 @@
             </section>
         </div>
         
-          <div id="contenedor-registroC"></div>
+          <div id="contenedor-eliminarC"></div>
 
          <div id="contenedo-modicuadrante"></div>
 
@@ -106,12 +114,6 @@
 			</div>
 
         
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollzer.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+
 	</body>
 </html>

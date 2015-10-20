@@ -56,13 +56,16 @@
                     <header>
                         <h4>CONFIGURACIÓN</h4>
                     </header>
-                    <form method="POST" action="#">
+                    <form method="POST"  id="form-config" action="cambioContrasena.php">
                         <div class="row">
                             <!--funcion para ver -->
                             <script type="text/javascript">
 function mostrarp(){
     document.getElementById('mostrarc').style.display = 'none';
-document.getElementById('mostrarp').style.display = 'block';}
+document.getElementById('mostrarp').style.display = 'block';
+var actp = document.getElementById('form-config').action = '#';
+// alert(actp);
+}
 </script>
                             
                             <!--funcion para ocultar -->
@@ -70,6 +73,9 @@ document.getElementById('mostrarp').style.display = 'block';}
 function mostrarc(){
 document.getElementById('mostrarp').style.display = 'none';
 document.getElementById('mostrarc').style.display = 'block';
+var actc = document.getElementById('form-config').action = 'cambioContrasena.php';
+// alert(actc);
+
 }
                                 
 </script>
