@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Drones</title>
+		<title>Tabla diagnosticos</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../../assets/css/estilo-tablas.css" /> 
@@ -12,7 +12,6 @@
             <script src="../../assets/js/skel.min.js"></script>
             <script src="../../assets/js/util.js"></script>
             <script src="../../assets/js/main.js"></script>
-            <script src="../../assets/js/js-drones.js"></script>
 	</head>
     
 	<body>
@@ -41,7 +40,7 @@
         
          <!-- Header2 de login-->
         <div id="usuario">
-            <img src="#" width="5%" height="8%" />
+            <img src="#" width="5%" height="5%" />
             <label>Jane F.</label>
             <label> | </label>
             <a href="../index.html">Salir</a>
@@ -54,25 +53,29 @@
             <section id="contact" class="two">
                 <div class="container">
                     <header>
-                        <h4>DRONES</h4>
+                        <h4>DIAGNÓSTICOS</h4>
                     </header>
                     <form method="post" action="#">
                         <div class="row">
                             <div class="0.5u 12u$(mobile)"><label class="icon fa-search"/></div>
-                            <div class="5u 12u$(mobile) estilo-buscador"><input type="text" name="buscador" placeholder="Buscador" onkeyup="buscarDrones(this.value)" /></div>
-                            <div class="1.5u 12u$(mobile) estilo-buscador"><a class="icon fa-plus-circle estilo-icono" href="datos-drone.php">      Nuevo registro</a></div>
-                            <div class="1.5u 12u$(mobile) estilo-buscador"><a class="icon fa-area-chart estilo-icono" href="../cuadrante/datos-cuadrante.php">      Cuadrantes</a></div>
-                       </div>
+                            <div class="4u 12u$(mobile) estilo-buscador"><input type="text" name="buscador" placeholder="Buscador"/></div>
+                            <div class="6u 12u$(mobile) icon fa-plus-circle estilo-buscador">
+                                <input type="checkbox" name="tipo-dco" value="1">Nuevo diagnóstico (Drone) <br>
+                                <input type="checkbox" name="tipo-dco" value="2" style="margin-left: 9%;">Nuevo diagnóstico (Manual)
+                            </div>
+                       
+                            
+                </div>
                         
                         <div class="rwd">
                             <table class="rwd_auto">
                                 <thead>
                                     <tr>
-                                        <th>Fecha de instalación</th>
-                                        <th>Modelo</th>
-                                        <th>Estatus</th>
-                                        <th>Calibración</th>
-                                        <th>Observaciones</th>
+                                        <th>Diagnóstico</th>
+                                        <th>Fecha</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido P.</th>
+                                        <th>Apellido M.</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -88,12 +91,6 @@
             </section>
         </div>
 
-         <div id="contenedor"></div>
-
-         <div id="contenedoE"></div>
-
-         <div id="contenedorVDrone"></div>
-        
 		<!-- Footer -->
 			<div id="footer">
 				<!-- Copyright -->

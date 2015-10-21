@@ -41,9 +41,10 @@
         
          <!-- Header2 de login-->
         <div id="usuario">
+            <img src="#" width="5%" height="8%" />
             <label>Jane F.</label>
             <label> | </label>
-            <label>Salir</label>
+            <a href="../index.html">Salir</a>
         </div>
         
         
@@ -66,7 +67,7 @@
                         <div class="3u 12u$(mobile)"> <label>Calibración</label></div>
                         <div class="9u$ 12u$(mobile)"><input type="text" name="calibracion"/></div>
                         <div class="3u 12u$(mobile)"> <label>Observaciones</label></div>
-                        <div class="9u$ 12u$(mobile)"><input type="text" name="observaciones"/></div>
+                        <div class="9u$ 12u$(mobile)"><textarea rows="4" cols="4" name="observaciones"></textarea></div>
                         <div class="12u$"><input type="submit" value="Guardar" /></div>
                     </div>
                     </form>   

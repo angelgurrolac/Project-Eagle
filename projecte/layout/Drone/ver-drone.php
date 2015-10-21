@@ -7,7 +7,7 @@ $sql_edit= mysqli_query($link, "SELECT `id_dron`,`fecha_instalacion`,`modelo`,`e
 $edit_drone = mysqli_fetch_array($sql_edit);
 echo "
         <div id='main'>
-            <section id='contact' class='two'>
+            <section id='contact' class='three'>
                 <div class='container'>
                     <header>
                         <h4>DRONE</h4>
