@@ -131,12 +131,12 @@
           
           
           <div class="3u 12u$(mobile)"> <label>Tipo de empresa</label></div>
-          <div class="6u$ 12u$(mobile)"><input type="text" name="tipo empresa"/></div>
+          <div class="6u$ 12u$(mobile)"><input type="text" name="tipoempresa"/></div>
           
           
           
           <div class="3u 12u$(mobile)"> <label>Titular minero</label></div>
-          <div class="6u$ 12u$(mobile)"><input type="text" name="titular minero"/></div>
+          <div class="6u$ 12u$(mobile)"><input type="text" name="titularminero"/></div>
           
           
           

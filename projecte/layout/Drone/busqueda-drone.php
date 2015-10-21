@@ -17,7 +17,7 @@
                 echo"   <td>".$row['estatus']."</td>"; //estatus
                 echo"   <td>".$row['calibracion']."</td>"; //calibracion
                 echo"   <td>".$row['observaciones']."</td>"; //observaciones
-                echo"<td ><a class='dato_drone' data-listadoOK='".$ide=$row['id_dron']."'  data-toggle='modal' href='tabla-drones.php#contenedor' style='cursor:pointer;'>Editar</a> <a class='dato_elim' data-listadoE='".$idEliminar=$row['id_dron']."' style='cursor:pointer;'>Eliminar</a></td>";
+    echo"<td ><a class='ver_drone' data-listadoVer='".$ide=$row['id_dron']."'  data-toggle='modal' href='tabla-drones.php#contenedorVDrone' style='cursor:pointer;'>Ver </a><a class='dato_drone' data-listadoOK='".$ide=$row['id_dron']."'  data-toggle='modal' href='tabla-drones.php#contenedor' style='cursor:pointer;'>Editar</a> <a class='dato_elim' data-listadoE='".$idEliminar=$row['id_dron']."' style='cursor:pointer;'>Eliminar</a></td>";
                 echo"                            </tr>   ";
             }            
       }

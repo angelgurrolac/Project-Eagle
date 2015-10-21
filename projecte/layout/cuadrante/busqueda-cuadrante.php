@@ -4,7 +4,7 @@
 
       $link=mysqli_connect("localhost","root","","projecte");
       
-    $result = $link->query('SELECT `cuadrante_id`,`latitud`,`longitud`,`descripcion`,`no_trabajadores` FROM `cuadrante` WHERE cuadrante_id LIKE "%' .$busqueda. '%" OR latitud LIKE "%' .$busqueda. '%" OR longitud LIKE "%' .$busqueda. '%" OR descripcion LIKE "%' .$busqueda. '%" OR no_trabajadores LIKE "%' .$busqueda. '%";');
+    $result = $link->query('SELECT `cuadrante_id`,`latitud`,`longitud`,`descripcion`,`no_trabajadores` FROM `cuadrante` WHERE cuadrante_id LIKE "%' .$busqueda. '%" OR latitud LIKE "%' .$busqueda. '%" OR longitud LIKE "%' .$busqueda. '%" OR descripcion LIKE "%' .$busqueda. '%" OR no_trabajadores LIKE "%' .$busqueda. '%" AND estado = 1;');
 
       if ($busqueda=="") {
             header("Location: llenar-cuadrante.php");

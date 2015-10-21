@@ -10,7 +10,7 @@ function llenarReportes(){
 		success: function(data){
            $("#miTabla").html(data);
            $("#miTabla").hide();
-           $("#miTabla").fadeToggle(2000,'swing');
+           $("#miTabla").fadeToggle(1000,'swing');
            $("#miTabla").addClass("linea");
 
             
@@ -22,7 +22,7 @@ function llenarReportes(){
 					data: {ide:id},//parametros
 
 					success: function(data){
-			           $("#contenedor").html(data);
+			           $("#contenedo-modiregistro").html(data);
 			           console.log(data); 
 					}
 				});
@@ -45,57 +45,23 @@ function llenarReportes(){
 					}
 				});
 			});
+
+			$('body').on('click', '.ver_reporte', function() {
+           	var id = $(this).attr('data-listadoVer');
+           	alert(id);
+				$.ajax({
+					type: 'POST',
+					url: 'ver-reporte.php', 
+					data: {idVer:id},//parametros
+
+					success: function(data){
+			           $("#contenedorVReporte").html(data);
+			           console.log(data); 
+					}
+				});
+			});
         }
 	});
-}
-
-function llenarDiagnosticos(){
-		$.ajax({			
-		url: 'llenar-diagnosticos.php',
-		type: 'GET',
-		beforeSend: function(){
-			$("#miTabla").html("");
-			$("#miTabla").removeClass("linea");
-		},
-		success: function(data){
-			console.log(data);
-           $("#miTabla").html(data);
-           $("#miTabla").hide();
-           $("#miTabla").fadeToggle(2000,'swing');
-           $("#miTabla").addClass("linea");
-
-            
-           $('body').on('click', '.dato_reporte', function() {
-           	var id = $(this).attr('data-listadook');
-				$.ajax({
-					type: 'POST',
-					url: 'editar-datos-reporte.php', 
-					data: {ide:id},//parametros
-
-					success: function(data){
-			           $("#contenedor").html(data);
-			           console.log(data); 
-					}
-				});
-			});
-            
-
-            
-            $('body').on('click', '.dato_elim', function() {
-           	var id = $(this).attr('data-listadoE');
-				$.ajax({
-					type: 'POST',
-					url: 'mensajeEliminar.php', 
-					data: {idEliminar:id},//parametros
-
-					success: function(data){
-			           $("#contenedorE").html(data);
-			           console.log(data); 
-					}
-				});
-			});
-        }
-	});	
 }
 
 function cambiarFecha(fecha){
@@ -106,7 +72,9 @@ function cambiarFecha(fecha){
 		data: {fecha:fecha},//parametros
 		success: function(data){
 			// $("#mostrarRD").empty();
-			$("#miTabla").html(data);
+			// alert(data);
+			$("#miTablaVic").html(data);
+
 			console.log(data); 
 		}
 	});
@@ -123,4 +91,20 @@ function otraOpt(opt){
 		document.getElementById("input-otro").style.display = "none";
 		otroTipo=false;
 	}
+}
+
+function buscarReportes(busqueda){
+	var letra = busqueda;
+	$.ajax({
+		type: 'POST',
+		url: 'busqueda-reporte.php', 
+		data: {busqueda:letra},//parametros
+		success: function(data){
+			$("#miTabla").html(data);
+           $("#miTabla").hide();
+           $("#miTabla").fadeToggle(1000,'swing');
+           $("#miTabla").addClass("linea");
+		}
+	});
+
 }

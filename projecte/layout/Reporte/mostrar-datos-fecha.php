@@ -13,6 +13,7 @@
     echo"   <td>".$row['nombre_victima']."</td>"; //nombre_victima
     echo"   <td>".$row['ap_paterno_victima']."</td>"; //ap_paterno_victima
     echo"   <td>".$row['ap_materno_victima']."</td>"; //ap_materno_victima
+    echo"   <td></td>"; 
     echo"                            </tr>   ";
         }
             

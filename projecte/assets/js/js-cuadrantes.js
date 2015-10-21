@@ -34,7 +34,7 @@ function llenarCuadrantes(){
             
             $('body').on('click', '.dato_elimC', function() {
            	var id = $(this).attr('data-listadoE');
-           	alert(id);
+           	// alert(id);
 				$.ajax({
 					type: 'POST',
 					url: 'mensajeEliminarC.php', 
@@ -43,6 +43,20 @@ function llenarCuadrantes(){
 					success: function(data){
 						window.location.href="tabla-cuadrantes.php"
 			           $("#contenedor-eliminarC").html(data);
+			           console.log(data); 
+					}
+				});
+			});
+
+			$('body').on('click', '.ver_cuadrante', function() {
+           	var id = $(this).attr('data-listadoVer');
+				$.ajax({
+					type: 'POST',
+					url: 'ver-cuadrante.php', 
+					data: {idVer:id},//parametros
+
+					success: function(data){
+			           $("#contenedorVCua").html(data);
 			           console.log(data); 
 					}
 				});

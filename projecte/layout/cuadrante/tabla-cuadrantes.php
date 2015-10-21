@@ -104,6 +104,8 @@
 
          <div id="contenedo-modicuadrante"></div>
 
+         <div id="contenedorVCua"></div>
+
         
 		<!-- Footer -->
 			<div id="footer">

@@ -103,6 +103,8 @@
          <div id="contenedor"></div>
 
          <div id="contenedoE"></div>
+
+         <div id="contenedorVDrone"></div>
         
 		<!-- Footer -->
 			<div id="footer">

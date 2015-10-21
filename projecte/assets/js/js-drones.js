@@ -8,29 +8,6 @@ $(function(){
 		$('#EditLlenar').fadeOut();
 	})
 
-	$('#buscador').keyup(function(){
-	 	var buscar= this.value;
-	    var dataString = 'buscarpalabra='+ buscar;
-
-	    console.log(buscar);
-
-	    if(buscar=='')
-	    {
-	    	$("#listadoUsers tbody tr").show();
-	    }
-	    else{
-
-			$("#listadoUsers tbody tr").each(function(){
-				var filtro = $(this).find('td').eq(1);
-				filtro = filtro.filter(':contains(' + buscar + ')');
-				if(filtro.length > 0)
-					$(this).show();
-				else
-					$(this).hide();
-				console.log(filtro);
-			})
-		}   
-	});
 
 });
 
@@ -78,6 +55,20 @@ function llenarDrones(){
 					success: function(data){
 						window.location.href="tabla-drones.php"
 			           $("#contenedorE").html(data);
+			           console.log(data); 
+					}
+				});
+			});
+
+            $('body').on('click', '.ver_drone', function() {
+           	var id = $(this).attr('data-listadoVer');
+				$.ajax({
+					type: 'POST',
+					url: 'ver-drone.php', 
+					data: {idVer:id},//parametros
+
+					success: function(data){
+			           $("#contenedorVDrone").html(data);
 			           console.log(data); 
 					}
 				});

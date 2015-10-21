@@ -4,7 +4,7 @@
 
       $link=mysqli_connect("localhost","root","","projecte");
       
-      $sql= mysqli_query($link,"UPDATE reporte SET  `no_decesos`=5 WHERE `id_reporte`=$id;");
+      $sql= mysqli_query($link,"UPDATE reporte SET  `estado`=0 WHERE `id_reporte`=$id;");
 
       
       // $res = mysqli_query($sql);

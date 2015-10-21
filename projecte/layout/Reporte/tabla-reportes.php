@@ -99,10 +99,11 @@
             </section>
         </div>
         
-          <div id="contenedor-registro"></div>
+        <div id="contenedor-registro"></div>
 
-         <div id="contenedo-modiregistro"></div>
+        <div id="contenedo-modiregistro"></div>
 
+        <div id="contenedorVReporte"></div>
         
 		<!-- Footer -->
 			<div id="footer">
