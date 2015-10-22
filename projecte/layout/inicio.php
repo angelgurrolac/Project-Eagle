@@ -19,11 +19,16 @@
         <div id="usuario">
         <?php 
         	session_start();
-        	echo "<label>".$_SESSION['nombre']." ".$_SESSION['apellido']."</label>
+        	 if (! empty($_SESSION["nombre"])){
+        		echo "<label>".$_SESSION['nombre']." ".$_SESSION['apellido']."</label>
 	    			<label> | </label>
-	    			<label id='cerrarSesion'>Salir</label>";
+	    			<a href='usuario/cerrarSesion.php'><label id='cerrarSesion'>Salir</label></a>";
+        	}else{
+        		header("Location: index.html");
+        	}	
 		?>
         </div>
+
 
 				<!-- Iconos -->
 					<section id="" class="">
@@ -37,7 +42,7 @@
 									</div>
                                     
                                     <div class="3u 12u$(mobile)">
-                                        <a class="icon fa-stethoscope estilo-icono" id="btn-diagnosticos" href="Diagnostico/tabla-diagnosticos.php"></br>Diagnosticos</a>
+                                        <a class="icon fa-stethoscope estilo-icono" id="btn-diagnosticos" href="Diagnostico/tabla-diagnostico.php"></br>Diagnosticos</a>
 									</div>
                                     
                                     <div class="3u 12u$(mobile)">

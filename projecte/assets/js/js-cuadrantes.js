@@ -24,6 +24,7 @@ function llenarCuadrantes(){
 
 					success: function(data){
 						// document.location.href = "tabla-drones.php#contenedor";
+						$("#contenedo-modicuadrante").empty();
 			           $("#contenedo-modicuadrante").html(data);
 			           console.log(data); 
 					}
@@ -56,7 +57,8 @@ function llenarCuadrantes(){
 					data: {idVer:id},//parametros
 
 					success: function(data){
-			           $("#contenedorVCua").html(data);
+						$("#contenedo-modicuadrante").empty();
+			           $("#contenedo-modicuadrante").html(data);
 			           console.log(data); 
 					}
 				});

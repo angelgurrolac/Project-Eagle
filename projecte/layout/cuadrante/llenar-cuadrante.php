@@ -13,7 +13,7 @@ sleep(1);
     echo"   <td>".$row['longitud']."</td>"; //longitud
     echo"   <td>".$row['descripcion']."</td>"; //descripcion
     echo"   <td>".$row['no_trabajadores']."</td>"; //no_trabajadores
-    echo"<td ><a class='ver_cuadrante' data-listadoVer='".$ide=$row['cuadrante_id']."'  data-toggle='modal' href='tabla-cuadrantes.php#contenedorVCua' style='cursor:pointer;'>Ver </a><a class='dato_cuadrante' data-listadoOK='".$ide=$row['cuadrante_id']."'  data-toggle='modal' href='tabla-cuadrantes.php#contenedo-modicuadrante' style='cursor:pointer;'>Editar</a> <a class='dato_elimC' data-listadoE='".$idEliminar=$row['cuadrante_id']."' style='cursor:pointer;'>Eliminar</a></td>";
+    echo"<td ><a class='ver_cuadrante' data-listadoVer='".$ide=$row['cuadrante_id']."'  data-toggle='modal' href='tabla-cuadrantes.php#contenedo-modicuadrante' style='cursor:pointer;'>Ver </a><a class='dato_cuadrante' data-listadoOK='".$ide=$row['cuadrante_id']."'  data-toggle='modal' href='tabla-cuadrantes.php#contenedo-modicuadrante' style='cursor:pointer;'>Editar</a> <a class='dato_elimC' data-listadoE='".$idEliminar=$row['cuadrante_id']."' style='cursor:pointer;'>Eliminar</a></td>";
     echo"                            </tr>   ";
         }
 

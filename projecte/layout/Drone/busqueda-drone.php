@@ -4,7 +4,7 @@
 
       $link=mysqli_connect("localhost","root","","projecte");
       
-    $result = $link->query('SELECT `id_dron`,`fecha_instalacion`,`modelo`,`estatus`,`calibracion`,`observaciones` FROM `dron` WHERE modelo LIKE "%' .$busqueda. '%" OR fecha_instalacion LIKE "%' .$busqueda. '%" OR calibracion LIKE "%' .$busqueda. '%" OR observaciones LIKE "%' .$busqueda. '%";');
+    $result = $link->query('SELECT * FROM `dron` WHERE modelo LIKE "%' .$busqueda. '%" AND estatus=1 OR calibracion LIKE "%' .$busqueda. '%" AND estatus=1 OR observaciones LIKE "%' .$busqueda. '%" AND estatus=1;');
 
       if ($busqueda=="") {
             header("Location: llenar-drones.php");
@@ -17,7 +17,7 @@
                 echo"   <td>".$row['estatus']."</td>"; //estatus
                 echo"   <td>".$row['calibracion']."</td>"; //calibracion
                 echo"   <td>".$row['observaciones']."</td>"; //observaciones
-    echo"<td ><a class='ver_drone' data-listadoVer='".$ide=$row['id_dron']."'  data-toggle='modal' href='tabla-drones.php#contenedorVDrone' style='cursor:pointer;'>Ver </a><a class='dato_drone' data-listadoOK='".$ide=$row['id_dron']."'  data-toggle='modal' href='tabla-drones.php#contenedor' style='cursor:pointer;'>Editar</a> <a class='dato_elim' data-listadoE='".$idEliminar=$row['id_dron']."' style='cursor:pointer;'>Eliminar</a></td>";
+                echo"<td ><a class='ver_drone icon fa-folder-open' data-listadoVer='".$ide=$row['id_dron']."'  data-toggle='modal' href='tabla-drones.php#contenedor' style='cursor:pointer;'></a> <a class='dato_drone icon fa-edit' data-listadoOK='".$ide=$row['id_dron']."'  data-toggle='modal' href='tabla-drones.php#contenedor' style='cursor:pointer;'></a> <a class='dato_elim icon fa-remove' data-listadoE='".$idEliminar=$row['id_dron']."' style='cursor:pointer;'></a></td>";
                 echo"                            </tr>   ";
             }            
       }

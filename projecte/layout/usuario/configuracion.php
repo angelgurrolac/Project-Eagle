@@ -41,13 +41,25 @@
         
          <!-- Header2 de login-->
         <div id="usuario">
-              <img src="#" width="5%" height="8%" />
-  <label>Jane F.</label>
-  <label> | </label>
-  <a href="../index.html">Salir</a>
-        </div>
-        
-        
+        <?php 
+            session_start();
+             if (! empty($_SESSION["nombre"])){
+                $idUser=$_SESSION['idUsuario'];
+                $link=mysqli_connect("localhost","root","","projecte");
+
+                $result = $link->query('SELECT imagen FROM `usuarios` WHERE id_user='.$idUser.';');
+                // var_dump($result);
+                while ($row = $result->fetch_assoc()) { 
+                    echo "<img src='".$row['imagen']."' width='5%' height='8%' />";
+                }
+                echo " <label>".$_SESSION['nombre']." ".$_SESSION['apellido']."</label>
+                    <label> | </label>
+                    <a href='usuario/cerrarSesion.php'><label id='cerrarSesion'>Salir</label></a>";
+            }else{
+                header("Location: index.html");
+            }   
+        ?>
+
         <!-- Main -->
         <div id="main">
             <!-- Tabla de drones -->
@@ -56,15 +68,15 @@
                     <header>
                         <h4>CONFIGURACIÓN</h4>
                     </header>
-                    <form method="POST"  id="form-config" action="cambioContrasena.php">
+                    <form method="POST"  id="form-config" enctype="multipart/form-data" action="cambioContrasena.php">
                         <div class="row">
                             <!--funcion para ver -->
                             <script type="text/javascript">
 function mostrarp(){
     document.getElementById('mostrarc').style.display = 'none';
 document.getElementById('mostrarp').style.display = 'block';
-var actp = document.getElementById('form-config').action = '#';
-// alert(actp);
+var actp = document.getElementById('form-config').action = 'subir.php';
+    
 }
 </script>
                             
@@ -94,12 +106,16 @@ var actc = document.getElementById('form-config').action = 'cambioContrasena.php
                                  <div class="12u$"><input type="submit" value="Guardar" /></div>
                             </div>
                         <div class="row" id="mostrarp">
-                                <div class="3u 12u$(mobile)"> <label>Imagen actual</label></div>
-                        <div class="9u$ 12u$(mobile)"><img src="#" width="10%" height="20%" /></div>
-                        
+                        <div class="3u 12u$(mobile)"> <label>Imagen actual</label></div>
+                        <?php 
+                            $result = $link->query('SELECT imagen FROM `usuarios` WHERE id_user='.$idUser.';');
+                            while ($row = $result->fetch_assoc()) { 
+                                echo "<div class='9u$ 12u$(mobile)'><img src='".$row['imagen']."' width='10%' height='20%' /></div>";
+                            }
+                        ?>
                         
                         <div class="3u 12u$(mobile)"> <label>Nueva imagen</label></div>
-                        <div class="9u$ 12u$(mobile)"><input type="file" /></div>
+                        <div class="9u$ 12u$(mobile)"><input type="file" id="foto" name="foto"/></div>
                                 
                                  <div class="12u$"><input type="submit" value="Guardar" /></div>
                             </div>

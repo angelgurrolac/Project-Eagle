@@ -37,6 +37,7 @@ function llenarDrones(){
 
 					success: function(data){
 						// document.location.href = "tabla-drones.php#contenedor";
+						$("#contenedor").empty();
 			           $("#contenedor").html(data);
 			           console.log(data); 
 					}
@@ -68,7 +69,8 @@ function llenarDrones(){
 					data: {idVer:id},//parametros
 
 					success: function(data){
-			           $("#contenedorVDrone").html(data);
+						$("#contenedor").empty();
+			           $("#contenedor").html(data);
 			           console.log(data); 
 					}
 				});

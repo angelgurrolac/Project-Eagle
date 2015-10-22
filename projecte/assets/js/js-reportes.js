@@ -22,6 +22,7 @@ function llenarReportes(){
 					data: {ide:id},//parametros
 
 					success: function(data){
+						$("#contenedo-modiregistro").empty();
 			           $("#contenedo-modiregistro").html(data);
 			           console.log(data); 
 					}
@@ -48,14 +49,15 @@ function llenarReportes(){
 
 			$('body').on('click', '.ver_reporte', function() {
            	var id = $(this).attr('data-listadoVer');
-           	alert(id);
+           	// alert(id);
 				$.ajax({
 					type: 'POST',
 					url: 'ver-reporte.php', 
 					data: {idVer:id},//parametros
 
 					success: function(data){
-			           $("#contenedorVReporte").html(data);
+						$("#contenedo-modiregistro").empty();
+			           $("#contenedo-modiregistro").html(data);
 			           console.log(data); 
 					}
 				});
