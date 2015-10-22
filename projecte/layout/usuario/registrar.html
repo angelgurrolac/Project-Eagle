@@ -3,11 +3,10 @@
             <head>
             <meta charset="utf-8">
             <title>Login</title>
-
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
 
             <link rel="stylesheet" type="text/css" href="../../assets/css/login.css" />
-            <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.css" />
-            <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css" />
+           
 
             <script type="text/javascript">
 
@@ -46,69 +45,79 @@
                 
             </script>
         </head>
-        <body>
+       
              <body>
-            <div class="container">
-                
-                <div class="row">
-                <div class="col-sm-4"></div>
+                       <!-- Main -->
+            <div id="main">
+              
+                <section id="contact" class="two">
+                    <div class="container">
+                        <div class="row">
+                            <div class="11u 12u$(mobile)"> </div>
+                            <div class="1u$ 12u$(mobile)">
+                      <input class="btn-registrar"  style="background-color:#8C949C;"type="button" value="Iniciar sesión" onClick=" window.location.href='../index.html' ">
+                            </div>
+                            </div>
+                        <header>
+                            <img class="estilo-logo-login" src="../../assets/images/Logo-reducido.png" alt="Project Eagle"  align="middle" >  
+                        </header>
+                        
+                       <form method="post" action="registroc.php">
+                            <div class="row">
+                            <div class="3u 12u$(mobile)"> </div>
+                            <div class="6u 12u$(mobile)"><input  name="usuario" type="text" placeholder="Nombre de usuario"  required /></div>
+                            <div class="3u$ 12u$(mobile)"> </div>
+                                
+                                <div class="3u 12u$(mobile)"> </div>
+                            <div class="6u 12u$(mobile)"><input  name="nombres" type="text" placeholder="Nombres"  required /></div>
+                            <div class="3u$ 12u$(mobile)"> </div>
+                                
+                                <div class="3u 12u$(mobile)"> </div>
+                            <div class="6u 12u$(mobile)">    
+                    <input  name="apellidop" type="text"  class="txt-datosr" placeholder="Apellido Paterno"  required /></div>
+                            <div class="3u$ 12u$(mobile)"> </div>
+                                
+                                
+                                <div class="3u 12u$(mobile)"> </div>
+                            <div class="6u 12u$(mobile)"><input  name="apellidom" type="text"  class="txt-datosr" placeholder="Apellido Materno"  required /></div>
+                            <div class="3u$ 12u$(mobile)"> </div>
+                                
+                                <div class="3u 12u$(mobile)"> </div>
+                            <div class="6u 12u$(mobile)">   <input type="password" name="contrasena" class="txt-datosr"  placeholder="Contrasena"  size="30" required /></div>
+                            <div class="3u$ 12u$(mobile)"> </div>
+                                
+                                
+                                <div class="3u 12u$(mobile)"> </div>
+                            <div class="6u 12u$(mobile)"> 
+                                <input id="registrar"  type="submit" value="Registrar" name="commit"></div>
+                                <label name="errorc"></label>
+                            <div class="3u$ 12u$(mobile)"> </div>
+                                
+                                
+                                </div>
+                           
+                           
+                            <div class="row">
+                            <div class="3.5u 12u$(mobile)">  <a class="acerca" >Acerca de Project Eagle</a></div>
+                            <div class="8.5u$ 12u$(mobile)">
                     
-                <div class="col-sm-4">
-                    
-                </div>
-                    
-                <div class="col-sm-4">  <input class="btn-registrar"type="button" value="Iniciar sesión" onClick=" window.location.href='../index.html' "></div>
-                
-              </div>
-                  
-              <div class="row">
-                <div class="col-sm-4"></div>
-                    
-                <div class="col-sm-4">
-                    <img class="estilo-logo-login" src="../../assets/images/logo_efectos.png" alt="Project Eagle"  align="middle" float="inherit">  
-                </div>
-                    
-                <div class="col-sm-4"> </div>
-                
-              </div>
-                
-                
+                            </div>
+                            </div>
+  
+                        </form>   
+                    </div>
+                </section>
+            </div>
                  
-                
-                <div class="row">
-                <div class="col-sm-4"></div>
-                    
-                <div class="col-sm-4">
-                     
-            <form method="post" action="registroc.php" >
-                
-            <input  name="usuario" class="txt-datosr" placeholder="usuario"  required />
-                </br>
-                    
-                <input  name="nombres" type="text" class="txt-datosr" placeholder="Nombres"  required />
-                </br> 
-                   
-                    <input  name="apellidop" type="text"  class="txt-datosr" placeholder="Apellido Paterno"  required />
-                </br>
-                <input  name="apellidom" type="text"  class="txt-datosr" placeholder="Apellido Materno"  required />
-                </br>
-        <input type="password" name="contrasena" class="txt-datosr"  placeholder="Contrasena"  size="30" required />
-            </br>
-        <input id="registrar" class="txt-datosr btn-iniciars"  type="submit" value="Registrar" name="commit">
-            </form>
-                </div>
-                    
-                <div class="col-sm-4"></div>
-                
-              </div>
-                
+                 //fin
+                 
+      
+       
+        
                 
              
 
-                </div>
-            <footer id="footer">
-                <a class="estilo-a" href="#">Acerca de Project Eagle</a>
-            </footer>
+             
 
         </body> 
         </html>
