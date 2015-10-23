@@ -6,7 +6,7 @@
 **Contraseña de usuario: root.
 **Si la conexion fallara mandamos un msj 'ha fallado la conexion'**/
 // mysql_connect('localhost','root','root')or die ('Ha fallado la conexión: '.mysql_error());
-$link=mysqli_connect("localhost","root","","projecte");
+$link=mysqli_connect("localhost","root","admin","projecte");
 
 /*Luego hacemos la conexión a la base de datos. 
 **De igual manera mandamos un msj si hay algun error*/
