@@ -45,7 +45,7 @@
             session_start();
              if (! empty($_SESSION["nombre"])){
                 $idUser=$_SESSION['idUsuario'];
-                $link=mysqli_connect("localhost","root","","projecte");
+                $link=mysqli_connect("localhost","root","admin","projecte");
 
                 $result = $link->query('SELECT imagen FROM `usuarios` WHERE id_user='.$idUser.';');
                 // var_dump($result);
@@ -54,7 +54,7 @@
                 }
                 echo " <label>".$_SESSION['nombre']." ".$_SESSION['apellido']."</label>
                     <label> | </label>
-                    <a href='usuario/cerrarSesion.php'><label id='cerrarSesion'>Salir</label></a>";
+                    <a href='cerrarSesion.php'><label id='cerrarSesion'>Salir</label></a>";
             }else{
                 header("Location: index.html");
             }   

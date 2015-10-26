@@ -2799,3 +2799,22 @@
   margin-left: 0;
   margin-bottom: -16px;
 }
+.info
+{
+    color: #fff;
+    text-align: justify;
+}
+#fondoi{
+    background-color: rgba(102, 102, 102, 0.53);
+    width: 100%;
+    background-attachment: fixed;
+ background-position: center center;
+background-size: cover;
+
+}
+.acomodo{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 1em;
+    padding-bottom: 0.1em;
+}
