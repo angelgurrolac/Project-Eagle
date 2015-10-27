@@ -77,7 +77,7 @@
                        </div>
                         <div class="row">
                              <div class="1.1u 12u$(mobile) estilo-buscador"><a class="icon fa-plus-circle estilo-icono" href="reporte-datos-drone.php"> Nuevo reporte</a></div>
-                            <div class="1.1u 12u$(mobile) estilo-buscador"><a class="icon fa-arrows estilo-icono" href="tabla-drones.php"> Registro de drones</a></div>
+                            <div class="1.1u 12u$(mobile) estilo-buscador"><a class="icon fa-crosshairs estilo-icono" href="tabla-drones.php"> Registro de drones</a></div>
                             <div class="1.1u$ 12u$(mobile) estilo-buscador"><a class="icon fa-area-chart estilo-icono" href="../cuadrante/tabla-cuadrantes.php"> Cuadrantes</a></div>
                             
                         </div>
