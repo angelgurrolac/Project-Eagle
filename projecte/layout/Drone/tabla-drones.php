@@ -67,14 +67,13 @@
             <section id="contact" class="two">
                 <div class="container">
                     <header>
-                        <h4>DRONES</h4>
+                        <h4>REGISTRO DE DRONES</h4>
                     </header>
                     <form method="post" action="#">
                         <div class="row">
                             <div class="0.5u 12u$(mobile)"><label class="icon fa-search"/></div>
                             <div class="5u 12u$(mobile) estilo-buscador"><input type="text" name="buscador" placeholder="Buscador" onkeyup="buscarDrones(this.value)" /></div>
                             <div class="1.5u 12u$(mobile) estilo-buscador"><a class="icon fa-plus-circle estilo-icono" href="datos-drone.php">      Nuevo registro</a></div>
-                            <div class="1.5u 12u$(mobile) estilo-buscador"><a class="icon fa-area-chart estilo-icono" href="../cuadrante/datos-cuadrante.php">      Cuadrantes</a></div>
                        </div>
                         
                         <div class="rwd">
