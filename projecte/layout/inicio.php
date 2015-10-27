@@ -38,15 +38,15 @@
 								<div class="row cont-i">
                                     <div class="2u"></div>
                                     <div class="3u 12u$(mobile)">
-                                        <a class="icon fa-file estilo-icono" href="Reporte/tabla-reportes.php"></br>Reportes</a>
+                                        <a class="icon fa-file estilo-icono" href="Reporte/tabla-reportes.php"><br>Reportes</a>
 									</div>
                                     
                                     <div class="3u 12u$(mobile)">
-                                        <a class="icon fa-stethoscope estilo-icono" id="btn-diagnosticos" href="Diagnostico/tabla-diagnostico.php"></br>Diagnosticos</a>
+                                        <a class="icon fa-stethoscope estilo-icono" id="btn-diagnosticos" href="Diagnostico/tabla-diagnostico.php"><br>Diagnosticos</a>
 									</div>
                                     
                                     <div class="3u 12u$(mobile)">
-                                        <a class="icon fa-crosshairs estilo-icono" id="btn-drones" href="Drone/tabla-drones.php"></br>Drones</a>
+                                        <a class="icon fa-crosshairs estilo-icono" id="btn-drones" href="Drone/tabla-reporte-drones.php"><br>Drones</a>
 									</div>
 								</div>
 							</form>

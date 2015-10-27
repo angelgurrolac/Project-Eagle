@@ -6,7 +6,7 @@ echo "
             <section id="contact" class="three">
                 <div class="container">
                     <header>
-                        <h4>MDIFICAR DIAGNÓSTICO DRONE</h4>
+                        <h4>MODIFICAR DIAGNÓSTICO DRONE</h4>
                     </header>
                     <form method="POST" action="">
                         <div class="row">

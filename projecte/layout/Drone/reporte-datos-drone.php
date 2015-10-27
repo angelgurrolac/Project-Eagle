@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>NUEVO CUADRANTE</title>
+		<title>Reporte drone</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../../assets/css/estilo-datos.css" />
@@ -29,9 +29,9 @@
 						<nav id="nav">
 							<ul>
 								<li><a href="../inicio.html" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicio</span></a></li>
-								<li><a href="../Reporte/tabla-reportes.php" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-file">Reportes</span></a></li>
-								<li><a href="../Diagnostico/diagnosticos.php" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-stethoscope">Diagnósticos</span></a></li>
-								<li><a href="../Drone/tabla-reporte-drones.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-crosshairs">Drones</span></a></li>
+                                <li><a href="../Reporte/tabla-reportes.php" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-file">Reportes</span></a></li>
+                                <li><a href="../Diagnostico/diagnosticos.php" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-stethoscope">Diagnósticos</span></a></li>
+                                <li><a href="tabla-reporte-drones.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-crosshairs">Drones</span></a></li>
                                 <li><a href="../usuario/configuracion-admin.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-wrench">Configuración</span></a></li>
 							</ul>
 						</nav>
@@ -63,24 +63,29 @@
         
         <!-- Main -->
         <div id="main">
-            <!-- Tabla de drones -->
+            <!-- nuevo reporte-->
             <section id="contact" class="two">
                 <div class="container">
                     <header>
-                        <h4>NUEVO CUADRANTE</h4>
+                        <h4>NUEVO REPORTE</h4>
                     </header>
-                    <form method="POST" action="registrar-cuadrante.php">
+                    <form method="POST" action="registrar-drone.php">
                         <div class="row">
-                        <div class="4u 12u$(mobile)"> <label>Latitud</label></div>
-                        <div class="8u$ 12u$(mobile)"><input type="text" name="latitudc"/></div>
-                        <div class="4u 12u$(mobile)"> <label>Longitud</label></div>
-                        <div class="8u$ 12u$(mobile)"><input type="text" name="longitudc"/></div>
-                        
-                        <div class="4u 12u$(mobile)"> <label>Número de trabajadores</label></div>
-                        <div class="8u$ 12u$(mobile)"><input type="number" name="ntrabajadoresc"/></div>
-                            <div class="4u 12u$(mobile)"> <label>Descripción</label></div>
-                            <div class="8u$ 12u$(mobile)"><textarea rows="4" cols="4" name="descripcionc"></textarea></div>
-                        
+                        <div class="3u 12u$(mobile)"> <label>Fecha</label></div>
+                        <div class="9u$ 12u$(mobile)"><input type="date" name="fecha"/></div>
+                        <div class="3u 12u$(mobile)"> <label>Modelo</label></div>
+                        <div class="9u$ 12u$(mobile)"><input type="text" name="modelod"/></div>
+
+                        <div class="3u 12u$(mobile)"> <label>Cuadrante</label></div>
+                        <div class="9u$ 12u$(mobile)"><select id="cuadrante" onchange="otraOpt(this.value)">
+            <option value="" selected>Seleccione</option>
+          </select></div>
+                        <div class="3u 12u$(mobile)"> <label>Tiempo de vuelo</label></div>
+                        <div class="9u$ 12u$(mobile)"><input type="text" name="tiempov"/></div>
+                            <div class="3u 12u$(mobile)"> <label>Nivel de batería</label></div>
+                        <div class="9u$ 12u$(mobile)"><input type="number" name="nivelb"/></div>
+                            <div class="3u 12u$(mobile)"> <label>Distancia recorrida</label></div>
+                        <div class="9u$ 12u$(mobile)"><input type="text" name="distanciar"/></div>
                         <div class="12u$"><input type="submit" value="Guardar" /></div>
                     </div>
                     </form>   

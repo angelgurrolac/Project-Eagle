@@ -2813,8 +2813,10 @@ background-size: cover;
 
 }
 .acomodo{
-    margin-left: 10%;
-    margin-right: 10%;
     padding-top: 1em;
     padding-bottom: 0.1em;
+    margin-left: 10%;
+    margin-right: 10%;
+    
 }
+/* Original */
