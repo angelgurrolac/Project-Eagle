@@ -2,7 +2,7 @@
       include_once('../conexion.php');
       $busqueda = $_POST['busqueda'];
 
-      $link=mysqli_connect("localhost","root","","projecte");
+      $link=mysqli_connect("localhost","root","admin","projecte");
       
     $result = $link->query('SELECT `cuadrante_id`,`latitud`,`longitud`,`descripcion`,`no_trabajadores` FROM `cuadrante` WHERE cuadrante_id LIKE "%' .$busqueda. '%" AND estado=1 OR latitud LIKE "%' .$busqueda. '%" AND estado=1 OR longitud LIKE "%' .$busqueda. '%" AND estado=1 OR descripcion LIKE "%' .$busqueda. '%" AND estado=1 OR no_trabajadores LIKE "%' .$busqueda. '%" AND estado = 1;');
 

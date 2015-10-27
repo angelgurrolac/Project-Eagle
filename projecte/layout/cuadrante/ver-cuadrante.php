@@ -1,5 +1,5 @@
 <?php 
-$link=mysqli_connect("localhost","root","","projecte");
+$link=mysqli_connect("localhost","root","admin","projecte");
 $id = $_POST['idVer'];
 
 $sql_edit= mysqli_query($link, "SELECT `cuadrante_id`,`latitud`,`longitud`,`descripcion`,`no_trabajadores` FROM `cuadrante` WHERE cuadrante_id=$id;");

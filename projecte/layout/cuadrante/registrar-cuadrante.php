@@ -3,7 +3,7 @@
 	$longitudc = $_POST['longitudc'];
 	$ntrabajadoresc = $_POST['ntrabajadoresc'];
 	$descripcionc = $_POST['descripcionc'];
-	$link=mysqli_connect("localhost","root","","projecte");
+	$link=mysqli_connect("localhost","root","admin","projecte");
 
 	mysqli_query($link,"INSERT INTO cuadrante (latitud, longitud, no_trabajadores, descripcion)
   				VALUES ('$latitudc', '$longitudc', '$ntrabajadoresc','$descripcionc')");

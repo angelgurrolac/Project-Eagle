@@ -7,7 +7,6 @@ concesion, obervaciones, estado FROM `reporte` WHERE id_reporte=$id;");
 
 $edit_reporte = mysqli_fetch_array($sql_edit);
 echo "
-<link rel='stylesheet' href='../../assets/css/estilo-datos.css' />
     <div id='main'>
         <section id='contact' class='two'>
             <div class='container'>
@@ -17,7 +16,7 @@ echo "
                 <form method='post' action='editar-registrar-reporte.php'>
                     <div class='row'>
                     <div class='9u$ 12u$(mobile)'><input type='text' name='id_editar' value='".$edit_reporte['id_reporte']."' style = 'display:none;'/></div>
-                    <div class='4u$ 12u$(mobile)'> <label>Fecha ".$edit_reporte['fecha']."</label></div>
+                    <div class='1u 12u$(mobile)'> <label>Fecha ".$edit_reporte['fecha']."</label></div>
                     <div class='3u 12u$(mobile)'> <label>Número de víctimas</label></div>
                     <div class='4u$ 12u$(mobile)'><input type='number' name='numvictimas' value='".$edit_reporte['no_victimas']."'/></div>
           

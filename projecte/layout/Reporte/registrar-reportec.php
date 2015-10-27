@@ -9,7 +9,7 @@
 	$concesion = $_POST['concesion'];
 	$observaciones = $_POST['observaciones'];
 
-	$link=mysqli_connect("localhost","root","","projecte");
+	$link=mysqli_connect("localhost","root","admin","projecte");
 
 
 

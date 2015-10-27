@@ -6,7 +6,7 @@
 	$ntrabajadorescE = $_POST['ntrabajadorescE'];
 	$descripcioncE = $_POST['descripcioncE'];
 
-	$link=mysqli_connect("localhost","root","","projecte");
+	$link=mysqli_connect("localhost","root","admin","projecte");
 	
 	$sql= mysqli_query($link,"UPDATE cuadrante SET `latitud`='$latitudcE', `longitud`='$longitudcE', `descripcion`='$descripcioncE', `no_trabajadores`='$ntrabajadorescE' WHERE `cuadrante_id`=$id_editCua;");
 

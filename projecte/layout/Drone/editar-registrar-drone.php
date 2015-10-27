@@ -8,7 +8,7 @@
 	$observaciones_editar = $_POST['observaciones_editar'];
 	// $marca_editar = $_POST['marca_editar'];
 
-	$link=mysqli_connect("localhost","root","","projecte");
+	$link=mysqli_connect("localhost","root","admin","projecte");
 	
 	$sql= mysqli_query($link,"UPDATE dron SET `fecha_instalacion`='$fecha_editar', `modelo`='$modelo_editar', `estatus`='$estatus_editar', `calibracion`='$calibracion_editar', `observaciones`='$observaciones_editar' WHERE `id_dron`=$id_editar;");
 

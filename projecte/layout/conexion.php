@@ -2,7 +2,7 @@
  
 function Conectarse() 
 { 
-   $link=mysqli_connect("localhost","root","");
+   $link=mysqli_connect("localhost","root","admin");
    if (!($link)) 
    { 
       echo "Error conectando a la base de datos."; 

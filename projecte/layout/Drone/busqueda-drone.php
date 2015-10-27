@@ -2,7 +2,7 @@
       include_once('../conexion.php');
       $busqueda = $_POST['busqueda'];
 
-      $link=mysqli_connect("localhost","root","","projecte");
+      $link=mysqli_connect("localhost","root","admin","projecte");
       
     $result = $link->query('SELECT * FROM `dron` WHERE modelo LIKE "%' .$busqueda. '%" AND estatus=1 OR calibracion LIKE "%' .$busqueda. '%" AND estatus=1 OR observaciones LIKE "%' .$busqueda. '%" AND estatus=1;');
 

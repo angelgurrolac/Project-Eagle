@@ -44,7 +44,7 @@
             session_start();
              if (! empty($_SESSION["nombre"])){
                 $idUser=$_SESSION['idUsuario'];
-                $link=mysqli_connect("localhost","root","","projecte");
+                $link=mysqli_connect("localhost","root","admin","projecte");
 
                 $result = $link->query('SELECT imagen FROM `usuarios` WHERE id_user='.$idUser.';');
                 while ($row = $result->fetch_assoc()) { 

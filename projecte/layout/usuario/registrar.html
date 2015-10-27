@@ -8,42 +8,7 @@
             <link rel="stylesheet" type="text/css" href="../../assets/css/login.css" />
            
 
-            <script type="text/javascript">
-
-            $(document).ready(function(){  
-
-                var form = $('.fn');
-             form.submit(function(){
-                        
-
-                        var usuario2 = document.datos.usuario.value;
-                        var contrasena2 = document.datos.contrasena.value;
-                        var tipo_usuario2 = document.datos.tipo_usuario.value;
-                     
-                        
-
-                         
-
-                          $.ajax({
-                                url:"registroc.php",
-                                type: "POST",
-                                data: {usuario:usuario2,contrasena:contrasena2,tipo_usuario:tipo_usuario2},
-
-                                success:function (resp) {
-                                        alert(resp);
-                                        alert("hola");
-                                        //location.reload();
-                                        window.location.href="../index.html";
-                                }
-
-
-                                  })
-                    });
-
-
-            });
-                
-            </script>
+        
         </head>
        
              <body>

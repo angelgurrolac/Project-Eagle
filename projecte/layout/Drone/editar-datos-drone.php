@@ -1,5 +1,5 @@
 <?php 
-$link=mysqli_connect("localhost","root","","projecte");
+$link=mysqli_connect("localhost","root","admin","projecte");
 $id = $_POST['ide'];
 
 $sql_edit= mysqli_query($link, "SELECT `id_dron`,`fecha_instalacion`,`modelo`,`estatus`,`calibracion`,`observaciones` FROM `dron` where id_dron=$id;");

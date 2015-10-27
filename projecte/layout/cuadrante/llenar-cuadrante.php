@@ -1,7 +1,7 @@
 <?php 
 sleep(1);
 // include_once('../conexion.php');
-    $link=mysqli_connect("localhost","root","","projecte");
+    $link=mysqli_connect("localhost","root","admin","projecte");
     
     $ide="";
     $result = $link->query('SELECT `cuadrante_id`,`latitud`,`longitud`,`descripcion`,`no_trabajadores` FROM `cuadrante` WHERE estado = 1');

@@ -73,10 +73,7 @@ function cambiarFecha(fecha){
 		url: 'mostrar-datos-fecha.php', 
 		data: {fecha:fecha},//parametros
 		success: function(data){
-			// $("#mostrarRD").empty();
-			// alert(data);
-			$("#miTablaVic").html(data);
-
+				$("#miTablaVic").html(data);
 			console.log(data); 
 		}
 	});

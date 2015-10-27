@@ -86,7 +86,7 @@
           <select id="tipo_accidente" onchange="otraOpt(this.value)">
             <option value="" selected>Seleccione</option>
           <?php 
-            $link=mysqli_connect("localhost","root","","projecte");
+            $link=mysqli_connect("localhost","root","admin","projecte");
             $result = $link->query('SELECT `id_tipo_accidente`,`descripcion` FROM `tipo_accidente`');
             while ($row = $result->fetch_assoc()) {  
               echo"<option value='".$row['id_tipo_accidente']."'>".$row['descripcion']."</option>";
@@ -132,7 +132,7 @@
                   </th>
                 </tr>
               </thead>
-              <tbody id="miTabla">
+              <tbody id="miTablaVic">
               </tbody>
             </table>
           </div>
