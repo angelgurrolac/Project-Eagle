@@ -12,7 +12,7 @@
 	$sql=mysqli_query($link,"UPDATE usuarios SET `imagen`= '$destino' WHERE id_user=$idUser");
 
 	if ($sql) {
-  		header("Location: configuracion.php");
+  		header("Location: configuracion-admin.php");
 	}else{
 		echo "Error";
 	}

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-10-2015 a las 22:37:29
+-- Tiempo de generación: 27-10-2015 a las 05:53:32
 -- Versión del servidor: 5.6.17
 -- Versión de PHP: 5.5.12
 
@@ -222,15 +222,18 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `id_tipo_user` int(11) NOT NULL,
   `alta` tinyint(1) NOT NULL,
   `imagen` varchar(150) NOT NULL,
+  `estado` tinyint(4) NOT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_user`, `nombre_user`, `nombre`, `ap_paterno`, `ap_materno`, `password_encriptado`, `fecha_creacion`, `contador_visitas`, `sesion_actual`, `ultima_sesion`, `fecha_actualizacion`, `id_tipo_user`, `alta`, `imagen`) VALUES
-(1, 'zayra@h.com', '12345678', 'admin', '', '', '0000-00-00', 0, '', '0000-00-00', '0000-00-00', 0, 0, '');
+INSERT INTO `usuarios` (`id_user`, `nombre_user`, `nombre`, `ap_paterno`, `ap_materno`, `password_encriptado`, `fecha_creacion`, `contador_visitas`, `sesion_actual`, `ultima_sesion`, `fecha_actualizacion`, `id_tipo_user`, `alta`, `imagen`, `estado`) VALUES
+(1, 'zayra@h.com', '12345678', 'admin', '', '', '0000-00-00', 0, '', '0000-00-00', '0000-00-00', 0, 0, '', 0),
+(9, 'x', 'x', 'x', 'x', '11f6ad8ec52a2984abaafd7c3b516503785c2072', '2015-10-27', 0, '', '0000-00-00', '0000-00-00', 0, 0, '', 1),
+(10, 'a', 'a', 'a', 'a', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', '2015-10-27', 0, '', '0000-00-00', '0000-00-00', 0, 0, '', 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

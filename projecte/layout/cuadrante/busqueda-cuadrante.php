@@ -1,5 +1,4 @@
 <?php 
-      include_once('../conexion.php');
       $busqueda = $_POST['busqueda'];
 
       $link=mysqli_connect("localhost","root","admin","projecte");

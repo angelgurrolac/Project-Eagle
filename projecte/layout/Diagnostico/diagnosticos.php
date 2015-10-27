@@ -23,7 +23,7 @@
                                 <li><a href="../Reporte/tabla-reportes.php" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-file">Reportes</span></a></li>
                                 <li><a href="tabla-diagnostico.php" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-stethoscope">Diagnósticos</span></a></li>
                                 <li><a href="../Drone/tabla-drones.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-crosshairs">Drones</span></a></li>
-                                <li><a href="../usuario/configuracion.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-wrench">Configuración</span></a></li>
+                                <li><a href="../usuario/configuracion-admin.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-wrench">Configuración</span></a></li>
 							</ul>
 						</nav>
 				</div>
@@ -46,7 +46,7 @@
                     <label> | </label>
                     <a href='../usuario/cerrarSesion.php'><label id='cerrarSesion'>Salir</label></a>";
             }else{
-                header("Location: index.html");
+                header("Location: ../index.html");
             }   
         ?>
         </div>

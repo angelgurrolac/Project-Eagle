@@ -25,7 +25,7 @@ if($row = mysqli_fetch_row($result))
         $sql= mysqli_query($link,"UPDATE usuarios SET `password_encriptado`='$newpass';");
         if ( isset($sql) ){
           echo "Correcto";
-          header("Location: configuracion.php");
+          header("Location: configuracion-admin.php");
         } else{
           echo "Incorrecto";  
         }
