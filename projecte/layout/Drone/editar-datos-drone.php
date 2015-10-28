@@ -10,7 +10,7 @@ echo "
             <section id='contact' class='three'>
                 <div class='container'>
                     <header>
-                        <h4>MODIFICAR DRONES</h4>
+                        <h4>MODIFICAR DRONE</h4>
                     </header>
                     <form method='post' action='editar-registrar-drone.php'>
                         <div class='row'>

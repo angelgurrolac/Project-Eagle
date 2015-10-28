@@ -72,7 +72,7 @@
                     <form method="post" action="#">
                         <div class="row">
                             <div class="0.5u 12u$(mobile)"><label class="icon fa-search"/></div>
-                            <div class="5u 12u$(mobile) estilo-buscador"><input type="text" name="buscador" placeholder="Buscador" onkeyup="buscarDrones(this.value)" /></div>
+                            <div class="5u 12u$(mobile) estilo-buscador"><input type="text" name="buscador" placeholder="Buscador" onkeyup="buscarReportesD(this.value)" /></div>
                             
                        </div>
                         <div class="row">

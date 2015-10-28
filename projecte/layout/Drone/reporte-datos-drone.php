@@ -69,7 +69,7 @@
                     <header>
                         <h4>NUEVO REPORTE</h4>
                     </header>
-                    <form method="POST" action="registrar-drone.php">
+                    <form method="POST" action="registrar-reported.php">
                         <div class="row">
                         <div class="3u 12u$(mobile)"> <label>Fecha</label></div>
                         <div class="9u$ 12u$(mobile)"><input type="date" name="fecha"/></div>
@@ -77,8 +77,9 @@
                         <div class="9u$ 12u$(mobile)"><input type="text" name="modelod"/></div>
 
                         <div class="3u 12u$(mobile)"> <label>Cuadrante</label></div>
-                        <div class="9u$ 12u$(mobile)"><select id="cuadrante" onchange="otraOpt(this.value)">
-            <option value="" selected>Seleccione</option>
+                        <div class="9u$ 12u$(mobile)"><select id="cuadrante" name="cuadrante">
+                        <script type="text/javascript">llenarCuadrantesReg();</script>
+            
           </select></div>
                         <div class="3u 12u$(mobile)"> <label>Tiempo de vuelo</label></div>
                         <div class="9u$ 12u$(mobile)"><input type="text" name="tiempov"/></div>
