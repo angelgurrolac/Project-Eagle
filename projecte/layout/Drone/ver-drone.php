@@ -10,15 +10,15 @@ echo "
             <section id='contact' class='three'>
                 <div class='container'>
                     <header>
-                        <h4>DRONE</h4>
+                        <h4>REGISTRO DE DRONE</h4>
                     </header>
                     <form method='post' action='editar-registrar-drone.php'>
                         <div class='row'>
-                            <div class='3u 12u$(mobile)'> <label>Fecha de instalación ".$edit_drone['fecha_instalacion']."</label></div>
-                            <div class='3u 12u$(mobile)'> <label>Modelo ".$edit_drone['modelo']."</label></div>
-                            <div class='3u 12u$(mobile)'> <label>Estatus ".$edit_drone['estatus']."</label></div>
-                            <div class='3u 12u$(mobile)'> <label>Calibración ".$edit_drone['calibracion']."</label></div>
-                            <div class='3u 12u$(mobile)'> <label>Observaciones ".$edit_drone['observaciones']."</label></div>
+                            <div class='10u$ 12u$(mobile)'> <label>Fecha de instalación: ".$edit_drone['fecha_instalacion']."</label></div>
+                            <div class='10u$ 12u$(mobile)'> <label>Modelo: ".$edit_drone['modelo']."</label></div>
+                            <div class='10u$ 12u$(mobile)'> <label>Estatus: ".$edit_drone['estatus']."</label></div>
+                            <div class='10u$ 12u$(mobile)'> <label>Calibración: ".$edit_drone['calibracion']."</label></div>
+                            <div class='10u$ 12u$(mobile)'> <label>Observaciones: ".$edit_drone['observaciones']."</label></div>
                         </div>
                     </form>   
                 </div>

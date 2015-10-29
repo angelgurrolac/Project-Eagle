@@ -52,10 +52,8 @@ echo "
                             </div>
                             <div class="3u 12u$(mobile)"><label>Observaciones</label></div>
                             <div class="9u$ 12u$(mobile)"><textarea rows="4" cols="4" name="observaciones"></textarea></div>
-                            <div class="12u$"><input type="submit" value="Modificar" /></div>
-                            <div class="12u$ 12u$">
-                                 <a href="http://www.github.com" class="icon fa-download" target="_blank"> PDF</a>
-                            </div>
+                            <div class="12u$"><input type="submit" value="Modificar"/><a href="http://www.github.com" class="icon fa-download estilo-pdf" target="_blank"> PDF</a></div>
+                        </div>
                         </div>
                     </form>   
                 </div>
