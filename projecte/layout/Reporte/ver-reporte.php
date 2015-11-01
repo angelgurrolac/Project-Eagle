@@ -15,10 +15,10 @@ echo "
                     </header>
                     <form method='post' action='#'>
                         <div class='row'>
-                        <div class='1u 12u$(mobile)'> <label>Fecha ".$edit_reporte['fecha']."</label></div>
-                        <div class='3u 12u$(mobile)'> <label>Número de víctimas ".$edit_reporte['no_victimas']."</label></div>
+                        <div class='5u$ 12u$(mobile)'> <label>Fecha: ".$edit_reporte['fecha']."</label></div>
+                        <div class='3u$ 12u$(mobile)'> <label>Número de víctimas: ".$edit_reporte['no_victimas']."</label></div>
               
-                        <div class='3u 12u$(mobile)'> <label>Número de decesos ".$edit_reporte['no_decesos']."</label></div>              
+                        <div class='3u$ 12u$(mobile)'> <label>Número de decesos: ".$edit_reporte['no_decesos']."</label></div>              
                         <div class='4u 12u$(mobile)'> <label>Nombre(s) de la(s) víctima(s) </label></div>
               
                         <div class='rwd'>
@@ -36,15 +36,15 @@ echo "
                         </table>
                         </div>
               
-                        <div class='3u 12u$(mobile)'> <label>Empresa ".$edit_reporte['empresa']."</label></div>
+                        <div class='12u$ 12u$(mobile)'> <label>Empresa: ".$edit_reporte['empresa']."</label></div>
             
-                        <div class='3u 12u$(mobile)'> <label>Tipo de empresa ".$edit_reporte['tipo_empresa']."</label></div>
+                        <div class='12u$ 12u$(mobile)'> <label>Tipo de empresa: ".$edit_reporte['tipo_empresa']."</label></div>
               
-                        <div class='3u 12u$(mobile)'> <label>Titular minero ".$edit_reporte['titular_minero']."</label></div>
+                        <div class='12u$ 12u$(mobile)'> <label>Titular minero: ".$edit_reporte['titular_minero']."</label></div>
               
-                        <div class='3u 12u$(mobile)'> <label>Concesión ".$edit_reporte['concesion']."</label></div>
+                        <div class='12u$ 12u$(mobile)'> <label>Concesión: ".$edit_reporte['concesion']."</label></div>
               
-                        <div class='3u 12u$(mobile)'> <label>Observaciones ".$edit_reporte['obervaciones']."</label></div>              
+                        <div class='12u$ 12u$(mobile)'> <label>Observaciones: ".$edit_reporte['obervaciones']."</label></div>              
                     </form> 
                 </div>
             </section>

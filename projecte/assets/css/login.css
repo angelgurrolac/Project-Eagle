@@ -1551,6 +1551,7 @@
 
 /* Basic */
 
+
 	body {
 		font-family: sans-serif;
 	background:url(../images/background-pe.jpg) no-repeat center center fixed;
@@ -1558,7 +1559,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-        overflow-y:hidden
+       
 	}
 
 		body.is-loading * {

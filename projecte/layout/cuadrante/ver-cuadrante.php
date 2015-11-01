@@ -14,10 +14,10 @@ echo "
                     </header>
                     <form method='post' action='#'>
                         <div class='row'>
-                        <div class='4u 12u$(mobile)'> <label>Latitud ".$edit_cua['latitud']."</label></div>
-                        <div class='4u 12u$(mobile)'> <label>Longitud ".$edit_cua['longitud']."</label></div>            
-                        <div class='4u 12u$(mobile)'> <label>Número de trabajadores ".$edit_cua['no_trabajadores']."</label></div>
-                            <div class='4u 12u$(mobile)'> <label>Descripción ".$edit_cua['descripcion']."</label></div>
+                        <div class='12u$ 12u$(mobile)'> <label>Latitud: ".$edit_cua['latitud']."</label></div>
+                        <div class='12u$ 12u$(mobile)'> <label>Longitud: ".$edit_cua['longitud']."</label></div>            
+                        <div class='12u$ 12u$(mobile)'> <label>Número de trabajadores: ".$edit_cua['no_trabajadores']."</label></div>
+                            <div class='12u$ 12u$(mobile)'> <label>Descripción: ".$edit_cua['descripcion']."</label></div>
                     </div> 
                     </form>   
                 </div>
