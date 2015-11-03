@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-10-2015 a las 05:53:32
+-- Tiempo de generación: 03-11-2015 a las 17:21:02
 -- Versión del servidor: 5.6.17
 -- Versión de PHP: 5.5.12
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `cuadrante` (
   `no_trabajadores` int(11) NOT NULL,
   `estado` tinyint(11) NOT NULL,
   PRIMARY KEY (`cuadrante_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `cuadrante`
@@ -42,7 +42,9 @@ CREATE TABLE IF NOT EXISTS `cuadrante` (
 
 INSERT INTO `cuadrante` (`cuadrante_id`, `descripcion`, `latitud`, `longitud`, `no_trabajadores`, `estado`) VALUES
 (1, 'DESCRIPCIÓN DEL CUADRANTE ', ' 35° 43'' 9"', ' 32° 42'' 3"', 4, 1),
-(2, 'Descripcion del cuadrante del dron', '78° 43'' 9" ', '46° 42'' 3"', 9, 0);
+(2, 'Descripcion del cuadrante del dron', '78° 43'' 9" ', '46° 42'' 3"', 9, 1),
+(3, '989', '873498', '8989', 989, 1),
+(4, '982', '092', '0902', 982, 0);
 
 -- --------------------------------------------------------
 
@@ -74,9 +76,9 @@ CREATE TABLE IF NOT EXISTS `diagnosticos` (
 --
 
 INSERT INTO `diagnosticos` (`id_diagnostico`, `sintomas`, `observaciones`, `oxigeno_sangre`, `pulsaciones`, `respiracion`, `imagen`, `video`, `fecha`, `nombre_victima`, `ap_paterno_victima`, `ap_materno_victima`, `id_reporte`, `tipo_accidente_id`, `fallecio`) VALUES
-(1, '2', 'insolacion ', 'El paciente sufre de insolacion ', '34', '245', 'Acelerada', '', '0000-00-00', '', '', '', 0, 0, 0),
-(2, '', '', '', '2', '', '', '', '0000-00-00', '', '', '', 0, 0, 0),
-(3, '', '', '', '2', '', '', '', '0000-00-00', '', '', '', 0, 0, 0),
+(1, '2', 'insolacion ', 'El paciente sufre de insolacion ', '34', '245', 'Acelerada', '', '2015-04-27', 'x', 'e', 'a', 0, 0, 0),
+(2, '', '', '', '2', '', '', '', '2015-11-12', '', '', '', 0, 0, 0),
+(3, '', '', '', '2', '', '', '', '2015-04-27', 'e', 'a', 'x', 0, 0, 0),
 (4, '', '', '', '75', '', '', '', '0000-00-00', '', '', '', 0, 0, 0);
 
 -- --------------------------------------------------------
@@ -93,14 +95,15 @@ CREATE TABLE IF NOT EXISTS `dron` (
   `observaciones` varchar(1000) NOT NULL,
   `fecha_instalacion` date NOT NULL,
   PRIMARY KEY (`id_dron`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Volcado de datos para la tabla `dron`
 --
 
 INSERT INTO `dron` (`id_dron`, `modelo`, `estatus`, `calibracion`, `observaciones`, `fecha_instalacion`) VALUES
-(1, 'modelo', 1, 'calibracion', 'observaciones', '0000-00-00');
+(1, 'modelo', 1, 'calibracion', 'observaciones', '0000-00-00'),
+(2, 'jkljk3', 0, 'lkjlk3', 'kljlk3', '2015-11-13');
 
 -- --------------------------------------------------------
 
@@ -122,7 +125,7 @@ CREATE TABLE IF NOT EXISTS `reporte` (
   `estado` tinyint(4) NOT NULL,
   PRIMARY KEY (`id_reporte`),
   UNIQUE KEY `victima_nombre` (`victima_nombre`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
 
 --
 -- Volcado de datos para la tabla `reporte`
@@ -142,7 +145,10 @@ INSERT INTO `reporte` (`id_reporte`, `fecha`, `titular_minero`, `concesion`, `no
 (11, '2015-03-17', 'SOCIEDAD MINERA BAYA S.A.C.', 'EL RINCON PROHIBIDO', 1, 'BARRIOS MERCEDES, OSCAR', 'SOCIEDAD MINERA BAYA S.A.C.', 'Titular Minero', 0, '', 1),
 (12, '2015-03-24', 'DOE RUN PERU S.R.L. EN LIQUIDACION EN MARCHA', 'COBRIZA 1126', 1, 'CANO RIVERO, ABRAHAM NEHEMIAS', 'DOE RUN PERU S.R.L. EN LIQUIDACION EN MARCHA', 'Titular Minero', 0, '', 0),
 (13, '2015-04-26', 'SOCIEDAD MINERA CORONA S.A.', 'ACUMULACION YAURICOCHA', 1, 'HUARINGA PONCE, JHOEL CARLOS', 'ALFA INGENIERIA SUBTERRANEA S.R.L.', 'Contratista Minero', 0, '', 0),
-(14, '2015-04-27', 'OBRAS CIVILES Y MINERAS S.A.C.', 'DIVISION OYON 1', 1, 'QUINCHO QUISPE, JULIO CESAR', 'OBRAS CIVILES Y MINERAS S.A.C.', 'Titular Minero', 0, '', 1);
+(14, '2015-04-27', 'OBRAS CIVILES Y MINERAS S.A.C.', 'DIVISION OYON 1', 1, 'QUINCHO QUISPE, JULIO CESAR', 'OBRAS CIVILES Y MINERAS S.A.C.', 'Titular Minero', 0, '', 0),
+(15, '2015-04-27', 'lkjlk', 'lkjl', 0, NULL, 'jlkj', 'jklkj', 0, 'lklk', 1),
+(16, '2015-04-27', '9', '9', 0, NULL, '1', '9', 9, '9', 1),
+(17, '2015-04-27', 'o', 'o', 2, NULL, 'o', 'o', 0, 'o', 1);
 
 -- --------------------------------------------------------
 
@@ -159,15 +165,21 @@ CREATE TABLE IF NOT EXISTS `reporte_dron` (
   `tiempo_vuelo` int(11) NOT NULL,
   `distancia_recorrida` int(11) NOT NULL,
   `nivel_bateria` int(11) NOT NULL,
+  `estado` int(11) NOT NULL,
   PRIMARY KEY (`id_dron`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Volcado de datos para la tabla `reporte_dron`
 --
 
-INSERT INTO `reporte_dron` (`id_dron`, `fecha`, `Modelo`, `tipo_id`, `cuadrante_id`, `tiempo_vuelo`, `distancia_recorrida`, `nivel_bateria`) VALUES
-(1, '2015-07-15', '', 1, 2, 30, 1800, 18);
+INSERT INTO `reporte_dron` (`id_dron`, `fecha`, `Modelo`, `tipo_id`, `cuadrante_id`, `tiempo_vuelo`, `distancia_recorrida`, `nivel_bateria`, `estado`) VALUES
+(1, '2015-10-28', 'ok2', 1, 1, 1, 1, 1, 1),
+(2, '2015-10-15', 'ok', 0, 0, 0, 1231, 23423, 1),
+(3, '2015-10-17', '', 0, 0, 0, 0, 0, 1),
+(4, '2015-10-15', 'ok', 0, 0, 123, 12, 12, 1),
+(5, '2015-10-16', '2', 0, 2, 2, 2, 2, 1),
+(6, '2015-11-02', 'ok2', 0, 2, 9802, 22, 79872, 0);
 
 -- --------------------------------------------------------
 
@@ -232,7 +244,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 
 INSERT INTO `usuarios` (`id_user`, `nombre_user`, `nombre`, `ap_paterno`, `ap_materno`, `password_encriptado`, `fecha_creacion`, `contador_visitas`, `sesion_actual`, `ultima_sesion`, `fecha_actualizacion`, `id_tipo_user`, `alta`, `imagen`, `estado`) VALUES
 (1, 'zayra@h.com', '12345678', 'admin', '', '', '0000-00-00', 0, '', '0000-00-00', '0000-00-00', 0, 0, '', 0),
-(9, 'x', 'x', 'x', 'x', '11f6ad8ec52a2984abaafd7c3b516503785c2072', '2015-10-27', 0, '', '0000-00-00', '0000-00-00', 0, 0, '', 1),
+(9, 'x', 'x', 'x', 'x', '11f6ad8ec52a2984abaafd7c3b516503785c2072', '2015-10-27', 0, '', '0000-00-00', '0000-00-00', 1, 0, 'foto-perfil/9Capturaanimales.JPG', 1),
 (10, 'a', 'a', 'a', 'a', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', '2015-10-27', 0, '', '0000-00-00', '0000-00-00', 0, 0, '', 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
