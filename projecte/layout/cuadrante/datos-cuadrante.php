@@ -79,7 +79,7 @@
                         <div class="4u 12u$(mobile)"> <label>Número de trabajadores</label></div>
                         <div class="8u$ 12u$(mobile)"><input type="number" name="ntrabajadoresc"/></div>
                             <div class="4u 12u$(mobile)"> <label>Descripción</label></div>
-                            <div class="8u$ 12u$(mobile)"><textarea rows="4" cols="4" name="descripcionc"></textarea></div>
+                            <div class="8u$ 12u$(mobile)"><textarea onkeypress="return alpha(event,letras)" rows="4" cols="4" name="descripcionc" class="descripcionc" style ="resize:none;"></textarea></div>
                         
                         <div class="12u$"><input type="submit" value="Guardar" /></div>
                     </div>
@@ -102,6 +102,20 @@
 						<li>Todos los derechos reservados. Project Eagle.</li>
 					</ul>
 			</div>
+              <script type="text/javascript">
+  <!--
+  var letras =' ABCÇDEFGHIJKLMNÑOPQRSTUVWXYZabcçdefghijklmnñopqrstuvwxyzàáÀÁéèÈÉíìÍÌïÏóòÓÒúùÚÙüÜ'
+  var numeros='1234567890'
+  var signos='´'
+
+  function alpha(e,allow) {
+       var k;
+       k=document.all?parseInt(e.keyCode): parseInt(e.which);
+       return (allow.indexOf(String.fromCharCode(k))!=-1);
+  }
+
+  // -->
+  </script>
 
         
 

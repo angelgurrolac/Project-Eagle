@@ -83,11 +83,11 @@
                                 <div class="row" id="mostrarc">
                                     <div class="12u$ 12u$(mobile)"></div>
                                     <div class="5u 12u$(mobile)"> <label>Contraseña actual</label></div>
-                                    <div class="7u$ 12u$(mobile)"><input type="password" name="contra-actual"/></div>
+                                    <div class="7u$ 12u$(mobile)"><input type="password"  pattern=".{8,}" title="La contraseña debe contener más de 8 caracteres." name="contra-actual"/></div>
                                     <div class="5u 12u$(mobile)"> <label>Nueva contraseña</label></div>
-                                    <div class="7u$ 12u$(mobile)"><input type="password" name="nueva-contra"/></div>
+                                    <div class="7u$ 12u$(mobile)"><input type="password"  pattern=".{8,}" title="La contraseña debe contener más de 8 caracteres." name="nueva-contra"/></div>
                                     <div class="5u 12u$(mobile)"> <label>Confirmar nueva contraseña</label></div>
-                                    <div class="7u$ 12u$(mobile)"><input type="password" name="confirmar-contra"/></div>
+                                    <div class="7u$ 12u$(mobile)"><input type="password"  pattern=".{8,}" title="La contraseña debe contener más de 8 caracteres." name="confirmar-contra"/></div>
                                     <div class="12u$"><input type="submit" value="Guardar" /></div>
                             </div>
                             </form>

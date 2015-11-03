@@ -4,7 +4,9 @@
         header("Location: inicio.php");
     }  
 ?>
+
         <!DOCTYPE html>
+<html>
         <head>
         <meta charset="utf-8">
         <title>Inicio de sesión</title>
@@ -37,7 +39,7 @@
                             <div class="6u 12u$(mobile)"><input type="text" name="usuario" placeholder="Usuario" max="50" required /></div>
                             <div class="3u$ 12u$(mobile)"> </div>
                                 <div class="3u 12u$(mobile)"> </div>
-                            <div class="6u 12u$(mobile)"><input type="password" name="contrasena" placeholder="Contraseña" min="8" maxlength="10" required /></div>
+                            <div class="6u 12u$(mobile)"><input type="password" name="contrasena" placeholder="Contraseña"  pattern=".{8,}" title="La contraseña debe contener más de 8 caracteres." required /></div>
                             <div class="3u$ 12u$(mobile)"> </div>
                                 
                                 <div class="3u 12u$(mobile)"> </div>

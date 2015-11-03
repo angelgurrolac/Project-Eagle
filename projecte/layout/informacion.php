@@ -17,7 +17,7 @@
                     <div class="container">
                   
                         <header>
-                            <img class="estilo-logo-login" src="../assets/images/Logo-reducido.png" alt="Project Eagle"  align="middle" >  
+                            <img class="estilo-logo-login" src="../assets/images/logo_efectos.png" alt="Project Eagle"  align="middle" >  
                         </header>
                           </div>
                 </section>

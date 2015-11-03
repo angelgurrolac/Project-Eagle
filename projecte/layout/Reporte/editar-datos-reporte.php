@@ -44,16 +44,16 @@ echo "
                     <div class='6u$ 12u$(mobile)'><input type='text' name='empresa' value='".$edit_reporte['empresa']."'/></div>
         
                     <div class='3u 12u$(mobile)'> <label>Tipo de empresa:</label></div>
-                    <div class='6u$ 12u$(mobile)'><input type='text' name='tipoempresa' value='".$edit_reporte['tipo_empresa']."'/></div>
+                    <div class='6u$ 12u$(mobile)'><input type='text'  onkeypress='return alpha(event,letras)' name='tipoempresa' value='".$edit_reporte['tipo_empresa']."'/></div>
           
                     <div class='3u 12u$(mobile)'> <label>Titular minero:</label></div>
-                    <div class='6u$ 12u$(mobile)'><input type='text' name='titularminero' value='".$edit_reporte['titular_minero']."'/></div>
+                    <div class='6u$ 12u$(mobile)'><input type='text'  onkeypress='return alpha(event,letras)' name='titularminero' value='".$edit_reporte['titular_minero']."'/></div>
           
                     <div class='3u 12u$(mobile)'> <label>Concesión:</label></div>
-                    <div class='6u$ 12u$(mobile)'><input type='text' name='concesion' value='".$edit_reporte['concesion']."'/></div>
+                    <div class='6u$ 12u$(mobile)'><input type='text'  onkeypress='return alpha(event,letras)' name='concesion' value='".$edit_reporte['concesion']."'/></div>
           
                     <div class='3u 12u$(mobile)'> <label>Observaciones:</label></div>
-                    <div class='6u$ 12u$(mobile)'><textarea rows='4' cols='4' name='observaciones'>".$edit_reporte['obervaciones']."</textarea></div>
+                    <div class='6u$ 12u$(mobile)'><textarea style ='resize:none;'   onkeypress='return alpha(event,letras)' rows='4' cols='4' id='observaciones name='observaciones' >".$edit_reporte['obervaciones']."</textarea></div>
         
                     <div class='12u'><input type='submit' value='Guardar' /><a style='padding:2em;' class='icon fa-download descargar' ></a></div> </div>
           
