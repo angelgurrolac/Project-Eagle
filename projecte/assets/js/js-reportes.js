@@ -67,14 +67,39 @@ function llenarReportes(){
 }
 
 function cambiarFecha(fecha){
-	// alert(fecha);
+	
 	$.ajax({
 		type: 'POST',
 		url: 'mostrar-datos-fecha.php', 
 		data: {fecha:fecha},//parametros
 		success: function(data){
+			// alert(data);
+			if (data==false) {
+				document.getElementById("numvictimas").value = "0";
+				deshabilitarCampos();
+			}else{
+				contarVictimas(fecha);
 				$("#miTablaVic").html(data);
-			console.log(data); 
+				document.getElementById("numvictimas").disabled = false;
+				document.getElementById("numdecesos").disabled = false;
+				document.getElementById("tipoempresa").disabled = false;
+				document.getElementById("titularminero").disabled = false;
+				document.getElementById("concesion").disabled = false;
+				document.getElementById("observaciones").disabled = false;
+				document.getElementById("empresa").disabled = false;
+
+			}
+		}
+	});
+}
+
+function contarVictimas(fecha){
+	$.ajax({
+		type: 'POST',
+		url: 'contar-victimas.php', 
+		data: {fecha:fecha},//parametros
+		success: function(data){
+			document.getElementById("numvictimas").value = data;
 		}
 	});
 }
@@ -106,4 +131,19 @@ function buscarReportes(busqueda){
 		}
 	});
 
+}
+
+// function usuarioReportes(tipo){
+// 	alert();
+
+// }
+
+function deshabilitarCampos(){
+	document.getElementById("numvictimas").disabled = true;
+	document.getElementById("numdecesos").disabled = true;
+	document.getElementById("tipoempresa").disabled = true;
+	document.getElementById("titularminero").disabled = true;
+	document.getElementById("concesion").disabled = true;
+	document.getElementById("observaciones").disabled = true;
+	document.getElementById("empresa").disabled = true;
 }

@@ -1,6 +1,3 @@
-<?php 
-    session_start();
- ?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -15,12 +12,10 @@
             <script src="../../assets/js/skel.min.js"></script>
             <script src="../../assets/js/util.js"></script>
             <script src="../../assets/js/main.js"></script>
-            <script src="../../assets/js/js-usuarios.js"></script>
-            <script src="../../assets/js/js.js"></script>
         
          
     
-	<body onload="tipoUsuario(<?php echo $_SESSION["tipo_usuario"];?>)">
+	<body>
 		<!-- Header -->
 			<div id="header">
 				<div class="top">
@@ -32,13 +27,13 @@
                     
 					<!-- Nav -->
 						<nav id="nav">
-                            <ul>
-                                <li><a href="../inicio.php" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicio</span></a></li>
+							<ul>
+								<li><a href="../inicio.html" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicio</span></a></li>
                                 <li><a href="../Reporte/tabla-reportes.php" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-file">Reportes</span></a></li>
-                                <li><a href="../Diagnostico/tabla-diagnostico.php" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-stethoscope">Diagnósticos</span></a></li>
-                                <li><a href="../Drone/tabla-reporte-drones.php" id="opt-reportesd" class="skel-layers-ignoreHref"><span class="icon fa-crosshairs">Drones</span></a></li>
-                                <li><a href="configuracion-admin.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-wrench">Configuración</span></a></li>
-                            </ul>
+                                <li><a href="../Diagnostico/diagnosticos.php" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-stethoscope">Diagnósticos</span></a></li>
+                                <li><a href="../Drone/tabla-reporte-drones.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-crosshairs">Drones</span></a></li>
+                                <li><a href="../usuario/configuracion.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-wrench">Configuración</span></a></li>
+							</ul>
 						</nav>
 				</div>
 			</div>
@@ -46,23 +41,10 @@
         
          <!-- Header2 de login-->
         <div id="usuario">
-             <?php 
-             if (! empty($_SESSION["nombre"])){
-                $idUser=$_SESSION['idUsuario'];
-                $link=mysqli_connect("localhost","root","admin","projecte");
-
-                $result = $link->query('SELECT imagen FROM `usuarios` WHERE id_user='.$idUser.';');
-                // var_dump($result);
-                while ($row = $result->fetch_assoc()) { 
-                    echo "<img src='".$row['imagen']."' width='5%' height='8%' />";
-                }
-                echo " <label>".$_SESSION['nombre']." ".$_SESSION['apellido']."</label>
-                    <label> | </label>
-                    <a href='cerrarSesion.php'><label id='cerrarSesion'>Salir</label></a>";
-            }else{
-                header("Location: ../index.php");
-            }   
-        ?>
+            <img src="#" width="5%" height="5%" />
+            <label>Jane F.</label>
+            <label> | </label>
+            <a href="../index.html">Salir</a>
         </div>
         
         
@@ -74,11 +56,9 @@
                     <header>
                         <h4>CONFIGURACIÓN</h4>
                     </header>
-                    
+                    <form method="post" action="#">
                         <article class="tabs">
-                        
                             <section id="tab1">
-                            <form method="post" action="cambioContrasena.php">
                                 <h2><a href="#tab1">Contraseña</a></h2>
                                 <div class="row" id="mostrarc">
                                     <div class="12u$ 12u$(mobile)"></div>
@@ -90,65 +70,47 @@
                                     <div class="7u$ 12u$(mobile)"><input type="password" name="confirmar-contra"/></div>
                                     <div class="12u$"><input type="submit" value="Guardar" /></div>
                             </div>
-                            </form>
                             </section>
-
                             
                             <section id="tab2">
-                            <form method="post" enctype="multipart/form-data"  action="subir.php">
                                 <h2><a href="#tab2">Fotografía</a></h2>
                                 <div class="row" id="mostrarp">
                                     <div class="12u$ 12u$(mobile)"></div>
                                     <div class="3u 12u$(mobile)"> <label>Imagen actual</label></div>
-                                     <?php 
-                                            $result = $link->query('SELECT imagen FROM `usuarios` WHERE id_user='.$idUser.';');
-                                            while ($row = $result->fetch_assoc()) { 
-                                                echo "<div class='9u$ 12u$(mobile)'><img src='".$row['imagen']."' width='10%' height='20%' /></div>";
-                                            }
-                                        ?>
+                                    <div class="9u$ 12u$(mobile)"><img src="#" width="10%" height="20%" /></div>
                                     <div class="3u 12u$(mobile)"> <label>Nueva imagen</label></div>
-                                    <div class="9u$ 12u$(mobile)"><input type="file" id="foto" name="foto"/></div>
+                                    <div class="9u$ 12u$(mobile)"><input type="file" /></div>
                                     <div class="12u$"><input type="submit" value="Guardar" /></div>
                             </div>
-                            </form>
                             </section>
                             
                             <section id="tab3">
-                            <form method="post" action="asignarUsuario.php">
                                 <h2><a href="#tab3">Roles</a></h2>
                                 <div class="row">
                                     <div class="12u$ 12u$(mobile)"></div>
                                     <div class="2u 12u$(mobile)"> <label>Usuarios</label></div>
                                     <div class="10u$ 12u$(mobile)">
                                         <select name="correo-usuario">
-                                        <?php 
-                                            $link=mysqli_connect("localhost","root","admin","projecte");
-                                            $result = $link->query('SELECT `id_user`,`nombre_user` FROM `usuarios`');
-                                            while ($row = $result->fetch_assoc()) {  
-                                              echo"<option value='".$row['id_user']."'>".$row['nombre_user']."</option>";
-                                            }
-                                       ?>
-                                            <!-- <option>Seleccione</option> -->
+                                            <option>Seleccione</option>
                                         </select>
                                     </div>
                                     <div class="2u 12u$(mobile)"> <label>Asignar</label></div>
                                     <div class="1u 12u$(mobile)">
-                                        <input type = "radio" name = "asigna-rol" value = "1"/>
+                                        <input type = "radio" name = "asigna-rol" value = "small"/>
                                     </div>
                                     <div class="2u$ 12u$(mobile)"> <label>Administrador</label></div>
                                     <div class="2u 12u$(mobile)"></div>
                                     <div class="1u 12u$(mobile)">
-                                        <input type = "radio" name = "asigna-rol" value = "2"/>
+                                        <input type = "radio" name = "asigna-rol" value = "small"/>
                                     </div>
                                     <div class="2u$ 12u$(mobile)"> <label>Paramédico</label></div>
                                     <div class="2u 12u$(mobile)"></div>
                                     <div class="1u 12u$(mobile)">
-                                        <input type = "radio" name = "asigna-rol" value = "3"/>
+                                        <input type = "radio" name = "asigna-rol" value = "small"/>
                                     </div>
                                     <div class="2u$ 12u$(mobile)"> <label>Consultor</label></div>
                                     <div class="12u$"><input type="submit" value="Guardar" /></div>
-                                </div>
-                                </form>
+                                </div> 
                             </section>
                             
                             <section id="tab4">
@@ -183,7 +145,7 @@
                                 </thead>
                                 <tbody id="miTabla">
                                     <script type="text/javascript">
-                                        llenarUsuarios();
+                                        llenarAdmin();
                                     </script>
                                 </tbody>
                             </table>
@@ -195,7 +157,6 @@
             </section>
         </div>
 
-        <div id="contenedor"></div>
 		<!-- Footer -->
 			<div id="footer">
 				<!-- Copyright -->

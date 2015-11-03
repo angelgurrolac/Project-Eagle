@@ -5,7 +5,7 @@
   unset($_SESSION['apellido']);
   unset($_SESSION['nombre_user']);
   session_destroy();
-  header("Location: ../index.html");
+  header("Location: ../index.php");
   exit;
 
 ?>

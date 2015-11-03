@@ -33,6 +33,7 @@ if($row = mysqli_fetch_row($result))
  {
   //Creamos sesión
   session_start();
+  $_SESSION['tipo_usuario'] = $row[11];
   $_SESSION['idUsuario'] = $row[0]; 
   $_SESSION['nombre'] = $row[2]; 
   $_SESSION['apellido'] = $row[3]; 

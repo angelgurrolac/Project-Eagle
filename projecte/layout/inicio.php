@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -12,19 +13,19 @@
 			<script src="../assets/js/skel.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
-			<script src="../assets/js/js-usuario.js"></script>
+			<script src="../assets/js/js.js"></script>
 	</head>
-	<body>
+	<body onload="tipoUsuario(<?php echo $_SESSION["tipo_usuario"];?>)">
          <!-- Header2 de login-->
         <div id="usuario">
         <?php 
-        	session_start();
+      
         	 if (! empty($_SESSION["nombre"])){
         		echo "<label>".$_SESSION['nombre']." ".$_SESSION['apellido']."</label>
 	    			<label> | </label>
 	    			<a href='usuario/cerrarSesion.php'><label id='cerrarSesion'>Salir</label></a>";
         	}else{
-        		header("Location: index.html");
+        		header("Location: index.php");
         	}	
 		?>
         </div>

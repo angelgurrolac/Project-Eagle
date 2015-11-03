@@ -19,8 +19,6 @@ echo "
                             <div class='9u$ 12u$(mobile)'><input type='text' name='fecha_editar' value='".$edit_drone['fecha_instalacion']."'/></div>
                             <div class='3u 12u$(mobile)'> <label>Modelo</label></div>
                             <div class='9u$ 12u$(mobile)'><input type='text' name='modelo_editar' value='".$edit_drone['modelo']."'/></div>
-                            <div class='3u 12u$(mobile)'> <label>Estatus</label></div>
-                            <div class='9u$ 12u$(mobile)'><input type='text' name='estatus_editar' value='".$edit_drone['estatus']."'/></div>
                             <div class='3u 12u$(mobile)'> <label>Calibración</label></div>
                             <div class='9u$ 12u$(mobile)'><input type='text' name='calibracion_editar' value='".$edit_drone['calibracion']."'/></div>
                             <div class='3u 12u$(mobile)'> <label>Observaciones</label></div>

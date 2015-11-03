@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -17,7 +18,7 @@
   
 </head>
 
-<body>
+<body onload="deshabilitarCampos()">
   <!-- Header -->
   <div id="header">
     <div class="top">
@@ -30,7 +31,7 @@
      <!-- Nav -->
      <nav id="nav">
        <ul>
-        <li><a href="../inicio.html" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicio</span></a></li>
+        <li><a href="../inicio.php" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicio</span></a></li>
         <li><a href="tabla-reportes.php" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-file">Reportes</span></a></li>
         <li><a href="../Diagnostico/tabla-diagnostico.php" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-stethoscope">Diagnósticos</span></a></li>
         <li><a href="../Drone/tabla-reporte-drones.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-crosshairs">Drones</span></a></li>
@@ -57,7 +58,7 @@
                     <label> | </label>
                     <a href='../usuario/cerrarSesion.php'><label id='cerrarSesion'>Salir</label></a>";
             }else{
-                header("Location: ../index.html");
+                header("Location: ../index.php");
             }   
         ?>
 </div>
@@ -80,7 +81,7 @@
           
           <div class="4u$ 12u$(mobile)"><input type="date" name="fechaaccidente" onchange="cambiarFecha(this.value)" required/></div>
           
-          
+<!--           
           <div class="3u 12u$(mobile)"> <label>Tipo de accidente</label></div>
           <div class="4u 12u$(mobile)">       
           <select id="tipo_accidente" onchange="otraOpt(this.value)">
@@ -93,7 +94,7 @@
             }
            ?>
            <option value="otro">Otro</option>
-          </select></div>
+          </select></div> -->
    
           <div class="1u 12u$(mobile)"> <label  id="lbl-otro">Otro</label></div>
           <div class="4u$ 12u$(mobile)"><input type="text" name="otroaccidente" id="input-otro" /></div>
@@ -103,12 +104,13 @@
           
           
           <div class="3u 12u$(mobile)"> <label>Número  de víctimas</label></div>
-          <div class="4u$ 12u$(mobile)"><input type="number" name="numvictimas"/></div>
+          <!-- <div class="4u$ 12u$(mobile)"><label id="numvictimas" name="numvictimas"></label></div> -->
+          <div class="4u$ 12u$(mobile)"><input type="text" name="numvictimas" id="numvictimas" onfocus="this.type='number';"/></div>
           
           
           
           <div class="3u 12u$(mobile)"> <label>Número  de decesos</label></div>
-          <div class="4u$ 12u$(mobile)"><input type="number" name="numdecesos"/></div>
+          <div class="4u$ 12u$(mobile)"><input type="number" name="numdecesos" id="numdecesos" /></div>
           
           
           <div class="4u 12u$(mobile)"> <label>Nombre(s) de la(s) víctima(s) </label></div>
@@ -139,29 +141,29 @@
           
           
           <div class="3u 12u$(mobile)"> <label>Empresa</label></div>
-          <div class="6u$ 12u$(mobile)"><input type="text" name="empresa"/></div>
+          <div class="6u$ 12u$(mobile)"><input type="text" name="empresa" id="empresa" /></div>
           
           
           
           <div class="3u 12u$(mobile)" pattern="[A-Za-z]" > <label>Tipo de empresa</label></div>
-          <div class="6u$ 12u$(mobile)"><input type="text" name="tipoempresa"/></div>
+          <div class="6u$ 12u$(mobile)"><input type="text" name="tipoempresa" id="tipoempresa" /></div>
           
           
           
           <div class="3u 12u$(mobile)"> <label>Titular minero</label></div>
-          <div class="6u$ 12u$(mobile)"><input type="text" name="titularminero"/></div>
+          <div class="6u$ 12u$(mobile)"><input type="text" name="titularminero" id="titularminero" /></div>
           
           
           
           
           
           <div class="3u 12u$(mobile)"> <label>Concesión</label></div>
-          <div class="6u$ 12u$(mobile)"><input type="text" name="concesion"/></div>
+          <div class="6u$ 12u$(mobile)"><input type="text" name="concesion" id="concesion" /></div>
           
           
           
           <div class="3u 12u$(mobile)"> <label>Observaciones</label></div>
-          <div class="6u$ 12u$(mobile)"><textarea rows="4" cols="4" name="observaciones"></textarea></div>
+          <div class="6u$ 12u$(mobile)"><textarea rows="4" cols="4" name="observaciones" id="observaciones"></textarea></div>
           
           
           

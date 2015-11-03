@@ -28,7 +28,7 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="../inicio.html" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicio</span></a></li>
+                                <li><a href="../inicio.php" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicio</span></a></li>
                                 <li><a href="../Reporte/tabla-reportes.php" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-file">Reportes</span></a></li>
                                 <li><a href="../Diagnostico/diagnosticos.php" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-stethoscope">Diagnósticos</span></a></li>
                                 <li><a href="tabla-reporte-drones.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-crosshairs">Drones</span></a></li>
@@ -55,7 +55,7 @@
                     <label> | </label>
                     <a href='../usuario/cerrarSesion.php'><label id='cerrarSesion'>Salir</label></a>";
             }else{
-                header("Location: ../index.html");
+                header("Location: ../index.php");
             }   
         ?>
         </div>

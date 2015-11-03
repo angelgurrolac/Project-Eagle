@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -13,9 +14,10 @@
             <script src="../../assets/js/util.js"></script>
             <script src="../../assets/js/main.js"></script>
             <script src="../../assets/js/js-drones.js"></script>
+            <script src="../../assets/js/js.js"></script>
 	</head>
     
-	<body>
+	<body onload="tipoUsuario(<?php echo $_SESSION["tipo_usuario"];?>)">
 		<!-- Header -->
 			<div id="header">
 				<div class="top">
@@ -28,7 +30,7 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="../inicio.html" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicio</span></a></li>
+                                <li><a href="../inicio.php" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicio</span></a></li>
                                 <li><a href="../Reporte/tabla-reportes.php" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-file">Reportes</span></a></li>
                                 <li><a href="../Diagnostico/tabla-diagnostico.php" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-stethoscope">Diagnósticos</span></a></li>
                                 <li><a href="tabla-reporte-drones.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-crosshairs">Drones</span></a></li>
@@ -42,7 +44,6 @@
          <!-- Header2 de login-->
         <div id="usuario">
         <?php 
-            session_start();
              if (! empty($_SESSION["nombre"])){
                 $idUser=$_SESSION['idUsuario'];
                 $link=mysqli_connect("localhost","root","admin","projecte");
@@ -55,7 +56,7 @@
                     <label> | </label>
                     <a href='../usuario/cerrarSesion.php'><label id='cerrarSesion'>Salir</label></a>";
             }else{
-                header("Location: ../index.html");
+                header("Location: ../index.php");
             }   
         ?>
         </div>
@@ -76,7 +77,7 @@
                             
                        </div>
                         <div class="row">
-                             <div class="1.1u 12u$(mobile) estilo-buscador"><a class="icon fa-plus-circle estilo-icono" href="reporte-datos-drone.php"> Nuevo reporte</a></div>
+                             <div class="1.1u 12u$(mobile) estilo-buscador" id="nvo-reported"><a class="icon fa-plus-circle estilo-icono" href="reporte-datos-drone.php" > Nuevo reporte</a></div>
                             <div class="1.1u 12u$(mobile) estilo-buscador"><a class="icon fa-crosshairs estilo-icono" href="tabla-drones.php"> Registro de drones</a></div>
                             <div class="1.1u$ 12u$(mobile) estilo-buscador"><a class="icon fa-area-chart estilo-icono" href="../cuadrante/tabla-cuadrantes.php"> Cuadrantes</a></div>
                             
