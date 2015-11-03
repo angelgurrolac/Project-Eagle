@@ -6,7 +6,7 @@
 	$destino =  "foto-perfil/".$idUser.$nombrefoto;
 	copy($ruta,$destino);
 
-	$link=mysqli_connect("localhost","root","admin","projecte");
+	require_once '../conexion.php'; 
 	
 
 	$sql=mysqli_query($link,"UPDATE usuarios SET `imagen`= '$destino' WHERE id_user=$idUser");

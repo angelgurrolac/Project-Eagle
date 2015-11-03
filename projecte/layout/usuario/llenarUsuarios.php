@@ -1,7 +1,7 @@
 <?php 
 sleep(1);
 // include_once('../conexion.php');
-    $link=mysqli_connect("localhost","root","admin","projecte");
+    require_once '../conexion.php'; 
     
     $ide="";
     $result = $link->query('SELECT `id_user`, `nombre_user`,`nombre`,`ap_paterno`,`ap_materno` FROM `usuarios` WHERE estado = 1;');

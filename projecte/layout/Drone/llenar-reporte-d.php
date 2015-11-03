@@ -1,7 +1,7 @@
 <?php
     session_start(); 
     sleep(1);
-    $link=mysqli_connect("localhost","root","admin","projecte");
+    require_once '../conexion.php'; 
     
     $ide="";
     $result = $link->query('SELECT `id_dron`,`fecha`,`Modelo`,`tipo_id`,`cuadrante_id`,`tiempo_vuelo`,`distancia_recorrida`,`nivel_bateria` FROM `reporte_dron` WHERE estado= 1;');

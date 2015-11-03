@@ -1,5 +1,5 @@
 <?php 
-$link=mysqli_connect("localhost","root","admin","projecte");
+require_once '../conexion.php'; 
 $id = $_POST['idVer'];
 
 $sql_edit= mysqli_query($link, "SELECT `id_dron`,`fecha`,`Modelo`,`cuadrante_id`,`tiempo_vuelo`,`distancia_recorrida`,`nivel_bateria` FROM `reporte_dron`;");

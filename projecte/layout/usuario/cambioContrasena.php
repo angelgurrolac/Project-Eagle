@@ -1,6 +1,6 @@
 <?php
 session_start();  
-$link=mysqli_connect("localhost","root","admin","projecte");
+require_once '../conexion.php'; 
 
 $contraactual = $_POST["contra-actual"];   
 $nuevacontra = $_POST["nueva-contra"];

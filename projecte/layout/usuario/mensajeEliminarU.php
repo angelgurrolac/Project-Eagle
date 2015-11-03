@@ -1,7 +1,7 @@
 <?php 
       $id = $_POST['idEliminar'];
 
-      $link=mysqli_connect("localhost","root","admin","projecte");
+     require_once '../conexion.php'; 
       
       $sql= mysqli_query($link,"UPDATE usuarios SET  `estado`=0 WHERE `id_user`=$id;");
 

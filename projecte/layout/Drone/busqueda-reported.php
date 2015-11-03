@@ -2,7 +2,7 @@
     session_start();
       $busqueda = $_POST['busqueda'];
 
-      $link=mysqli_connect("localhost","root","admin","projecte");
+      require_once '../conexion.php'; 
       
     $result = $link->query('SELECT * FROM `reporte_dron` WHERE Modelo LIKE "%' .$busqueda. '%" AND estado=1 OR fecha LIKE "%' .$busqueda. '%" AND estado=1 OR cuadrante_id LIKE "%' .$busqueda. '%" AND estado=1  OR tiempo_vuelo LIKE "%' .$busqueda. '%" AND estado=1  OR distancia_recorrida LIKE "%' .$busqueda. '%" AND estado=1  OR nivel_bateria LIKE "%' .$busqueda. '%" AND estado=1; ');
 

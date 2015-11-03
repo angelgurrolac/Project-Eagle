@@ -7,7 +7,7 @@
 	$tiempov = $_POST['tiempov'];
 	$nivelb = $_POST['nivelb'];
 	$distanciar = $_POST['distanciar'];
-	$link=mysqli_connect("localhost","root","admin","projecte");
+	require_once '../conexion.php'; 
 
 	mysqli_query($link,"INSERT INTO reporte_dron (fecha, Modelo, estado, cuadrante_id, tiempo_vuelo, distancia_recorrida, nivel_bateria)
   				VALUES ('$fecha', '$modelod', 1,'$cuadrante','$tiempov','$nivelb','$distanciar')");

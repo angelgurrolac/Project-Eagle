@@ -4,7 +4,7 @@
 	$rol = $_POST['asigna-rol'];
 
 	// echo $nombreUsuario;
-	$link=mysqli_connect("localhost","root","admin","projecte");
+	require_once '../conexion.php'; 
 	
 
 

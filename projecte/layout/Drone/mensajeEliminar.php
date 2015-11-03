@@ -2,7 +2,7 @@
       include_once('../conexion.php');
       $id = $_POST['idEliminar'];
 
-      $link=mysqli_connect("localhost","root","admin","projecte");
+      require_once '../conexion.php'; 
       
       $sql= mysqli_query($link,"UPDATE dron SET  `estatus`=0 WHERE `id_dron`=$id;");
 

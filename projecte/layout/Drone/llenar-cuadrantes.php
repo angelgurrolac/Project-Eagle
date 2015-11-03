@@ -1,7 +1,7 @@
 <?php 
 sleep(1);
 // include_once('../conexion.php');
-    $link=mysqli_connect("localhost","root","admin","projecte");
+    require_once '../conexion.php'; 
     
     $result = $link->query('SELECT `cuadrante_id` FROM `cuadrante` WHERE estado=1;');
 

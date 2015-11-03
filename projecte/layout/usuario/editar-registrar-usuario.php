@@ -1,5 +1,5 @@
 <?php 
-	$link=mysqli_connect("localhost","root","admin","projecte");
+	require_once '../conexion.php'; 
 	$id_editar = $_POST['id_editar'];
 	$nombre = $_POST['nombre_user'];
 	$ap_paterno = $_POST['ap_paterno'];

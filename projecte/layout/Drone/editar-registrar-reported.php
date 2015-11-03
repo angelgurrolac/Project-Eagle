@@ -8,7 +8,7 @@
 	$nivelb_editar = $_POST['nivelb_editar'];
 
 // echo $cuadrante_editar;
-	$link=mysqli_connect("localhost","root","admin","projecte");
+	require_once '../conexion.php'; 
 	
 	$sql= mysqli_query($link,"UPDATE reporte_dron SET `fecha`='$fecha_editar', `Modelo`='$modelod_editar', `cuadrante_id`='$cuadrante_editar', `tiempo_vuelo`='$tiempov_editar', `distancia_recorrida`='$distanciar_editar', `nivel_bateria`='$nivelb_editar' WHERE `id_dron`=$id_editar;");
 

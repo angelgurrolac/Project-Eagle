@@ -6,7 +6,7 @@
 **Contraseña de usuario: root.
 **Si la conexion fallara mandamos un msj 'ha fallado la conexion'**/
 // mysql_connect('localhost','root','root')or die ('Ha fallado la conexión: '.mysql_error());
-$link=mysqli_connect("localhost","root","admin","projecte");
+require_once '../conexion.php'; 
 
 /*Luego hacemos la conexión a la base de datos. 
 **De igual manera mandamos un msj si hay algun error*/
@@ -46,14 +46,30 @@ if($row = mysqli_fetch_row($result))
  else
  {
   //En caso que la contraseña sea incorrecta enviamos un msj y redireccionamos a login.php
-    echo "error contraseña"; 
+  //  echo "error contraseña"; 
+
+  ?>
+  <script languaje="javascript">
+  alert("Contraseña Incorrecta");
+    location.href = "../index.html";
+    </script>
+  
+
+  <?php
     // echo $pas;            
  }
 }
 else
 {
  //en caso que el nombre de administrador es incorrecto enviamos un msj y redireccionamos a login.php  
- echo "error usuario";         
+  ?>
+  <script languaje="javascript">
+  alert("Usuario Incorrecto");
+    location.href = "../index.html";
+    </script>
+  
+
+  <?php       
 }
 
 //Mysql_free_result() se usa para liberar la memoria empleada al realizar una consulta

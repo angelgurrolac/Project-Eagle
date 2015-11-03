@@ -1,5 +1,5 @@
 <?php 
-$link=mysqli_connect("localhost","root","admin","projecte");
+require_once '../conexion.php'; 
 $id = $_POST['ide'];
 
 $sql_edit= mysqli_query($link, "SELECT `id_user`,`nombre`,`ap_paterno`,`ap_materno` FROM `usuarios` where id_user=$id;");

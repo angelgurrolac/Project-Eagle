@@ -14,6 +14,17 @@
             <script src="../../assets/js/util.js"></script>
             <script src="../../assets/js/main.js"></script>
             <script src="../../assets/js/js.js"></script>
+            <script type="text/javascript">
+            $(document).ready(function(){   
+                
+               if(document.getElementById("drone").checked = true;) {
+               window.location.href="datos-diagnostico-drone.php";
+           }
+          }); 
+ 
+        });
+
+            </script>
 	</head>
     
 	<body onload="tipoUsuario(<?php echo $_SESSION["tipo_usuario"];?>)">
@@ -74,8 +85,9 @@
                             <div class="0.5u 12u$(mobile)"><label class="icon fa-search"/></div>
                             <div class="4u 12u$(mobile) estilo-buscador"><input type="text" name="buscador" placeholder="Buscador"/></div>
                             <div class="6u 12u$(mobile) icon fa-plus-circle estilo-buscador">
-                                <input type="checkbox" name="tipo-dco" value="1">Nuevo diagnóstico (Drone) <br>
-                                <input type="checkbox" name="tipo-dco" value="2" style="margin-left: 9%;">Nuevo diagnóstico (Manual)
+                                <input id = "drone" type="radio" name="tipo-dco" value="1">Nuevo diagnóstico (Drone) 
+                                <br>
+                                <input type="radio" name="tipo-dco" value="2" style="margin-left: 9%;">Nuevo diagnóstico (Manual)
                             </div>
                        
                             

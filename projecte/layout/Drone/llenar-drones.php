@@ -2,7 +2,7 @@
 session_start();
 sleep(1);
 // include_once('../conexion.php');
-    $link=mysqli_connect("localhost","root","admin","projecte");
+    require_once '../conexion.php'; 
     
     $ide="";
     $result = $link->query('SELECT `id_dron`,`fecha_instalacion`,`modelo`,`estatus`,`calibracion`,`observaciones` FROM `dron` WHERE estatus = 1;');
