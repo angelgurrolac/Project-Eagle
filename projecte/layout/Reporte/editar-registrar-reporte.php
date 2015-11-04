@@ -9,7 +9,6 @@
 	$concesion = $_POST['concesion'];
 	$observaciones = $_POST['observaciones'];
 
-	$link=mysqli_connect("localhost","root","admin","projecte");
 	
 	$sql= mysqli_query($link,"UPDATE reporte SET `no_victimas`='$numvictimas', 
 		`no_decesos`='$numdecesos', `empresa`='$empresa', `tipo_empresa`='$tipoempresa', 

@@ -2,7 +2,7 @@
   session_start();
       $busqueda = $_POST['busqueda'];
 
-      $link=mysqli_connect("localhost","root","admin","projecte");
+      require_once('../conexion.php');
       
     $result = $link->query('SELECT `fecha`, `id_reporte`, `no_victimas`, `empresa` FROM reporte WHERE fecha LIKE "%' .$busqueda. '%"  AND estado=1 OR id_reporte LIKE "%' .$busqueda. '%"  AND estado=1 OR no_victimas LIKE "%' .$busqueda. '%"  AND estado=1 OR empresa LIKE "%' .$busqueda. '%"  AND estado=1');
 

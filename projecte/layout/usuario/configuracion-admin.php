@@ -46,23 +46,26 @@
         
          <!-- Header2 de login-->
         <div id="usuario">
-             <?php 
-             if (! empty($_SESSION["nombre"])){
-                $idUser=$_SESSION['idUsuario'];
-                $link=mysqli_connect("localhost","root","admin","projecte");
+          <?php 
+               if (! empty($_SESSION["nombre"])){
+                  $idUser=$_SESSION['idUsuario'];
+                  require_once '../conexion.php'; 
 
-                $result = $link->query('SELECT imagen FROM `usuarios` WHERE id_user='.$idUser.';');
-                // var_dump($result);
-                while ($row = $result->fetch_assoc()) { 
-                    echo "<img src='".$row['imagen']."' width='5%' height='8%' />";
-                }
-                echo " <label>".$_SESSION['nombre']." ".$_SESSION['apellido']."</label>
-                    <label> | </label>
-                    <a href='cerrarSesion.php'><label id='cerrarSesion'>Salir</label></a>";
-            }else{
-                header("Location: ../index.php");
-            }   
-        ?>
+                  $result = $link->query('SELECT imagen FROM `usuarios` WHERE id_user='.$idUser.';');
+                  while ($row = $result->fetch_assoc()) {
+                    if ($row['imagen']==null) {
+                      echo "<img src='../usuario/foto-perfil/foto-default.png' width='5%' height='8%' />";
+                    }else{
+                      echo "<img src='../usuario/".$row['imagen']."' width='5%' height='8%' />";
+                    }
+                  }
+                  echo " <a href='configuracion-admin.php'><label>".$_SESSION['nombre']." ".$_SESSION['apellido']."</label></a>
+                      <label> | </label>
+                      <a href='../usuario/cerrarSesion.php'><label id='cerrarSesion'>Salir</label></a>";
+              }else{
+                  header("Location: ../index.php");
+              }   
+          ?>
         </div>
         
         
@@ -79,7 +82,7 @@
                         
                             <section id="tab1">
                             <form method="post" action="cambioContrasena.php">
-                                <h2><a href="#tab1">Contraseña</a></h2>
+                                <a href="#tab1"><h2>Contraseña</h2></a>
                                 <div class="row" id="mostrarc">
                                     <div class="12u$ 12u$(mobile)"></div>
                                     <div class="5u 12u$(mobile)"> <label>Contraseña actual</label></div>
@@ -96,7 +99,7 @@
                             
                             <section id="tab2">
                             <form method="post" enctype="multipart/form-data"  action="subir.php">
-                                <h2><a href="#tab2">Fotografía</a></h2>
+                                <a href="#tab2"><h2>Fotografía</h2></a>
                                 <div class="row" id="mostrarp">
                                     <div class="12u$ 12u$(mobile)"></div>
                                     <div class="3u 12u$(mobile)"> <label>Imagen actual</label></div>
@@ -115,7 +118,7 @@
                             
                             <section id="tab3">
                             <form method="post" action="asignarUsuario.php">
-                                <h2><a href="#tab3">Roles</a></h2>
+                                <a href="#tab3"><h2>Roles</h2></a>
                                 <div class="row">
                                     <div class="12u$ 12u$(mobile)"></div>
                                     <div class="2u 12u$(mobile)"> <label>Usuarios</label></div>
@@ -152,7 +155,7 @@
                             </section>
                             
                             <section id="tab4">
-                                <h2><a href="#tab4">Usuarios</a></h2>
+                                <a href="#tab4"><h2>Usuarios</h2></a>
 <!--
                                 Esto es a lo que te envia si das click a la opcion de modificar de la tabla.
                                 <div class="row">

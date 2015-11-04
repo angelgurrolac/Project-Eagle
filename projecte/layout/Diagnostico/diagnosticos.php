@@ -42,7 +42,7 @@
                 while ($row = $result->fetch_assoc()) { 
                     echo "<img src='../usuario/".$row['imagen']."' width='5%' height='8%' />";
                 }
-                echo " <label>".$_SESSION['nombre']." ".$_SESSION['apellido']."</label>
+                echo " <a href='../usuario/configuracion-admin.php'><label>".$_SESSION['nombre']." ".$_SESSION['apellido']."</label></a>
                     <label> | </label>
                     <a href='../usuario/cerrarSesion.php'><label id='cerrarSesion'>Salir</label></a>";
             }else{

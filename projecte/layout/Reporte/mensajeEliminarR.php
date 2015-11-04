@@ -1,8 +1,8 @@
 <?php 
-      include_once('../conexion.php');
+       require_once('../conexion.php');
       $id = $_POST['idEliminar'];
 
-      $link=mysqli_connect("localhost","root","admin","projecte");
+       
       
       $sql= mysqli_query($link,"UPDATE reporte SET  `estado`=0 WHERE `id_reporte`=$id;");
 

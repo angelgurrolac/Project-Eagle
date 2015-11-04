@@ -12,6 +12,11 @@
 	$sql=mysqli_query($link,"UPDATE usuarios SET `imagen`= '$destino' WHERE id_user=$idUser");
 
 	if ($sql) {
+		 ?>
+  <script languaje="javascript">
+  alert("¡Imagen actualizada!");
+    </script>
+  <?php 
   		header("Location: configuracion-admin.php");
 	}else{
 		echo "Error";

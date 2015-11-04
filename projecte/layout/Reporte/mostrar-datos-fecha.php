@@ -1,7 +1,7 @@
 <?php 
       $fecha = $_POST['fecha'];
 
-      $link=mysqli_connect("localhost","root","admin","projecte");
+       require_once('../conexion.php');
       
       $result = $link->query('SELECT `id_diagnostico`,`nombre_victima`, `ap_paterno_victima`, `ap_materno_victima` FROM diagnosticos WHERE `fecha` = "'.$fecha.'";');
 

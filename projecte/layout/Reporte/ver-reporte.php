@@ -1,5 +1,5 @@
 <?php 
-$link=mysqli_connect("localhost","root","admin","projecte");
+require_once('../conexion.php');
 $id = $_POST['idVer'];
 
 $sql_edit= mysqli_query($link, "SELECT id_reporte, fecha, no_victimas, no_decesos, empresa,tipo_empresa, titular_minero,

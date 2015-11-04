@@ -1,7 +1,7 @@
 <?php 
     $fecha = $_POST['fecha'];
 
-    $link=mysqli_connect("localhost","root","admin","projecte");
+      require_once('../conexion.php');
       
     $result = $link->query('SELECT count(*) from diagnosticos WHERE fecha="'.$fecha.'";');
 

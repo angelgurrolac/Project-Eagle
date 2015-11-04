@@ -5,8 +5,10 @@
     
     $ide="";
     $result = $link->query('SELECT `id_dron`,`fecha`,`Modelo`,`tipo_id`,`cuadrante_id`,`tiempo_vuelo`,`distancia_recorrida`,`nivel_bateria` FROM `reporte_dron` WHERE estado= 1;');
-
+    // var_dump($result);
     while ($row = $result->fetch_assoc()) {
+        // var_dump($row['id_dron']);
+        // var_dump($_SESSION["tipo_usuario"]);
         if ($_SESSION["tipo_usuario"]==1) {
             echo"<tr>";
             echo"   <td style = 'display:none;'>".$row['id_dron']."</td>";

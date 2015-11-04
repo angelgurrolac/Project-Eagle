@@ -1,7 +1,7 @@
 <?php 
 sleep(1);
 // include_once('../conexion.php');
-    $link=mysqli_connect("localhost","root","admin","projecte");
+    require_once('../conexion.php');
     
     $ide="";
     $result = $link->query('SELECT `id_diagnostico`, `nombre_victima`, `ap_paterno_victima`, `ap_materno_victima` FROM diagnosticos');
