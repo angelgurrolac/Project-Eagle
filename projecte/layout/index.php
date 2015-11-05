@@ -26,11 +26,11 @@
                         <div class="row">
                             <div class="11u 12u$(mobile)"> </div>
                             <div class="1u$ 12u$(mobile)">
-                        <input class="btn-registrar"type="button" value="Regístrate" style="background-color:#8C949C;" onClick=" window.location.href='usuario/registrar.html' ">
+                        <input class="btn-registrar"type="button" value="Regístrate" style="background-color:#8C949C;" onClick=" window.location.href='usuario/registrar.php' ">
                             </div>
                             </div>
                         <header>
-                            <img class="estilo-logo-login" src="../assets/images/Logo-reducido.png" alt="Project Eagle"  align="middle" >  
+                            <img class="estilo-logo-login" src="../assets/images/logo_efectos.png" alt="Project Eagle"  align="middle" >  
                         </header>
                         
                        <form method="post" action="usuario/login.php">

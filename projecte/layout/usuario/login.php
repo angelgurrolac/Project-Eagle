@@ -51,7 +51,7 @@ if($row = mysqli_fetch_row($result))
   ?>
   <script languaje="javascript">
   alert("Contraseña Incorrecta");
-    location.href = "../index.html";
+    location.href = "../index.php";
     </script>
   
 
@@ -65,7 +65,7 @@ else
   ?>
   <script languaje="javascript">
   alert("Usuario Incorrecto");
-    location.href = "../index.html";
+    location.href = "../index.php";
     </script>
   
 
