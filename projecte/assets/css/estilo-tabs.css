@@ -2684,4 +2684,8 @@ article.tabs section h2
 	transition: all 500ms ease;
 }
 
+
+.ancla-salir{
+    cursor:pointer;
+}
 /*http://www.sitepoint.com/css3-tabs-using-target-selector/*/

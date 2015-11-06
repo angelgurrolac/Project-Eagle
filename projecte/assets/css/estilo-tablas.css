@@ -2592,13 +2592,11 @@
  margin:0 1em 1em 0;
 }
 
-/*Estilo del ancla de salir de la sesión*/
-.estilo-salir
-{
- 
+
+
+
+.ancla-salir{
+    cursor:pointer;
 }
-
-
-
 
 

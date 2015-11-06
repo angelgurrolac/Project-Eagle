@@ -21,7 +21,7 @@ echo "
                         <div class='8u$ 12u$(mobile)'><input type='text' name='longitudcE' value='".$edit_cua['longitud']."'/></div>
                         
                         <div class='4u 12u$(mobile)'> <label>Número de trabajadores</label></div>
-                        <div class='8u$ 12u$(mobile)'><input type='number' name='ntrabajadorescE' value='".$edit_cua['no_trabajadores']."'/></div>
+                        <div class='12u$ 12u$(mobile)'><input type='number' name='ntrabajadorescE' value='".$edit_cua['no_trabajadores']."'/></div>
                             <div class='4u 12u$(mobile)'> <label>Descripción</label></div>
                             <div class='8u$ 12u$(mobile)'><textarea style ='resize:none;' rows='4' cols='4' name='descripcioncE'>".$edit_cua['descripcion']."</textarea></div>
                             <div class='12u$''><input type='submit' value='Modificar' /></div>

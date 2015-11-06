@@ -33,7 +33,7 @@
                   }
                   echo " <label>".$_SESSION['nombre']." ".$_SESSION['apellido']."</label>
                       <label> | </label>
-                      <a href='usuario/cerrarSesion.php'><label id='cerrarSesion'>Salir</label></a>";
+                      <a href='usuario/cerrarSesion.php'><label class='ancla-salir' id='cerrarSesion'>Salir</label></a>";
               }else{
                   header("Location: index.php");
               }   
