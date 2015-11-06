@@ -78,7 +78,7 @@
                         <div class="row">
                             <div class="0.5u 12u$(mobile)"><label class="icon fa-search"/></div>
                             <div class="5u 12u$(mobile) estilo-buscador"><input type="text" name="buscador" placeholder="Buscador" onkeyup="buscarCuadrantes(this.value)"/></div>
-                            <div class="1.5u 12u$(mobile) estilo-buscador" id="nvo-cuadran"><a href="datos-cuadrante.php"class="icon fa-plus-circle estilo-icono" >      Nuevo cuadrante</a></div>
+                            <div class="1.5u 12u$(mobile) estilo-buscador" ><a class="icon fa-plus-circle estilo-icono" href="datos-cuadrante.php">      Nuevo cuadrante</a></div>
                         </div>
                     
                         <div class="rwd">
