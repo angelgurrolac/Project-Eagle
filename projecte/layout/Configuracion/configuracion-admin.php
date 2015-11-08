@@ -40,11 +40,29 @@
         
         
          <!-- Header2 de login-->
+        
+        
         <div id="usuario">
-            <img src="#" width="5%" height="5%" />
-            <label>Jane F.</label>
-            <label> | </label>
-            <a href="../index.html">Salir</a>
+          <?php 
+               if (! empty($_SESSION["nombre"])){
+                  $idUser=$_SESSION['idUsuario'];
+                  $link=mysqli_connect("localhost","root","admin","projecte");
+
+                  $result = $link->query('SELECT imagen FROM `usuarios` WHERE id_user='.$idUser.';');
+                  while ($row = $result->fetch_assoc()) {
+                    if ($row['imagen']==null) {
+                      echo "<img src='../usuario/foto-perfil/foto-default.png' width='3%' />";
+                    }else{
+                      echo "<img src='../usuario/".$row['imagen']."' width='3%' />";
+                    }
+                  }
+                  echo " <a href='../usuario/configuracion-admin.php'><label>".$_SESSION['nombre']." ".$_SESSION['apellido']."</label></a>
+                      <label> | </label>
+                      <a href='../usuario/cerrarSesion.php'><label class='ancla-salir' id='cerrarSesion'>Salir</label></a>";
+              }else{
+                  header("Location: ../index.php");
+              }   
+          ?>
         </div>
         
         

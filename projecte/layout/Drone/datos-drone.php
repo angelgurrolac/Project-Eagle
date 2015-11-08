@@ -50,9 +50,9 @@
                   $result = $link->query('SELECT imagen FROM `usuarios` WHERE id_user='.$idUser.';');
                   while ($row = $result->fetch_assoc()) {
                     if ($row['imagen']==null) {
-                      echo "<img src='../usuario/foto-perfil/foto-default.png' width='5%' height='8%' />";
+                      echo "<img src='../usuario/foto-perfil/foto-default.png' width='3%'/>";
                     }else{
-                      echo "<img src='../usuario/".$row['imagen']."' width='5%' height='8%' />";
+                      echo "<img src='../usuario/".$row['imagen']."' width='3%'/>";
                     }
                   }
                    echo " <a href='../usuario/configuracion-admin.php'><label>".$_SESSION['nombre']." ".$_SESSION['apellido']."</label></a>
@@ -76,15 +76,15 @@
                     <form method="POST" action="registrar-drone.php">
                         <div class="row">
                         <div class="3u 12u$(mobile)"> <label>Fecha de instalación</label></div>
-                        <div class="9u$ 12u$(mobile)"><input type="date" name="fechaInstalacion"/></div>
+                        <div class="9u$ 12u$(mobile)"><input type="date" name="fechaInstalacion" required/></div>
                         <div class="3u 12u$(mobile)"> <label>Modelo</label></div>
-                        <div class="9u$ 12u$(mobile)"><input type="text" name="modelo"/></div>
+                        <div class="9u$ 12u$(mobile)"><input type="text" name="modelo" required pattern="[A-Za-z]{1-30}[0-9]{1-20}[/-']{1-10}"/></div>
 <!--                         <div class="3u 12u$(mobile)"> <label>Estatus</label></div>
                         <div class="9u$ 12u$(mobile)"><input type="text" name="estatus"/></div> -->
                         <div class="3u 12u$(mobile)"> <label>Calibración</label></div>
-                        <div class="9u$ 12u$(mobile)"><input type="text" name="calibracion"/></div>
+                        <div class="9u$ 12u$(mobile)"><input type="text" name="calibracion" required pattern="[A-Za-z]{1,20}"/></div>
                         <div class="3u 12u$(mobile)"> <label>Observaciones</label></div>
-                        <div class="9u$ 12u$(mobile)"><textarea rows="4" cols="4" name="observaciones"></textarea></div>
+                        <div class="9u$ 12u$(mobile)"><textarea rows="4" cols="4" name="observaciones" id="estilo-area"></textarea></div>
                         <div class="12u$"><input type="submit" value="Guardar" /></div>
                     </div>
                     </form>   

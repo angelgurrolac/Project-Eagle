@@ -2027,7 +2027,8 @@
 
 	#logo {
 		position: relative;
-        margin: 2.5em 6.5em 5.5em 1.5em;
+       /* margin: 2.5em 6.5em 5.5em 1.5em;*/
+        margin: 2.5em 5.5em 7.5em 2em;
 		min-height: 48px;
 		cursor: default;
 	}
@@ -2094,7 +2095,6 @@
 			}
 
 /* Footer */
-
 	#footer {
 		margin-left: 375px;
 		text-align: center;
@@ -2105,33 +2105,28 @@
 	}
 #usuario
 {
-    background-color: #ffffff;
-		text-align: center;
-        padding: 1em 1em 1em 0;
-		box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05), inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.025);
-		font-size: 0.8em;
-    text-align: right;
+        background-color: #ffffff;
+		font-size: 0.7em;
+        text-align: right;
+        font-family: sans-serif;
+        padding: 1em 1em 0 0;
 }
-
-
-		#footer .copyright {
-			cursor: default;
-			margin: 0;
-		}
-
-			#footer .copyright li {
-				display: inline-block;
-				line-height: 1em;
-				border-left: solid 1px rgba(128, 128, 128, 0.35);
-				padding: 0 0 0 0.5em;
-				margin: 0 0 0 0.5em;
-			}
-
-				#footer .copyright li:first-child {
-					border-left: 0;
-					padding-left: 0;
-					margin-left: 0;
-				}
+#footer .copyright {
+    cursor: default;
+    margin: 0;
+}
+#footer .copyright li {
+    display: inline-block;
+    line-height: 1em;
+    border-left: solid 1px rgba(128, 128, 128, 0.35);
+    padding: 0 0 0 0.5em;
+    margin: 0 0 0 0.5em;
+}
+#footer .copyright li:first-child {
+    border-left: 0;
+    padding-left: 0;
+    margin-left: 0;
+}
 
 /* Main */
 
@@ -2573,6 +2568,12 @@
 {
     padding: 2em;
 }
+
 .ancla-salir{
     cursor:pointer;
+}
+
+#estilo-area
+{
+    resize:none;
 }

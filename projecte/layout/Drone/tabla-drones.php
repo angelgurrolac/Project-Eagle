@@ -51,9 +51,9 @@
                   $result = $link->query('SELECT imagen FROM `usuarios` WHERE id_user='.$idUser.';');
                   while ($row = $result->fetch_assoc()) {
                     if ($row['imagen']==null) {
-                      echo "<img src='../usuario/foto-perfil/foto-default.png' width='5%' height='8%' />";
+                      echo "<img src='../usuario/foto-perfil/foto-default.png' width='3%' />";
                     }else{
-                      echo "<img src='../usuario/".$row['imagen']."' width='5%' height='8%' />";
+                      echo "<img src='../usuario/".$row['imagen']."' width='3%' />";
                     }
                   }
                  echo " <a href='../usuario/configuracion-admin.php'><label>".$_SESSION['nombre']." ".$_SESSION['apellido']."</label></a>
