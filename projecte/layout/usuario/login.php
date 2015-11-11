@@ -66,6 +66,10 @@ else
   <script languaje="javascript">
   alert("Usuario Incorrecto");
     location.href = "../index.php";
+      
+      
+      
+      
     </script>
   
 

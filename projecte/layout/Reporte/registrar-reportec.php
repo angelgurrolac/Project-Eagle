@@ -20,7 +20,7 @@ concesion, obervaciones, estado) VALUES ('$fechaaccidente', '$numvictimas', '$nu
 	
 	if ($sql) {
 		echo "bien";
-		header("Location: registrar-reporte.php");
+		header("Location: tabla-reportes.php");
 	}else{
 		echo "mal";
 	}

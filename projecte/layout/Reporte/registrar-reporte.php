@@ -169,7 +169,7 @@
             
             
             <div class="3u 12u$(mobile)"> <label>Observaciones</label></div>
-            <div class="6u$ 12u$(mobile)"><textarea style ="resize:none;" onkeypress="return alpha(event,letras)" rows="4" cols="4" name="observaciones" id="observaciones"></textarea></div>
+            <div class="6u$ 12u$(mobile)"><textarea style ="resize:none;" onkeypress="return alpha(event,letras+signos)" rows="4" cols="4" name="observaciones" id="observaciones"></textarea></div>
             
             
             
@@ -201,7 +201,7 @@
   <!--
   var letras =' ABCÇDEFGHIJKLMNÑOPQRSTUVWXYZabcçdefghijklmnñopqrstuvwxyzàáÀÁéèÈÉíìÍÌïÏóòÓÒúùÚÙüÜ'
   var numeros='1234567890'
-  var signos='´'
+  var signos=',.:;'
 
   function alpha(e,allow) {
        var k;

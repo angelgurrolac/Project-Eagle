@@ -1,7 +1,8 @@
 <?php 
     session_start();
  ?>
-<!DOCTYPE HTML>
+
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Configuración</title>
@@ -82,7 +83,7 @@
                         
                             <section id="tab1">
                             <form method="post" action="cambioContrasena.php">
-                                <a href="#tab1"><h2>Contraseña</h2></a>
+                                <h2><a href="#tab1">Contraseña</a></h2>
                                 <div class="row" id="mostrarc">
                                     <div class="12u$ 12u$(mobile)"></div>
                                     <div class="5u 12u$(mobile)"> <label>Contraseña actual</label></div>
@@ -99,7 +100,7 @@
                             
                             <section id="tab2">
                             <form method="post" enctype="multipart/form-data"  action="subir.php">
-                                <a href="#tab2"><h2>Fotografía</h2></a>
+                                <h2><a href="#tab2">Fotografía</a></h2>
                                 <div class="row" id="mostrarp">
                                     <div class="12u$ 12u$(mobile)"></div>
                                     <div class="3u 12u$(mobile)"> <label>Imagen actual</label></div>
@@ -118,7 +119,7 @@
                             
                             <section id="tab3">
                             <form method="post" action="asignarUsuario.php">
-                                <a href="#tab3"><h2>Roles</h2></a>
+                                <h2><a href="#tab3">Roles</a></h2>
                                 <div class="row">
                                     <div class="12u$ 12u$(mobile)"></div>
                                     <div class="2u 12u$(mobile)"> <label>Usuarios</label></div>
@@ -155,7 +156,7 @@
                             </section>
                             
                             <section id="tab4">
-                                <a href="#tab4"><h2>Usuarios</h2></a>
+                                <h2><a href="#tab4">Usuarios</a></h2>
 <!--
                                 Esto es a lo que te envia si das click a la opcion de modificar de la tabla.
                                 <div class="row">
@@ -193,7 +194,7 @@
                         </div>
                             </section>
                         </article>
-                    </form>
+                    
                 </div>
             </section>
         </div>

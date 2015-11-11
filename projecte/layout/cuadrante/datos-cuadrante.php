@@ -76,14 +76,14 @@
                     <form method="POST" action="registrar-cuadrante.php">
                         <div class="row">
                         <div class="4u 12u$(mobile)"> <label>Latitud</label></div>
-                        <div class="8u$ 12u$(mobile)"><input type="text" name="latitudc"/></div>
+                        <div class="8u$ 12u$(mobile)"><input type="text" name="latitudc" onkeypress="return alpha(event,numeros+signos)"/></div>
                         <div class="4u 12u$(mobile)"> <label>Longitud</label></div>
-                        <div class="8u$ 12u$(mobile)"><input type="text" name="longitudc"/></div>
+                        <div class="8u$ 12u$(mobile)"><input onkeypress="return alpha(event,numeros+signos)"type="text" name="longitudc"/></div>
                         
                         <div class="4u 12u$(mobile)"> <label>Número de trabajadores</label></div>
                         <div class="8u$ 12u$(mobile)"><input type="number" name="ntrabajadoresc"/></div>
                             <div class="4u 12u$(mobile)"> <label>Descripción</label></div>
-                            <div class="8u$ 12u$(mobile)"><textarea onkeypress="return alpha(event,letras)" rows="4" cols="4" name="descripcionc" class="descripcionc" style ="resize:none;"></textarea></div>
+                            <div class="8u$ 12u$(mobile)"><textarea onkeypress="return alpha(event,letras+signos)" rows="4" cols="4" name="descripcionc" class="descripcionc" style ="resize:none;"></textarea></div>
                         
                         <div class="12u$"><input type="submit" value="Guardar" /></div>
                     </div>
@@ -110,7 +110,7 @@
   <!--
   var letras =' ABCÇDEFGHIJKLMNÑOPQRSTUVWXYZabcçdefghijklmnñopqrstuvwxyzàáÀÁéèÈÉíìÍÌïÏóòÓÒúùÚÙüÜ'
   var numeros='1234567890'
-  var signos='´'
+  var signos='.;,'
 
   function alpha(e,allow) {
        var k;

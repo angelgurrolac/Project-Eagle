@@ -15,6 +15,15 @@
             <script src="../../assets/js/main.js"></script>
             <script src="../../assets/js/js-reportes.js"></script>
             <script src="../../assets/js/js.js"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".dato_reporte").click(function(){
+                    window.location.href="#contenedo-modiregistro";
+                });
+                
+            });
+        </script>
 	</head>
     
 	<body onload="tipoUsuario(<?php echo $_SESSION["tipo_usuario"];?>)">
@@ -116,11 +125,13 @@
             </section>
         </div>
         
-        <div id="contenedor-registro"></div>
+       
 
-        <div id="contenedo-modiregistro"></div>
+        
+            <a name="contenedo-modiregistro"><div id="contenedo-modiregistro"></div></a>
+        
 
-        <div id="contenedorVReporte"></div>
+        
         
 		<!-- Footer -->
 			<div id="footer">

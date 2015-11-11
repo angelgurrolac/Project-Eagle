@@ -1925,7 +1925,7 @@
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: transparent;
+			background-color: #4D4D4D;
 		}
 
 		input[type="button"]:active,

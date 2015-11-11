@@ -36,7 +36,7 @@
                        <form method="post" action="usuario/login.php">
                             <div class="row">
                             <div class="3u 12u$(mobile)"> </div>
-                            <div class="6u 12u$(mobile)"><input type="text" name="usuario" placeholder="Usuario" max="50" required /></div>
+                            <div class="6u 12u$(mobile)"><input type="text" name="usuario" placeholder="Usuario" max="50" required autofocus /></div>
                             <div class="3u$ 12u$(mobile)"> </div>
                                 <div class="3u 12u$(mobile)"> </div>
                             <div class="6u 12u$(mobile)"><input type="password" name="contrasena" placeholder="Contraseña"  pattern=".{8,}" title="La contraseña debe contener más de 8 caracteres." required /></div>
