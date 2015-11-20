@@ -5,7 +5,8 @@
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="stylesheet" href="../../assets/css/estilo-datos.css" /> 
-        <link rel="stylesheet" href="../../assets/css/estilo-tablas.css"
+        <link rel="stylesheet" href="../../assets/css/estilo-tablas.css" />
+            <link rel="shortcut icon" href="../../assets/images/logo-favicon.ico">
      </head>
     
      <body>

@@ -2,7 +2,7 @@
         <head>
         <meta charset="utf-8">
         <title>Project Eagle</title>
-            
+             <link rel="shortcut icon" href="../assets/images/logo-favicon.ico" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
     		<link rel="stylesheet" href="../assets/css/login.css" />
 

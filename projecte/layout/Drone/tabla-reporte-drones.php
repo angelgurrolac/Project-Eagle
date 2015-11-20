@@ -6,6 +6,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../../assets/css/estilo-tablas.css" /> 
+        <link rel="shortcut icon" href="../../assets/images/logo-favicon.ico">
                 <!-- Scripts -->
             <script src="../../assets/js/jquery.min.js"></script>
             <script src="../../assets/js/jquery.scrolly.min.js"></script>

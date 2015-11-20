@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: text/html; charset=UTF-8');
 /****************************************
 **establecemos conexion con el servidor.
 **nombre del servidor: localhost.
@@ -50,7 +51,7 @@ if($row = mysqli_fetch_row($result))
 
   ?>
   <script languaje="javascript">
-  alert("Contraseña Incorrecta");
+  alert("Contraseña incorrecta, por favor vuelva a intentarlo.");
     location.href = "../index.php";
     </script>
   
@@ -64,7 +65,7 @@ else
  //en caso que el nombre de administrador es incorrecto enviamos un msj y redireccionamos a login.php  
   ?>
   <script languaje="javascript">
-  alert("Usuario Incorrecto");
+  alert("Usuario incorrecto, por favor vuelva a intentarlo.");
     location.href = "../index.php";
       
       
@@ -83,4 +84,6 @@ mysqli_free_result($result);
 **necesario hacerlo para no sobrecargar al servidor, bueno en el caso de
 **programar una aplicación que tendrá muchas visitas ;) .*/
 mysqli_close($link);
+
 ?>
+
