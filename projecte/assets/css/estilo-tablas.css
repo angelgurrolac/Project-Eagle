@@ -1731,7 +1731,7 @@
 
 		.image.left {
 			float: left;
-			margin: 0 2em 2em 0;
+			margin: 0 0 2em 0;
 		}
 
 		.image.centered {
@@ -2024,8 +2024,8 @@
 
 	#logo {
 		position: relative;
-       /* margin: 2.5em 6.5em 5.5em 1.5em;*/
-        margin: 2.5em 5.5em 7.5em 2em;
+        margin: 2.5em 2.5em 7.5em 2em;
+       /* margin: 2.5em 5.5em 7.5em 2em;*/
 		min-height: 48px;
 		cursor: default;
 	}
@@ -2265,7 +2265,7 @@
 			}
 
 			#logo .image {
-				position: relative;
+				position: fixed;
 				margin: 0 0 0 0;
 			}
 

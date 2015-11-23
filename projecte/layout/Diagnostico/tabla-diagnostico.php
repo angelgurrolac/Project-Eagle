@@ -43,8 +43,8 @@
 							<ul>
                                 <li><a href="../inicio.php" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicio</span></a></li>
                                 <li><a href="../Reporte/tabla-reportes.php" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-file">Reportes</span></a></li>
-                                <li><a href="tabla-diagnostico.php" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-stethoscope">Diagnósticos</span></a></li>
-                                <li><a href="../Drone/tabla-reporte-drones.php" id="opt-reportesd" class="skel-layers-ignoreHref"><span class="icon fa-crosshairs">Drones</span></a></li>
+                                <li><a href="../Diagnostico/tabla-diagnostico.php" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-stethoscope">Diagnósticos</span></a></li>
+                                <li><a href="../Drone/tabla-drones.php" id="opt-reportesd" class="skel-layers-ignoreHref"><span class="icon fa-crosshairs">Drones</span></a></li>
                                 <li><a href="../usuario/configuracion-admin.php" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-wrench">Configuración</span></a></li>
                             </ul>
 						</nav>
@@ -88,15 +88,13 @@
                     <form method="post" action="#">
                         <div class="row">
                             <div class="0.5u 12u$(mobile)"><label class="icon fa-search"/></div>
-                            <div class="4u 12u$(mobile) estilo-buscador"><input type="text" name="buscador" placeholder="Buscador"/></div>
-                            <div class="6u 12u$(mobile) icon fa-plus-circle estilo-buscador">
-                                <input id = "drone" type="radio" name="tipo-dco" value="1">Nuevo diagnóstico (Drone) 
-                                <br>
+                            <div class="5u 12u$(mobile) estilo-buscador2"><input type="text" name="buscador" placeholder="Buscador"/></div>
+                             <div class="1.5u$ 12u$(mobile) estilo-buscador2" id="nvo-accidente"><a class="icon fa-exclamation-triangle estilo-icono" href="agregar-tipo-accidente.php" >      Agregar un tipo de accidente</a></div>
+                            <div class="10u 12u$(mobile) icon fa-plus-circle estilo-buscador">
+                                <input type="radio" name="tipo-dco" value="1">Nuevo diagnóstico (Drone) 
                                 <input type="radio" name="tipo-dco" value="2" style="margin-left: 9%;">Nuevo diagnóstico (Manual)
                             </div>
-                       
-                            
-                </div>
+                        </div>
                         
                         <div class="rwd">
                             <table class="rwd_auto">

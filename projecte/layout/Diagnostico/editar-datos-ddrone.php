@@ -10,7 +10,13 @@ echo "
                     </header>
                     <form method="POST" action="">
                         <div class="row">
-                            <div class="7u 12u$(mobile)"></div>
+                            <div class="1u 12u$(mobile)"><label>Drone</label></div>
+                            <div class="4u 12u$(mobile)">
+                                <select name="usar-drone">
+                                    <option>Seleccione</option>
+                                </select>
+                            </div>
+                             <div class="2u 12u$(mobile)"></div>
                             <div class="1u 12u$(mobile)"><label>Fecha</label></div>
                             <div class="4u$ 12u$(mobile)"><input type="date" name="fecha"/></div>
                             <div class="12u$ 12u$(mobile)"><video width="600" height="400" controls> </video></div>
