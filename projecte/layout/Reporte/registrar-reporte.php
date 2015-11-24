@@ -148,24 +148,24 @@
             
             
             <div class="3u 12u$(mobile)"> <label>Empresa</label></div>
-            <div class="6u$ 12u$(mobile)"><input type="text" name="empresa" id="empresa" /></div>
+            <div class="6u$ 12u$(mobile)"><input type="text" name="empresa" id="empresa" required /></div>
             
             
             
             <div class="3u 12u$(mobile)" pattern="[A-Za-z]" > <label>Tipo de empresa</label></div>
-            <div class="6u$ 12u$(mobile)"><input type="text" onkeypress="return alpha(event,letras)" name="tipoempresa" id="tipoempresa" /></div>
+            <div class="6u$ 12u$(mobile)"><input type="text" onkeypress="return alpha(event,letras)" name="tipoempresa" id="tipoempresa" required  /></div>
             
             
             
             <div class="3u 12u$(mobile)"> <label>Titular minero</label></div>
-            <div class="6u$ 12u$(mobile)"><input type="text" onkeypress="return alpha(event,letras)" name="titularminero" id="titularminero" /></div>
+            <div class="6u$ 12u$(mobile)"><input type="text" onkeypress="return alpha(event,letras)" name="titularminero" id="titularminero" required /></div>
             
             
             
             
             
             <div class="3u 12u$(mobile)"> <label>Concesión</label></div>
-            <div class="6u$ 12u$(mobile)"><input type="text" onkeypress="return alpha(event,letras)"  name="concesion" id="concesion" /></div>
+            <div class="6u$ 12u$(mobile)"><input type="text" onkeypress="return alpha(event,letras)"  name="concesion" id="concesion" required /></div>
             
             
             

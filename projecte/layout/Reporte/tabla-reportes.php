@@ -135,14 +135,20 @@
         
         
 		<!-- Footer -->
-			<div id="footer">
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>Todos los derechos reservados. Project Eagle.</li>
-					</ul>
-			</div>
-
+			
         
 
 	</body>
+    <footer id="footer">
+       
+				<!-- Copyright -->
+					
+              <ul class="copyright">
+        <li>Todos los derechos reservados. Project Eagle.</li>
+      </ul>
+				
+		
+
+    </footer>
+    
 </html>

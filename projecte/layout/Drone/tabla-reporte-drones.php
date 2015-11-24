@@ -92,7 +92,8 @@
                             <table class="rwd_auto">
                                 <thead>
                                     <tr>
-                                        <th>Reporte</th>
+                                        
+                                        
                                         <th>Fecha</th>
                                         <th>Modelo</th>
                                         <th>Cuadrante</th>

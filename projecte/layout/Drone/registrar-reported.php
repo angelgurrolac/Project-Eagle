@@ -12,5 +12,5 @@
 	mysqli_query($link,"INSERT INTO reporte_dron (fecha, Modelo, estado, cuadrante_id, tiempo_vuelo, distancia_recorrida, nivel_bateria)
   				VALUES ('$fecha', '$modelod', 1,'$cuadrante','$tiempov','$nivelb','$distanciar')");
 
-	header("Location: reporte-datos-drone.php");
+	header("Location: tabla-reporte-drones.php");
 ?>

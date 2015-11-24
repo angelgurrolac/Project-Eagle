@@ -77,21 +77,24 @@
                     <form method="POST" action="registrar-reported.php">
                         <div class="row">
                         <div class="3u 12u$(mobile)"> <label>Fecha</label></div>
-                        <div class="9u$ 12u$(mobile)"><input type="date" name="fecha"/></div>
+                        <div class="9u$ 12u$(mobile)"><input type="date" name="fecha" required  /></div>
                         <div class="3u 12u$(mobile)"> <label>Modelo</label></div>
-                        <div class="9u$ 12u$(mobile)"><input type="text" name="modelod"/></div>
+                        <div class="9u$ 12u$(mobile)"><select id="modelod" name="cuadrante" required >
+                        <script type="text/javascript">llenarDrones();</script>
+            
+          </select></div>
 
                         <div class="3u 12u$(mobile)"> <label>Cuadrante</label></div>
-                        <div class="9u$ 12u$(mobile)"><select id="cuadrante" name="cuadrante">
+                        <div class="9u$ 12u$(mobile)"><select id="cuadrante" name="cuadrante" required >
                         <script type="text/javascript">llenarCuadrantesReg();</script>
             
           </select></div>
                         <div class="3u 12u$(mobile)"> <label>Tiempo de vuelo</label></div>
-                        <div class="9u$ 12u$(mobile)"><input type="text" name="tiempov"/></div>
+                        <div class="9u$ 12u$(mobile)"><input onkeypress="return alpha(event,numeros+signos)" type="text" name="tiempov" required  /></div>
                             <div class="3u 12u$(mobile)"> <label>Nivel de batería</label></div>
-                        <div class="9u$ 12u$(mobile)"><input type="number" name="nivelb"/></div>
+                        <div class="9u$ 12u$(mobile)"><input  onkeypress="return alpha(event,numeros+signos)" type="text" name="nivelb" required /></div>
                             <div class="3u 12u$(mobile)"> <label>Distancia recorrida</label></div>
-                        <div class="9u$ 12u$(mobile)"><input type="text" name="distanciar"/></div>
+                        <div class="9u$ 12u$(mobile)"><input  onkeypress="return alpha(event,numeros+signos)" type="text" name="distanciar" required  /></div>
                         <div class="12u$"><input type="submit" value="Guardar" /></div>
                     </div>
                     </form>   
@@ -114,7 +117,20 @@
 					</ul>
 			</div>
 
-        
+           <script type="text/javascript">
+  <!--
+  var letras =' ABCÇDEFGHIJKLMNÑOPQRSTUVWXYZabcçdefghijklmnñopqrstuvwxyzàáÀÁéèÈÉíìÍÌïÏóòÓÒúùÚÙüÜ'
+  var numeros='1234567890'
+  var signos='.%'
+
+  function alpha(e,allow) {
+       var k;
+       k=document.all?parseInt(e.keyCode): parseInt(e.which);
+       return (allow.indexOf(String.fromCharCode(k))!=-1);
+  }
+
+  // -->
+  </script>
 
 	</body>
 </html>
